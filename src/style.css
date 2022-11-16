@@ -10,24 +10,15 @@ header{
     height: 10%;
 }
 
-   
-.ocultar-contenido{
+.contenido{
     display: none;
     margin: 5px auto;
     width: 80% ;
     height: 80%;
     border: solid 1px black;
 }
-.mostrar-contenido{
-    display: block;
-    margin: 5px auto;
-    width: 80% ;
-    height: 80%;
-    border: solid 1px black;
-}
+
 nav{
     flex-direction: row;
     margin: 5px auto; 
-    height: 50%;
-    width: 10%;
 }
