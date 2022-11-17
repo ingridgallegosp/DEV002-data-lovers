@@ -5,6 +5,7 @@
 
 //console.log(example, data);
 
+
 // IR A PAGINA DE BIENVENIDA
 document.getElementById('empezar').onclick = 
   function (){
