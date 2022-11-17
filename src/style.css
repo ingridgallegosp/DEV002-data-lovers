@@ -1,24 +1,78 @@
-
-* {
+header {
     display: flex;
-    flex-direction: column;
-}
-header{
-    flex-direction: row;
-    padding: ;
-    background-color: rgba(217, 217, 217, 1);
-    height: 10%;
+    background-color: rgba(105, 0, 0, 1);
+    justify-content: center;
+    align-items: center;
+    height: 92px;
 }
 
-.contenido{
+#nombrePagina {
+    width: 75%;
+    text-align: center;
+    color: rgba(241, 241, 241, 1);
+}
+
+#menuSuperior {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+
+}
+
+main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.contenido {
     display: none;
-    margin: 5px auto;
-    width: 80% ;
-    height: 80%;
+    width: 80%;
+    min-height: 500px;
     border: solid 1px black;
 }
 
-nav{
-    flex-direction: row;
-    margin: 5px auto; 
+#menuInferior {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(217, 217, 217, 1);
+    min-height: max-content;
+    width: 20%;
 }
+
+.menu-inferior-btn {
+    margin: 30px 15px 20px;
+    background-color: rgba(105, 0, 0, 1);
+    color: rgba(236, 236, 236, 1);
+    height: 80px;
+}
+
+@media (max-width: 850px) {
+    header {
+        display: flex;
+        background-color: rgba(217, 217, 217, 1);
+        justify-content: center;
+        align-items: center;
+        height: 65px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menuInferior {
+        display: flex;
+        background-color: rgba(105, 0, 0, 1);
+        min-height: max-content;
+    }
+
+    label {
+        display: none;
+    }
+
+    .menu-inferior-btn {
+        height: auto;
+        width: auto;
+    }

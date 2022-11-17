@@ -10,11 +10,11 @@
 <body>
   <header>
     <!--Encabezado y menú superior-->
-    <nav>
-      <button id="salidaBtn">Salida</button>
-      <button id="homeBtn">Home</button>
+    <nav id="menuSuperior">
+      <button class="menu-superior" id="salidaBtn">Salida</button>
+      <button class="menu-superior" id="homeBtn">Home</button>
     </nav>
-    <h4>Nombre de la página</h4>
+    <h4 id="nombrePagina">Nombre de la página</h4>
   </header>
 
   <main>
@@ -43,16 +43,17 @@
         AQUI APARECE INFO DE HECHIZOS Y POCIONES
       </div> -->
 
-  </main>
-
-  <nav>
-    <!--menú inferior-->
-    <button class="click" id="personajesBtn">Personajes</button>
-
-    <!--<button class="click"  id="librosBtn">Libros</button>
+    <nav id="menuInferior">
+      <!--menú inferior-->
+      <div class="menu-inferior-btn">
+        <button id="personajesBtn">P</button>
+        <label for="pesonajesBtn">Personajes</label>
+      </div>
+      <!--<button class="click"  id="librosBtn">Libros</button>
       <button class="click" id="casasBtn">Casas</button>
       <button class="click" id="hechizosYpocionesBtn">Hechizos y pociones</button> -->
-  </nav>
+    </nav>
+  </main>
 
   <script src="main.js" type="module"></script>
 </body>

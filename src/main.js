@@ -5,9 +5,20 @@
 
 //console.log(example, data);
 
-const homeBtn = document.getElementById('homeBtn');
-const contenidoHome = document.getElementById('contenidoHome');
 
-homeBtn.addEventListener('click', function () {
- contenidoHome.style.display = "flex";
- })
+  const homeBtn = document.getElementById('homeBtn');
+  const contenidoHome = document.getElementById('contenidoHome');
+
+  homeBtn.addEventListener('click', function () {
+    contenidoHome.style.display = "flex";
+  })
+
+
+
+  const personajesBtn = document.getElementById('personajesBtn');
+  const contenidoPersonajes = document.getElementById('contenidoPersonajes');
+
+  personajesBtn.addEventListener('click', function () {
+    contenidoPersonajes.style.display = "flex";
+    contenidoHome.style.display = "none";
+  })
