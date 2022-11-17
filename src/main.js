@@ -5,9 +5,9 @@
 
 //console.log(example, data);
 
-const librosBtn = document.getElementById('librosBtn');
-    const contenidoLibros = document.getElementById('contenidoLibros');
+const homeBtn = document.getElementById('homeBtn');
+const contenidoHome = document.getElementById('contenidoHome');
 
-    librosBtn.addEventListener('click', function () {
-      contenidoLibros.classList.add('mostrar-contenido');
-    })
+homeBtn.addEventListener('click', function () {
+ contenidoHome.style.display = "flex";
+ })
