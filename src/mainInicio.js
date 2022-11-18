@@ -5,6 +5,11 @@
 
 //console.log(example, data);
 
+//evitar que la pagina se recargue por completo
+document.getElementById('Formulario').onsubmit = function(event){
+  event.preventDefault()
+};
+  
 
 // IR A PAGINA DE BIENVENIDA
 document.getElementById('empezar').onclick = 
@@ -15,6 +20,6 @@ document.getElementById('empezar').onclick =
       if(!nombre) {
       alert( "No olvides ingresar tu nombre") ;
         } else {
-         window.location.href=' ' ; 
-        } ;
+         window.location.href="index.html" ; 
+        } 
 };
