@@ -15,13 +15,7 @@ body{
     
 
 } 
-@media (max-width:360px) {
-    body {
-        background-image:url("imagenes/fondoPasillo.jpg") ;
-        height: 96vh;
-        background-position: center;
-    }
-}
+
 
 form {
     height: 96vh;
