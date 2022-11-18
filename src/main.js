@@ -23,3 +23,10 @@ personajesBtn.addEventListener('click', function () {
   contenidoPersonajes.style.display = "flex";
   contenidoHome.style.display = "none";
 })
+
+// IR A PAGINA DE INICIO
+/*
+document.getElementById('salidaBtn').onclick =
+  window.location.href = "indexInicio.html"; 
+
+*/

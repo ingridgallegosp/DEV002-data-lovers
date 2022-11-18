@@ -20,6 +20,6 @@ document.getElementById('empezar').onclick =
       if(!nombre) {
       alert( "No olvides ingresar tu nombre") ;
         } else {
-         window.location.href="index.html" ; 
+         window.location.href="contenido.html" ; 
         } 
 };
