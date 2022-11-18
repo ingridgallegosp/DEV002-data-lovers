@@ -48,10 +48,14 @@ form {
         background-color:rgb(238, 238, 238);
         
         font-family: 'Inter', sans-serif;
-        font-size: 20px;
-        text-align: center;  
+        font-size: 18px;
+        text-align: center; 
+        text-transform: capitalize; 
     } 
 
+    button:hover { 
+        border: #FFC500 solid 0.35px;
+    }
 
     button {  
         width: 220px;
@@ -59,8 +63,9 @@ form {
         padding: 2px;
         margin: 10px;
         box-sizing: border-box;
-        border: #FFC500 solid 0.2px;
+        border: rgb(238, 238, 238) solid 0.2px;
         border-radius: 7px;
+        align-content: center;
 
         background-color:#690000;
         color:rgb(238, 238, 238);
