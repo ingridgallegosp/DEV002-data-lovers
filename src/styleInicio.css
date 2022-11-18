@@ -8,14 +8,23 @@
 
 body{
     margin: 0px;
-} 
+    background-image: url("imagenes/fondoPasillo.jpg");
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+    
 
+} 
+@media (max-width:360px) {
+    body {
+        background-image:url("imagenes/fondoPasillo.jpg") ;
+        height: 96vh;
+        background-position: center;
+    }
+}
 
 form {
     height: 96vh;
-    background-image: url(https://i.pinimg.com/originals/33/56/ca/3356ca0257490a9fb813b6587ebc2c25.jpg);
-    background-size: cover ;
-    background-repeat: no-repeat;
 
     display:flex;
     flex-direction: column;
