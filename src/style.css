@@ -26,12 +26,31 @@ main {
 
 #contenidoHome {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("imagenes/mapaMerodeador.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+#mensaje-bienvenida {
+    background-color:aliceblue;
+    height: fit-content;
+}
+#hedwig {
+    height: 300px;
+}
+
 .contenido {
     display: none;
-    width: 80%;
-    min-height: 500px;
-    border: solid 1px black;
+    width: 100%;
+    min-height: 612px;
+    margin: 0px;
+    background-image: url("imagenes/beigeBackground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
 #menuInferior {
@@ -47,6 +66,18 @@ main {
     background-color: rgba(105, 0, 0, 1);
     color: rgba(236, 236, 236, 1);
     height: 80px;
+}
+
+footer {
+   
+    width: 100%;
+    height: 4vh;
+    display: block;   
+    background-color: #690000;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;   
+    text-align: center;
 }
 
 @media (max-width: 850px) {
@@ -72,7 +103,7 @@ main {
         background-color: rgba(105, 0, 0, 1);
         width: 100%;
         height: 65px;
-        
+
     }
 
     label {
