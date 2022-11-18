@@ -9,12 +9,12 @@
 // IR A PAGINA DE BIENVENIDA
 document.getElementById('empezar').onclick = 
   function (){
-      let nombrex = document.getElementById('nombreInvitado').value;
-    console.log (nombrex)
+      let nombre = document.getElementById('nombreInvitado').value;
+    console.log (nombre)
 
-      if(!nombrex) {
+      if(!nombre) {
       alert( "No olvides ingresar tu nombre") ;
         } else {
-         window.location.href='indexInicio.html' ; 
+         window.location.href=' ' ; 
         } ;
 };
