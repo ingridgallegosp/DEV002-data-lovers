@@ -14,12 +14,15 @@ document.getElementById('Formulario').onsubmit = function(event){
 // IR A PAGINA DE BIENVENIDA
 document.getElementById('empezar').onclick = 
   function (){
-      let nombre = document.getElementById('nombreInvitado').value;
+      const nombre = document.getElementById('nombreInvitado').value;
     console.log (nombre)
 
       if(!nombre) {
       alert( "No olvides ingresar tu nombre") ;
         } else {
+         //window.localStorage.setItem("nombrex", nombre)
          window.location.href="index.html" ; 
         } 
+        return nombre
 };
+

@@ -23,3 +23,18 @@ personajesBtn.addEventListener('click', function () {
   contenidoPersonajes.style.display = "flex";
   contenidoHome.style.display = "none";
 })
+
+
+//Guardar valor
+//localStorage.setItem("nombreM");
+//localStorage.removeItem("nombreM")
+
+
+//Obtener valor almacenado local Storage --Ingrid
+let nombreObtenido = localStorage.getItem("nombreM");
+console.log (nombreObtenido)
+
+//Mostrar valor almacenado  --Ingrid
+let nombreBienv= document.getElementById("mensaje-bienvenida");
+nombreBienv.innerHTML = "Bienvenido " + nombreObtenido;
+
