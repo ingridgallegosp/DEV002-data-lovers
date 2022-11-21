@@ -25,8 +25,9 @@ personajesBtn.addEventListener('click', function () {
 })
 
 // IR A PAGINA DE INICIO
-/*
-document.getElementById('salidaBtn').onclick =
-  window.location.href = "indexInicio.html"; 
 
-*/
+const salidaBtn = document.getElementById('salidaBtn'); //capturando salidaBtn
+salidaBtn.addEventListener('click', function () {
+  window.location.href = "index.html"; 
+})
+
