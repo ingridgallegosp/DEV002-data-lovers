@@ -1,11 +1,3 @@
-//import { example } from './data.js';
-// import data from './data/lol/lol.js';
-//import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-
-//console.log(example, data);
-
-
 const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
 const contenidoHome = document.getElementById('contenidoHome'); //capturando contenidoHome
 
@@ -48,3 +40,7 @@ let nombreBienv= document.getElementById("mensaje-bienvenida");
 nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
 
 
+import { example } from './data.js';
+import data from './data/harrypotter/harry.js';
+
+console.log(example, data);
