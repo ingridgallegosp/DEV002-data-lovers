@@ -20,9 +20,10 @@ document.getElementById('empezar').onclick =
       if(!nombre) {
       alert( "No olvides ingresar tu nombre") ;
         } else {
-         //window.localStorage.setItem("nombrex", nombre)
-         window.location.href="index.html" ; 
+          window.localStorage.setItem("nombreM", nombre)
+          window.location.href="index.html" ; 
         } 
         return nombre
+
 };
 

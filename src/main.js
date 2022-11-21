@@ -34,7 +34,10 @@ personajesBtn.addEventListener('click', function () {
 let nombreObtenido = localStorage.getItem("nombreM");
 console.log (nombreObtenido)
 
+//to uppercase al indice 0
+
+
 //Mostrar valor almacenado  --Ingrid
 let nombreBienv= document.getElementById("mensaje-bienvenida");
-nombreBienv.innerHTML = "Bienvenido " + nombreObtenido;
+nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
 
