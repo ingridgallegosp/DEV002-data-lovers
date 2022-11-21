@@ -14,7 +14,11 @@ document.getElementById('Formulario').onsubmit = function(event){
 // IR A PAGINA DE BIENVENIDA
 document.getElementById('empezar').onclick = 
   function (){
+
+      let nombre = document.getElementById('nombreInvitado').value;
+
       const nombre = document.getElementById('nombreInvitado').value;
+
     console.log (nombre)
 
       if(!nombre) {
@@ -26,4 +30,5 @@ document.getElementById('empezar').onclick =
         return nombre
 
 };
+
 

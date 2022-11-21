@@ -25,6 +25,14 @@ personajesBtn.addEventListener('click', function () {
 })
 
 
+// IR A PAGINA DE INICIO
+
+const salidaBtn = document.getElementById('salidaBtn'); //capturando salidaBtn
+salidaBtn.addEventListener('click', function () {
+  window.location.href = "index.html"; 
+})
+
+
 //Guardar valor - nombre del invitado
 //localStorage.setItem("nombreM");
 //localStorage.removeItem("nombreM")
@@ -38,4 +46,5 @@ console.log (nombreObtenido)
 //Mostrar valor almacenado  --Ingrid
 let nombreBienv= document.getElementById("mensaje-bienvenida");
 nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
+
 
