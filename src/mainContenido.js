@@ -24,10 +24,27 @@ personajesBtn.addEventListener('click', function () {
   contenidoHome.style.display = "none";
 })
 
+
 // IR A PAGINA DE INICIO
 
 const salidaBtn = document.getElementById('salidaBtn'); //capturando salidaBtn
 salidaBtn.addEventListener('click', function () {
   window.location.href = "index.html"; 
 })
+
+
+//Guardar valor - nombre del invitado
+//localStorage.setItem("nombreM");
+//localStorage.removeItem("nombreM")
+
+//Obtener valor almacenado local Storage --Ingrid
+let nombreObtenido = localStorage.getItem("nombreM");
+console.log (nombreObtenido)
+
+//to uppercase al indice 0
+
+//Mostrar valor almacenado  --Ingrid
+let nombreBienv= document.getElementById("mensaje-bienvenida");
+nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
+
 
