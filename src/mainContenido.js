@@ -25,17 +25,15 @@ personajesBtn.addEventListener('click', function () {
 })
 
 
-//Guardar valor
+//Guardar valor - nombre del invitado
 //localStorage.setItem("nombreM");
 //localStorage.removeItem("nombreM")
-
 
 //Obtener valor almacenado local Storage --Ingrid
 let nombreObtenido = localStorage.getItem("nombreM");
 console.log (nombreObtenido)
 
 //to uppercase al indice 0
-
 
 //Mostrar valor almacenado  --Ingrid
 let nombreBienv= document.getElementById("mensaje-bienvenida");

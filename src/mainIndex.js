@@ -21,7 +21,7 @@ document.getElementById('empezar').onclick =
       alert( "No olvides ingresar tu nombre") ;
         } else {
           window.localStorage.setItem("nombreM", nombre)
-          window.location.href="index.html" ; 
+          window.location.href="contenido.html" ; 
         } 
         return nombre
 
