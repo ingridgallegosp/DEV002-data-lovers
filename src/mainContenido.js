@@ -1,9 +1,10 @@
 //import { example } from './data.js';
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import data from './data/harrypotter/harry.js';
 
-//console.log(example, data);
+
+console.log(example, data);
 
 
 const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
@@ -31,6 +32,7 @@ const salidaBtn = document.getElementById('salidaBtn'); //capturando salidaBtn
 salidaBtn.addEventListener('click', function () {
   window.location.href = "index.html"; 
 })
+
 
 
 //Guardar valor - nombre del invitado
