@@ -43,8 +43,6 @@ salidaBtn.addEventListener('click', function () {
 let nombreObtenido = localStorage.getItem("nombreM");
 console.log (nombreObtenido)
 
-//to uppercase al indice 0
-
 //Mostrar valor almacenado  
 let nombreBienv= document.getElementById("mensaje-bienvenida");
 nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;

@@ -105,6 +105,8 @@ h2 {
     align-items: center;
     font-family: 'Inter', sans-serif;
     font-size: 18px;
+    text-transform: capitalize; 
+
 }
 
 @media (max-width: 850px) {
