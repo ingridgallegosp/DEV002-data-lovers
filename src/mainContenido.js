@@ -47,6 +47,6 @@ console.log (nombreObtenido)
 
 //Mostrar valor almacenado  --Ingrid
 let nombreBienv= document.getElementById("mensaje-bienvenida");
-nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
+nombreBienv.innerHTML = "Bienvenida " + nombreObtenido.toUpperCase;
 
 
