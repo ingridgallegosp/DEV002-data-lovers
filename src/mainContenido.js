@@ -7,9 +7,9 @@ import data from './data/harrypotter/harry.js';
 
 const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
 const contenidoHome = document.getElementById('contenidoHome'); //capturando contenidoHome
-const contenidoPersonajes = document.getElementById('contenidoPersonajes')//capturando contenidoPersonajes
-const personajesBtn = document.getElementById('personajesBtn'); //capturando personajesBtn
 
+const personajesBtn = document.getElementById('personajesBtn'); //capturando personajesBtn
+const contenidoPersonajes = document.getElementById('contenidoPersonajes')//capturando contenidoPersonajes
 
 
 
@@ -24,28 +24,29 @@ personajesBtn.addEventListener('click', function () {
   contenidoPersonajes.style.display = "flex";
   contenidoHome.style.display = "none";
 
+      // tarjetas
+      let tarjetas = [];
+      
+      crearTarjetas (data.characters);
+      function crearTarjetas (element) {
+        console.log(element);
 
-
-
-//pintar tarjetas
-crearTarjetas (data.characters);
-function crearTarjetas (element) {
-  console.log(element)
-  
-  const container = document.querySelector(".tarjeta");
-  element.forEach(characters => {
-    container.innerHTML += `
-            <article class="card" id= "card">
-              <h2> ${characters.name}</h2>
-              <p> ${characters.house}</p>
-            </article>
-            `
-  });
-  
-};
-console.log(data.characters);
-
-//cierra pintar tarjetas*/
+        const container = document.querySelector(".tarjeta");
+        element.forEach(characters => {
+        tarjetas += `
+                  <article class="card" id= "card">
+                    <div class="cardImage" id="card-1"> </div>
+                    <h2> ${characters.name}</h2>
+                    <p> ${characters.house}</p>
+                  </article>
+                  `
+        });
+       
+        contenidoPersonajes.innerHTML= tarjetas;
+        
+      };
+      
+      //cierra pintar tarjetas*/
 })
 
 
