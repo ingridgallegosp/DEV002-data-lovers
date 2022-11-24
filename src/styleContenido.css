@@ -70,13 +70,13 @@ main {
     width: 80%;
     min-height: 500px;
     border: solid 1px black;
-
 }
 
 .tarjetas {
     display: block;
     border: solid 1px black;
-    padding: 5%;
+    padding: 2%;
+    margin: 1%;
     background-color: white;
     height: fit-content;
 

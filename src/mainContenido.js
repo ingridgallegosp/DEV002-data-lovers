@@ -3,8 +3,10 @@ import data from './data/harrypotter/harry.js';
 /*import { example } from './data.js';
 console.log(example, data);*/
 
-
 const contenidoPersonajes = document.getElementById('contenidoPersonajes'); //capturando contenidoPersonajes
+const contenidoHome = document.getElementById('contenidoHome'); //capturando contenidoHome
+const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
+const personajesBtn = document.getElementById('personajesBtn'); //capturando personajesBtn
 
 //Función para crear las tarjetas con los personajes e imprimirlas en html
 function crearTarjetas(personajes) { 
@@ -13,6 +15,7 @@ function crearTarjetas(personajes) {
   <div class="tarjetas" id= ${characters.id}>
           <h2 class="nombre">${characters.name}</h2>
           <li class="casa"> Casa: ${characters.house}</li>
+          <li class="especie">Especie: ${characters.species}</li>
           <li class="ascendencia">Ascendencia: ${characters.ancestry}</li>
           <li class="genero">Género: ${characters.gender}</li>
           <li class="fecha-nacimiento">Nacimiento: ${characters.birth}</li>
@@ -20,17 +23,10 @@ function crearTarjetas(personajes) {
          </div>
   `});
 }
+
 crearTarjetas(data.characters);//llamar a la función
 
-
-
 // MANIPULACIÓN PÁGINA INDEX/CONTENIDO
-
-const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
-const contenidoHome = document.getElementById('contenidoHome'); //capturando contenidoHome
-
-const personajesBtn = document.getElementById('personajesBtn'); //capturando personajesBtn
-
 
 //Evento click de homeBtn despliega contendioHome y oculta contenidoPersonajes
 homeBtn.addEventListener('click', function () {
@@ -44,14 +40,12 @@ personajesBtn.addEventListener('click', function () {
   contenidoHome.style.display = "none";
 })
 
-
 // IR A PAGINA DE INICIO
 
 const salidaBtn = document.getElementById('salidaBtn'); //capturando salidaBtn
 salidaBtn.addEventListener('click', function () {
   window.location.href = "index.html";
 })
-
 
 //Guardar valor - nombre del invitado
 //localStorage.setItem("nombreM");
