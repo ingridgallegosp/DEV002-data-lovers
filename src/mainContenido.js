@@ -1,12 +1,24 @@
+
 import data from './data/harrypotter/harry.js';
 
 /*import { example } from './data.js';
 console.log(example, data);*/
 
 const contenidoPersonajes = document.getElementById('contenidoPersonajes'); //capturando contenidoPersonajes
+
+//import { example } from './data.js';
+//import data from './data/pokemon/pokemon.js';
+//import { filtrarDirector, filtrarProductor, ordenPeliculas, calculo } from './data.js';
+
+
+import data from './data/harrypotter/harry.js';
+
+const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
+
 const contenidoHome = document.getElementById('contenidoHome'); //capturando contenidoHome
 const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
 const personajesBtn = document.getElementById('personajesBtn'); //capturando personajesBtn
+
 
 //Función para crear las tarjetas con los personajes e imprimirlas en html
 function crearTarjetas(personajes) { 
@@ -28,6 +40,11 @@ crearTarjetas(data.characters);//llamar a la función
 
 // MANIPULACIÓN PÁGINA INDEX/CONTENIDO
 
+const contenidoPersonajes = document.getElementById('contenidoPersonajes')//capturando contenidoPersonajes
+
+
+
+
 //Evento click de homeBtn despliega contendioHome y oculta contenidoPersonajes
 homeBtn.addEventListener('click', function () {
   contenidoHome.style.display = "flex";
@@ -38,7 +55,32 @@ homeBtn.addEventListener('click', function () {
 personajesBtn.addEventListener('click', function () {
   contenidoPersonajes.style.display = "flex";
   contenidoHome.style.display = "none";
+
+      // tarjetas
+      let tarjetas = [];
+      
+      crearTarjetas (data.characters);
+      function crearTarjetas (element) {
+        console.log(element);
+
+        const container = document.querySelector(".tarjeta");
+        element.forEach(characters => {
+        tarjetas += `
+                  <article class="card" id= "card">
+                    <div class="cardImage" id="card-1"> </div>
+                    <h2> ${characters.name}</h2>
+                    <p> ${characters.house}</p>
+                  </article>
+                  `
+        });
+       
+        contenidoPersonajes.innerHTML= tarjetas;
+        
+      };
+      
+      //cierra pintar tarjetas*/
 })
+
 
 // IR A PAGINA DE INICIO
 
@@ -47,18 +89,24 @@ salidaBtn.addEventListener('click', function () {
   window.location.href = "index.html";
 })
 
+
 //Guardar valor - nombre del invitado
 //localStorage.setItem("nombreM");
 //localStorage.removeItem("nombreM")
 
-//Obtener valor almacenado local Storage --Ingrid
+//Obtener valor almacenado local Storage 
 let nombreObtenido = localStorage.getItem("nombreM");
 //console.log(nombreObtenido)
+
 
 //to uppercase al indice 0
 
 //Mostrar valor almacenado  --Ingrid
 let nombreBienv = document.getElementById("mensaje-bienvenida");
+
+//Mostrar valor almacenado  
+let nombreBienv= document.getElementById("mensaje-bienvenida");
+
 nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
 
 

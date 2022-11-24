@@ -4,9 +4,25 @@ document.getElementById('Formulario').onsubmit = function (event) {
 };
 
 
+
 // IR A PAGINA DE BIENVENIDA
 document.getElementById('empezar').onclick =
   function () {
+
+
+      const nombre = document.getElementById('nombreInvitado').value;
+
+
+    console.log (nombre)
+
+      if(!nombre) {
+      alert( "No olvides ingresar tu nombre") ;
+        } else {
+          window.localStorage.setItem("nombreM", nombre)
+          window.location.href="contenido.html" ; 
+        } 
+        return nombre
+
 
     const nombre = document.getElementById('nombreInvitado').value;
 
