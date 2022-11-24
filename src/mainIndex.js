@@ -15,7 +15,9 @@ document.getElementById('Formulario').onsubmit = function(event){
 document.getElementById('empezar').onclick = 
   function (){
 
+
       const nombre = document.getElementById('nombreInvitado').value;
+
 
     console.log (nombre)
 
