@@ -1,49 +1,39 @@
 
+//import { filterAsc, filterDesct } from './data.js'; //organizarPersonaje
 import data from './data/harrypotter/harry.js';
 
 /*import { example } from './data.js';
 console.log(example, data);*/
 
-const contenidoPersonajes = document.getElementById('contenidoPersonajes'); //capturando contenidoPersonajes
-
-//import { example } from './data.js';
-//import data from './data/pokemon/pokemon.js';
-//import { filtrarDirector, filtrarProductor, ordenPeliculas, calculo } from './data.js';
-
-
-import data from './data/harrypotter/harry.js';
 
 const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
-
 const contenidoHome = document.getElementById('contenidoHome'); //capturando contenidoHome
-const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
+
 const personajesBtn = document.getElementById('personajesBtn'); //capturando personajesBtn
 
+// IR A PAGINA DE INICIO
 
-//Función para crear las tarjetas con los personajes e imprimirlas en html
-function crearTarjetas(personajes) { 
-  personajes.forEach(characters => { //por cada objeto del objeto "characters" se ejecuta la siguiente función para imprimir la tarjeta dentro del contenedor "contenidoPersonajes":
-    contenidoPersonajes.innerHTML += `
-  <div class="tarjetas" id= ${characters.id}>
-          <h2 class="nombre">${characters.name}</h2>
-          <li class="casa"> Casa: ${characters.house}</li>
-          <li class="especie">Especie: ${characters.species}</li>
-          <li class="ascendencia">Ascendencia: ${characters.ancestry}</li>
-          <li class="genero">Género: ${characters.gender}</li>
-          <li class="fecha-nacimiento">Nacimiento: ${characters.birth}</li>
-          <li class="libros">Libros en los que aparece: ${characters.books_featured_in}</li>
-         </div>
-  `});
-}
+const salidaBtn = document.getElementById('salidaBtn'); //capturando salidaBtn
+salidaBtn.addEventListener('click', function () {
+  window.location.href = "index.html";
+})
 
-crearTarjetas(data.characters);//llamar a la función
+
+//Guardar valor - nombre del invitado
+//localStorage.setItem("nombreM");
+//localStorage.removeItem("nombreM")
+
+//Obtener valor almacenado local Storage 
+let nombreObtenido = localStorage.getItem("nombreM");
+//console.log(nombreObtenido)
+
+//Mostrar valor almacenado  
+let nombreBienv= document.getElementById("mensaje-bienvenida");
+nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
 
 // MANIPULACIÓN PÁGINA INDEX/CONTENIDO
 
 const contenidoPersonajes = document.getElementById('contenidoPersonajes')//capturando contenidoPersonajes
-
-
-
 
 //Evento click de homeBtn despliega contendioHome y oculta contenidoPersonajes
 homeBtn.addEventListener('click', function () {
@@ -56,7 +46,7 @@ personajesBtn.addEventListener('click', function () {
   contenidoPersonajes.style.display = "flex";
   contenidoHome.style.display = "none";
 
-      // tarjetas
+      /*/ tarjetas
       let tarjetas = [];
       
       crearTarjetas (data.characters);
@@ -79,34 +69,71 @@ personajesBtn.addEventListener('click', function () {
       };
       
       //cierra pintar tarjetas*/
-})
+});
+
+//Función para crear las tarjetas con los personajes e imprimirlas en html
+function crearTarjetas(personajes) { 
+  personajes.forEach(characters => { //por cada objeto del objeto "characters" se ejecuta la siguiente función para imprimir la tarjeta dentro del contenedor "contenidoPersonajes":
+    contenidoPersonajes.innerHTML += `
+  <div class="tarjetas" id= ${characters.id}>
+          <h2 class="nombre">${characters.name}</h2>
+          <li class="casa"> Casa: ${characters.house}</li>
+          <li class="especie">Especie: ${characters.species}</li>
+          <li class="ascendencia">Ascendencia: ${characters.ancestry}</li>
+          <li class="genero">Género: ${characters.gender}</li>
+          <li class="fecha-nacimiento">Nacimiento: ${characters.birth}</li>
+          <li class="libros">Libros en los que aparece: ${characters.books_featured_in}</li>
+         </div>
+  `});
+}
+
+crearTarjetas(data.characters);//llamar a la función
+
+//ORDENAR PERSONAJES
+
+//let charac =["a", "d", "b"] 
+//let organizarPersonaje = charac.sort();
+//console.log(organizarPersonaje) regresa abd 
+  
+//export funcion que define personajes
+const characters = (data) => {
+    return(data.characters);
+  };
+console.log(characters);
+
+//export funcion que ordena
+const filterAsc = (characters) => {
+  let ascendente = characters.sort(function(a, b) {
+    //return (a-b)
+    return parseFloat(a.name) - parseFloat(b.name);
+    //return a.nombre.localeCompare(b.nombre); 
+    //return((a.name < b.name)? -1: ((a.name > b.name)? 1: 0));
+    })
+    return ascendente;
+  };
+
+// escoger opcion a-z y hacer clic en el boton
+document.getElementById("enviarOrdenar").onclick = 
+function (){
+  if(document.querySelector('option[value="ascendente"]:checked')){ 
+    return filterAsc(characters.name);
+  }
+};
+console.log(filterAsc(characters.name));
 
 
-// IR A PAGINA DE INICIO
-
-const salidaBtn = document.getElementById('salidaBtn'); //capturando salidaBtn
-salidaBtn.addEventListener('click', function () {
-  window.location.href = "index.html";
-})
 
 
-//Guardar valor - nombre del invitado
-//localStorage.setItem("nombreM");
-//localStorage.removeItem("nombreM")
-
-//Obtener valor almacenado local Storage 
-let nombreObtenido = localStorage.getItem("nombreM");
-//console.log(nombreObtenido)
 
 
-//to uppercase al indice 0
 
-//Mostrar valor almacenado  --Ingrid
-let nombreBienv = document.getElementById("mensaje-bienvenida");
+  /*orderAsc.addEventListener("click", () => {
+    list.innerHTML = '';
+    listElements(filterAsc(characters.name));
+});
 
-//Mostrar valor almacenado  
-let nombreBienv= document.getElementById("mensaje-bienvenida");
-
-nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
-
-
+orderDescendent.addEventListener("click", () => {
+  list.innerHTML = '';
+  listElements(filterDescendent(characters.name));
+});
+*/
