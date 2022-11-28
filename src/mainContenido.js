@@ -5,17 +5,8 @@ import data from './data/harrypotter/harry.js';
 console.log(example, data);*/
 
 const contenidoPersonajes = document.getElementById('contenidoPersonajes'); //capturando contenidoPersonajes
-
-//import { example } from './data.js';
-//import data from './data/pokemon/pokemon.js';
-//import { filtrarDirector, filtrarProductor, ordenPeliculas, calculo } from './data.js';
-
-
-import data from './data/harrypotter/harry.js';
-
-const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
-
 const contenidoHome = document.getElementById('contenidoHome'); //capturando contenidoHome
+
 const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
 const personajesBtn = document.getElementById('personajesBtn'); //capturando personajesBtn
 
@@ -35,15 +26,7 @@ function crearTarjetas(personajes) {
          </div>
   `});
 }
-
 crearTarjetas(data.characters);//llamar a la función
-
-// MANIPULACIÓN PÁGINA INDEX/CONTENIDO
-
-const contenidoPersonajes = document.getElementById('contenidoPersonajes')//capturando contenidoPersonajes
-
-
-
 
 //Evento click de homeBtn despliega contendioHome y oculta contenidoPersonajes
 homeBtn.addEventListener('click', function () {
@@ -55,7 +38,9 @@ homeBtn.addEventListener('click', function () {
 personajesBtn.addEventListener('click', function () {
   contenidoPersonajes.style.display = "flex";
   contenidoHome.style.display = "none";
+})
 
+/*
       // tarjetas
       let tarjetas = [];
       
@@ -78,9 +63,8 @@ personajesBtn.addEventListener('click', function () {
         
       };
       
-      //cierra pintar tarjetas*/
-})
-
+      //cierra pintar tarjetas
+})*/
 
 // IR A PAGINA DE INICIO
 
@@ -88,7 +72,6 @@ const salidaBtn = document.getElementById('salidaBtn'); //capturando salidaBtn
 salidaBtn.addEventListener('click', function () {
   window.location.href = "index.html";
 })
-
 
 //Guardar valor - nombre del invitado
 //localStorage.setItem("nombreM");
@@ -98,15 +81,7 @@ salidaBtn.addEventListener('click', function () {
 let nombreObtenido = localStorage.getItem("nombreM");
 //console.log(nombreObtenido)
 
-
-//to uppercase al indice 0
-
-//Mostrar valor almacenado  --Ingrid
-let nombreBienv = document.getElementById("mensaje-bienvenida");
-
 //Mostrar valor almacenado  
 let nombreBienv= document.getElementById("mensaje-bienvenida");
 
 nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
-
-

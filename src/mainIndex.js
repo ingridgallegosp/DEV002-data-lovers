@@ -24,7 +24,7 @@ document.getElementById('empezar').onclick =
         return nombre
 
 
-    const nombre = document.getElementById('nombreInvitado').value;
+    //const nombre = document.getElementById('nombreInvitado').value;
 
     console.log(nombre)
 
