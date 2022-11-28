@@ -115,6 +115,7 @@ const ordenarDesc = (characters) => {
     return descendente;
   };
 
+  
 //capturar opciones
 
 const ordenAscendente = document.getElementById('asc'); //capturando opcion ascendente
