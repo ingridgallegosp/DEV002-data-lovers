@@ -104,8 +104,8 @@ const characters = (data) => {
 console.log(characters);
 
 //export funcion que ordena
-const filterDesc = (characters) => {
-  let descendente = characters.sort(function(a, b) {
+const ordenarDesc = (characters) => {
+  const descendente = characters.sort(function(a, b) {
     //return (a-b)
     return (b.name - a.name)
     //return parseFloat(b.name) - parseFloat(a.name);
@@ -115,15 +115,25 @@ const filterDesc = (characters) => {
     return descendente;
   };
 
-/*// escoger opcion z-a y hacer clic en el boton
-document.getElementById("enviarOrdenar").onclick = 
+//capturar opciones
+
+const ordenAscendente = document.getElementById('asc'); //capturando opcion ascendente
+const ordenDescendente = document.getElementById('desc'); //capturando opcion descendente
+
+// escoger opcion z-a 
+ordenDescendente.addEventListener('selected', ordenarDesc () {
+
+  
+})
+
+/*document.getElementById("enviarOrdenar").onclick = 
 function (){
   //if(document.getElementById(("desc").selected)) { 
     if(document.querySelector('option[value="descendente"]:selected')){ 
-    return filterDesc(characters.name);
+    return ordenDesc(characters.name);
   }
 };
-console.log(filterDesc(characters.name));*/
+console.log(ordenDesc(characters.name));*/
 
 
 
@@ -136,8 +146,8 @@ console.log(filterDesc(characters.name));*/
     listElements(filterAsc(characters.name));
 });*/
 
-orderDesc.addEventListener("click", () => {
+/*orderDesc.addEventListener("click", () => {
   contenidoPersonajes.innerHTML = '';
   listElements(filterDesc(characters.name));
-});
+});*/
 
