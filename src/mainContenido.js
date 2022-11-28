@@ -4,16 +4,14 @@ import data from './data/harrypotter/harry.js';
 
 /*import { example } from './data.js';
 console.log(example, data);*/
-/*document.getElementById('ordenAsdDesc').onsubmit = function (event) {
-  event.preventDefault()
-};*/
 
-const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
+const contenidoPersonajes = document.getElementById('contenidoPersonajes'); //capturando contenidoPersonajes
 const contenidoHome = document.getElementById('contenidoHome'); //capturando contenidoHome
-
+const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
 const personajesBtn = document.getElementById('personajesBtn'); //capturando personajesBtn
 
 // IR A PAGINA DE INICIO
+
 
 const salidaBtn = document.getElementById('salidaBtn'); //capturando salidaBtn
 salidaBtn.addEventListener('click', function () {
@@ -37,6 +35,27 @@ nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
 
 const contenidoPersonajes = document.getElementById('contenidoPersonajes')//capturando contenidoPersonajes
 
+
+//Función para crear las tarjetas con los personajes e imprimirlas en html
+function crearTarjetas(personajes) { 
+  personajes.forEach(characters => { //por cada objeto del objeto "characters" se ejecuta la siguiente función para imprimir la tarjeta dentro del contenedor "contenidoPersonajes":
+    contenidoPersonajes.innerHTML += `
+  <div class="tarjetas" id= ${characters.id}>
+    <div class= "texto-tarjetas">
+      <h2 class="nombre">${characters.name}</h2>
+      <li class="casa"> Casa: ${characters.house}</li>
+      <li class="especie">Especie: ${characters.species}</li>
+      <li class="ascendencia">Ascendencia: ${characters.ancestry}</li>
+      <li class="genero">Género: ${characters.gender}</li>
+      <li class="fecha-nacimiento">Nacimiento: ${characters.birth}</li>
+      <li class="fecha-muerte">Muerte: ${characters.death}</li>
+      <li class="libros">Libros en los que aparece: ${characters.books_featured_in}</li>
+    </div>
+  </div>
+  `});
+}
+crearTarjetas(data.characters);//llamar a la función
+
 //Evento click de homeBtn despliega contendioHome y oculta contenidoPersonajes
 homeBtn.addEventListener('click', function () {
   contenidoHome.style.display = "flex";
@@ -47,8 +66,9 @@ homeBtn.addEventListener('click', function () {
 personajesBtn.addEventListener('click', function () {
   contenidoPersonajes.style.display = "flex";
   contenidoHome.style.display = "none";
+})
 
-      /*/ tarjetas
+
       let tarjetas = [];
       
       crearTarjetas (data.characters);
@@ -70,24 +90,7 @@ personajesBtn.addEventListener('click', function () {
         
       };
       
-      //cierra pintar tarjetas*/
-});
 
-//Función para crear las tarjetas con los personajes e imprimirlas en html
-function crearTarjetas(personajes) { 
-  personajes.forEach(characters => { //por cada objeto del objeto "characters" se ejecuta la siguiente función para imprimir la tarjeta dentro del contenedor "contenidoPersonajes":
-    contenidoPersonajes.innerHTML += `
-  <div class="tarjetas" id= ${characters.id}>
-          <h2 class="nombre">${characters.name}</h2>
-          <li class="casa"> Casa: ${characters.house}</li>
-          <li class="especie">Especie: ${characters.species}</li>
-          <li class="ascendencia">Ascendencia: ${characters.ancestry}</li>
-          <li class="genero">Género: ${characters.gender}</li>
-          <li class="fecha-nacimiento">Nacimiento: ${characters.birth}</li>
-          <li class="libros">Libros en los que aparece: ${characters.books_featured_in}</li>
-         </div>
-  `});
-}
 
 crearTarjetas(data.characters);//llamar a la función
 
@@ -127,6 +130,7 @@ ordenDescendente.addEventListener('selected', ordenarDesc () {
   
 })
 
+
 /*document.getElementById("enviarOrdenar").onclick = 
 function (){
   //if(document.getElementById(("desc").selected)) { 
@@ -137,8 +141,9 @@ function (){
 console.log(ordenDesc(characters.name));*/
 
 
-
-
+//Guardar valor - nombre del invitado
+//localStorage.setItem("nombreM");
+//localStorage.removeItem("nombreM")
 
 
 
@@ -151,4 +156,10 @@ console.log(ordenDesc(characters.name));*/
   contenidoPersonajes.innerHTML = '';
   listElements(filterDesc(characters.name));
 });*/
+
+
+//Mostrar valor almacenado  
+let nombreBienv= document.getElementById("mensaje-bienvenida");
+
+nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
 

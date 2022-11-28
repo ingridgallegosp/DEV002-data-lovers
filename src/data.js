@@ -1,7 +1,11 @@
 // estas funciones son de ejemplo
 
-//export const mainCharacters = (array) => {
-//  return 'example';
-//};
+
+export const example = () => {
+  return 'example';
+};
 
 
+export const anotherExample = () => {
+  return 'OMG';
+};
