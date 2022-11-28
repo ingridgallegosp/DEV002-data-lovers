@@ -58,6 +58,8 @@ main {
 
 .contenido {
     display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
     width: 100%;
     min-height: 612px;
     margin: 0px;
@@ -65,15 +67,6 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-
-}
-.contenido {
-    display: none;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 80%;
-    min-height: 500px;
     border: solid 1px black;
 }
 
@@ -123,20 +116,6 @@ h2 {
     font-size: 18px;
     text-transform: capitalize; 
 
-}
-
-/*tarjeta para personajes*/
-.card {
-    width: 100px;
-    height: 100px;
-    align-items: center;
-    justify-content: center;
-
-    background-color: rgba(217, 217, 217, 1);
-    border: #080808 solid 0.2px;
-    border-radius: 8px;
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
 }
 
 
