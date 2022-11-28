@@ -33,9 +33,6 @@ nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
 
 // MANIPULACIÓN PÁGINA INDEX/CONTENIDO
 
-const contenidoPersonajes = document.getElementById('contenidoPersonajes')//capturando contenidoPersonajes
-
-
 //Función para crear las tarjetas con los personajes e imprimirlas en html
 function crearTarjetas(personajes) { 
   personajes.forEach(characters => { //por cada objeto del objeto "characters" se ejecuta la siguiente función para imprimir la tarjeta dentro del contenedor "contenidoPersonajes":
@@ -68,8 +65,7 @@ personajesBtn.addEventListener('click', function () {
   contenidoHome.style.display = "none";
 })
 
-
-      let tarjetas = [];
+      /*let tarjetas = [];
       
       crearTarjetas (data.characters);
       function crearTarjetas (element) {
@@ -90,9 +86,8 @@ personajesBtn.addEventListener('click', function () {
         
       };
       
-
-
 crearTarjetas(data.characters);//llamar a la función
+*/
 
 //ORDENAR PERSONAJES
 
@@ -118,7 +113,6 @@ const ordenarDesc = (characters) => {
     return descendente;
   };
 
-  
 //capturar opciones
 
 const ordenAscendente = document.getElementById('asc'); //capturando opcion ascendente
@@ -126,10 +120,8 @@ const ordenDescendente = document.getElementById('desc'); //capturando opcion de
 
 // escoger opcion z-a 
 ordenDescendente.addEventListener('selected', ordenarDesc () {
-
   
 })
-
 
 /*document.getElementById("enviarOrdenar").onclick = 
 function (){
@@ -139,11 +131,6 @@ function (){
   }
 };
 console.log(ordenDesc(characters.name));*/
-
-
-//Guardar valor - nombre del invitado
-//localStorage.setItem("nombreM");
-//localStorage.removeItem("nombreM")
 
 
 
@@ -158,8 +145,4 @@ console.log(ordenDesc(characters.name));*/
 });*/
 
 
-//Mostrar valor almacenado  
-let nombreBienv= document.getElementById("mensaje-bienvenida");
-
-nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
 
