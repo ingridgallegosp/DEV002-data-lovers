@@ -16,14 +16,17 @@ function crearTarjetas(personajes) {
   personajes.forEach(characters => { //por cada objeto del objeto "characters" se ejecuta la siguiente función para imprimir la tarjeta dentro del contenedor "contenidoPersonajes":
     contenidoPersonajes.innerHTML += `
   <div class="tarjetas" id= ${characters.id}>
-          <h2 class="nombre">${characters.name}</h2>
-          <li class="casa"> Casa: ${characters.house}</li>
-          <li class="especie">Especie: ${characters.species}</li>
-          <li class="ascendencia">Ascendencia: ${characters.ancestry}</li>
-          <li class="genero">Género: ${characters.gender}</li>
-          <li class="fecha-nacimiento">Nacimiento: ${characters.birth}</li>
-          <li class="libros">Libros en los que aparece: ${characters.books_featured_in}</li>
-         </div>
+    <div class= "texto-tarjetas">
+      <h2 class="nombre">${characters.name}</h2>
+      <li class="casa"> Casa: ${characters.house}</li>
+      <li class="especie">Especie: ${characters.species}</li>
+      <li class="ascendencia">Ascendencia: ${characters.ancestry}</li>
+      <li class="genero">Género: ${characters.gender}</li>
+      <li class="fecha-nacimiento">Nacimiento: ${characters.birth}</li>
+      <li class="fecha-muerte">Muerte: ${characters.death}</li>
+      <li class="libros">Libros en los que aparece: ${characters.books_featured_in}</li>
+    </div>
+  </div>
   `});
 }
 crearTarjetas(data.characters);//llamar a la función
