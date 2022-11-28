@@ -10,8 +10,7 @@ document.getElementById('empezar').onclick =
   function () {
 
 
-      const nombre = document.getElementById('nombreInvitado').value;
-
+    const nombre = document.getElementById('nombreInvitado').value;
 
     console.log (nombre)
 
@@ -22,17 +21,4 @@ document.getElementById('empezar').onclick =
           window.location.href="contenido.html" ; 
         } 
         return nombre
-
-
-    //const nombre = document.getElementById('nombreInvitado').value;
-
-    console.log(nombre)
-
-    if (!nombre) {
-      alert("No olvides ingresar tu nombre");
-    } else {
-      window.localStorage.setItem("nombreM", nombre)
-      window.location.href = "contenido.html";
-    }
-    return nombre
   };
