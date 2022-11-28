@@ -4,7 +4,9 @@ import data from './data/harrypotter/harry.js';
 
 /*import { example } from './data.js';
 console.log(example, data);*/
-
+/*document.getElementById('ordenAsdDesc').onsubmit = function (event) {
+  event.preventDefault()
+};*/
 
 const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
 const contenidoHome = document.getElementById('contenidoHome'); //capturando contenidoHome
@@ -102,24 +104,26 @@ const characters = (data) => {
 console.log(characters);
 
 //export funcion que ordena
-const filterAsc = (characters) => {
-  let ascendente = characters.sort(function(a, b) {
+const filterDesc = (characters) => {
+  let descendente = characters.sort(function(a, b) {
     //return (a-b)
-    return parseFloat(a.name) - parseFloat(b.name);
+    return (b.name - a.name)
+    //return parseFloat(b.name) - parseFloat(a.name);
     //return a.nombre.localeCompare(b.nombre); 
     //return((a.name < b.name)? -1: ((a.name > b.name)? 1: 0));
     })
-    return ascendente;
+    return descendente;
   };
 
-// escoger opcion a-z y hacer clic en el boton
+/*// escoger opcion z-a y hacer clic en el boton
 document.getElementById("enviarOrdenar").onclick = 
 function (){
-  if(document.querySelector('option[value="ascendente"]:checked')){ 
-    return filterAsc(characters.name);
+  //if(document.getElementById(("desc").selected)) { 
+    if(document.querySelector('option[value="descendente"]:selected')){ 
+    return filterDesc(characters.name);
   }
 };
-console.log(filterAsc(characters.name));
+console.log(filterDesc(characters.name));*/
 
 
 
@@ -130,10 +134,10 @@ console.log(filterAsc(characters.name));
   /*orderAsc.addEventListener("click", () => {
     list.innerHTML = '';
     listElements(filterAsc(characters.name));
+});*/
+
+orderDesc.addEventListener("click", () => {
+  contenidoPersonajes.innerHTML = '';
+  listElements(filterDesc(characters.name));
 });
 
-orderDescendent.addEventListener("click", () => {
-  list.innerHTML = '';
-  listElements(filterDescendent(characters.name));
-});
-*/
