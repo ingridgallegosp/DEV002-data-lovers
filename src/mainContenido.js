@@ -9,61 +9,66 @@ const contenidoPersonajes = document.getElementById('contenidoPersonajes'); //ca
 const contenidoHome = document.getElementById('contenidoHome'); //capturando contenidoHome
 const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
 const personajesBtn = document.getElementById('personajesBtn'); //capturando personajesBtn
-
-// IR A PAGINA DE INICIO
-
-
 const salidaBtn = document.getElementById('salidaBtn'); //capturando salidaBtn
 salidaBtn.addEventListener('click', function () {
   window.location.href = "index.html";
-})
-
-
-//Guardar valor - nombre del invitado
-//localStorage.setItem("nombreM");
-//localStorage.removeItem("nombreM")
-
-//Obtener valor almacenado local Storage 
-let nombreObtenido = localStorage.getItem("nombreM");
+});
+const nombreObtenido = localStorage.getItem("nombreM"); //Obtener valor almacenado local Storage 
 //console.log(nombreObtenido)
-
-//Mostrar valor almacenado  
-let nombreBienv= document.getElementById("mensaje-bienvenida");
+const nombreBienv= document.getElementById("mensaje-bienvenida"); //Mostrar valor almacenado  
 nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
 
-// MANIPULACIÓN PÁGINA INDEX/CONTENIDO
-
-//Función para crear las tarjetas con los personajes e imprimirlas en html
-function crearTarjetas(personajes) { 
-  personajes.forEach(characters => { //por cada objeto del objeto "characters" se ejecuta la siguiente función para imprimir la tarjeta dentro del contenedor "contenidoPersonajes":
-    contenidoPersonajes.innerHTML += `
-  <div class="tarjetas" id= ${characters.id}>
-    <div class= "texto-tarjetas">
-      <h2 class="nombre">${characters.name}</h2>
-      <li class="casa"> Casa: ${characters.house}</li>
-      <li class="especie">Especie: ${characters.species}</li>
-      <li class="ascendencia">Ascendencia: ${characters.ancestry}</li>
-      <li class="genero">Género: ${characters.gender}</li>
-      <li class="fecha-nacimiento">Nacimiento: ${characters.birth}</li>
-      <li class="fecha-muerte">Muerte: ${characters.death}</li>
-      <li class="libros">Libros en los que aparece: ${characters.books_featured_in}</li>
-    </div>
-  </div>
-  `});
-}
-crearTarjetas(data.characters);//llamar a la función
+//capturar opciones de combobox
+const ordenAscendente = document.getElementById('asc'); //capturando opcion ascendente
+const ordenDescendente = document.getElementById('desc'); //capturando opcion descendente
+// escoger opcion z-a 
+ordenDescendente.addEventListener('click', function () {
+  ordenarDesc(data);
+});
+ordenAscendente.addEventListener('click', function () {
+    ordenarAsc(data.characters.name);
+});
 
 //Evento click de homeBtn despliega contendioHome y oculta contenidoPersonajes
 homeBtn.addEventListener('click', function () {
   contenidoHome.style.display = "flex";
   contenidoPersonajes.style.display = "none";
-})
+});
 
 //Evento click de personajesBtn despliega contendioPersonajes y oculta contenidoHome
 personajesBtn.addEventListener('click', function () {
   contenidoPersonajes.style.display = "flex";
   contenidoHome.style.display = "none";
-})
+  crearTarjetas(data.characters);
+});
+
+//Función para crear las tarjetas con los personajes e imprimirlas en html
+
+ //vamos a ir inyectando los valores de abajo
+function crearTarjetas (element) {
+  //console.log(element);
+  let tarjetas = [];
+  element.forEach(characters => { //template literaios
+  tarjetas += ` 
+              <div class="tarjetas" id= ${characters.id}>
+                <div class= "texto-tarjetas">
+                <h2 class="nombre">${characters.name}</h2>
+                <li class="casa"> Casa: ${characters.house}</li>
+                <li class="especie">Especie: ${characters.species}</li>
+                <li class="ascendencia">Ascendencia: ${characters.ancestry}</li>
+                <li class="genero">Género: ${characters.gender}</li>
+                <li class="fecha-nacimiento">Nacimiento: ${characters.birth}</li>
+                <li class="fecha-muerte">Muerte: ${characters.death}</li>
+                <li class="libros">Libros en los que aparece: ${characters.books_featured_in}</li>
+                </div>
+              </div>
+              `
+  });
+  return console.log(tarjetas)
+};
+//console.log(tarjetas)
+//imprimir tarjetas
+
 
       /*let tarjetas = [];
       
@@ -90,7 +95,7 @@ crearTarjetas(data.characters);//llamar a la función
 */
 
 //ORDENAR PERSONAJES
-
+/*
 //let charac =["a", "d", "b"] 
 //let organizarPersonaje = charac.sort();
 //console.log(organizarPersonaje) regresa abd 
