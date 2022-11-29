@@ -12,12 +12,10 @@ const personajesBtn = document.getElementById('personajesBtn'); //capturando per
 
 // IR A PAGINA DE INICIO
 
-
 const salidaBtn = document.getElementById('salidaBtn'); //capturando salidaBtn
 salidaBtn.addEventListener('click', function () {
   window.location.href = "index.html";
 })
-
 
 //Guardar valor - nombre del invitado
 //localStorage.setItem("nombreM");
@@ -31,29 +29,9 @@ let nombreObtenido = localStorage.getItem("nombreM");
 let nombreBienv= document.getElementById("mensaje-bienvenida");
 nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
 
+
 // MANIPULACIÓN PÁGINA INDEX/CONTENIDO
 
-//Función para crear las tarjetas con los personajes e imprimirlas en html
-/*let tarjetas = [];
-function crearTarjetas(personajes) { 
-  personajes.forEach(characters => { //por cada objeto del objeto "characters" se ejecuta la siguiente función para imprimir la tarjeta dentro del contenedor "contenidoPersonajes":
-   tarjetas += `
-  <div class="tarjetas" id= ${characters.id}>
-    <div class= "texto-tarjetas">
-      <h2 class="nombre">${characters.name}</h2>
-      <li class="casa"> Casa: ${characters.house}</li>
-      <li class="especie">Especie: ${characters.species}</li>
-      <li class="ascendencia">Ascendencia: ${characters.ancestry}</li>
-      <li class="genero">Género: ${characters.gender}</li>
-      <li class="fecha-nacimiento">Nacimiento: ${characters.birth}</li>
-      <li class="fecha-muerte">Muerte: ${characters.death}</li>
-      <li class="libros">Libros en los que aparece: ${characters.books_featured_in}</li>
-    </div>
-  </div>
-  `});
-  contenidoPersonajes.innerHTML = tarjetas;
-}
-crearTarjetas(data.characters);//llamar a la función*/
 
 //Evento click de homeBtn despliega contendioHome y oculta contenidoPersonajes
 homeBtn.addEventListener('click', function () {
@@ -65,12 +43,14 @@ homeBtn.addEventListener('click', function () {
 personajesBtn.addEventListener('click', function () {
   contenidoPersonajes.style.display = "flex";
   contenidoHome.style.display = "none";
+  crearTarjetas(data.characters);
+  //NO APARECE EL FORMULARIO FILTRAR DATOS
 })
-   
-    
 
-  
-//export funcion que define personajes
+//})
+   
+
+//export funcion que define personajes :( no funciona
 /*let charactersHP = []; 
 charactersHP = (data) => {
     return(data.characters);
@@ -79,10 +59,8 @@ console.log(charactersHP);*/
 
 // pintar tarjetas
 let tarjetas = []; //vamos a ir inyectando los valores de abajo
-
 function crearTarjetas (element) {
   console.log(element);
-  const container = document.querySelector(".tarjetas");
   element.forEach(characters => { //template literaios
   tarjetas += ` 
               <div class="tarjetas" id= ${characters.id}>
@@ -90,15 +68,18 @@ function crearTarjetas (element) {
                 <h2 class="nombre">${characters.name}</h2>
                 <li class="casa"> Casa: ${characters.house}</li>
                 <li class="especie">Especie: ${characters.species}</li>
+                <li class="ascendencia">Ascendencia: ${characters.ancestry}</li>
+                <li class="genero">Género: ${characters.gender}</li>
+                <li class="fecha-nacimiento">Nacimiento: ${characters.birth}</li>
+                <li class="fecha-muerte">Muerte: ${characters.death}</li>
+                <li class="libros">Libros en los que aparece: ${characters.books_featured_in}</li>
                 </div>
               </div>
               `
   });
- 
   contenidoPersonajes.innerHTML= tarjetas;
-  crearTarjetas(characters);
-  
 };
+
 /*
 //ORDENAR PERSONAJES
 
