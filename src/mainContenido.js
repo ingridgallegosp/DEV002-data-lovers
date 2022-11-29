@@ -33,13 +33,11 @@ nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
 
 // MANIPULACIÓN PÁGINA INDEX/CONTENIDO
 
-const contenidoPersonajes = document.getElementById('contenidoPersonajes')//capturando contenidoPersonajes
-
-
 //Función para crear las tarjetas con los personajes e imprimirlas en html
+/*let tarjetas = [];
 function crearTarjetas(personajes) { 
   personajes.forEach(characters => { //por cada objeto del objeto "characters" se ejecuta la siguiente función para imprimir la tarjeta dentro del contenedor "contenidoPersonajes":
-    contenidoPersonajes.innerHTML += `
+   tarjetas += `
   <div class="tarjetas" id= ${characters.id}>
     <div class= "texto-tarjetas">
       <h2 class="nombre">${characters.name}</h2>
@@ -53,8 +51,9 @@ function crearTarjetas(personajes) {
     </div>
   </div>
   `});
+  contenidoPersonajes.innerHTML = tarjetas;
 }
-crearTarjetas(data.characters);//llamar a la función
+crearTarjetas(data.characters);//llamar a la función*/
 
 //Evento click de homeBtn despliega contendioHome y oculta contenidoPersonajes
 homeBtn.addEventListener('click', function () {
@@ -67,99 +66,71 @@ personajesBtn.addEventListener('click', function () {
   contenidoPersonajes.style.display = "flex";
   contenidoHome.style.display = "none";
 })
+   
+    
 
+  
+//export funcion que define personajes
+/*let charactersHP = []; 
+charactersHP = (data) => {
+    return(data.characters);
+};
+console.log(charactersHP);*/
 
-      let tarjetas = [];
-      
-      crearTarjetas (data.characters);
-      function crearTarjetas (element) {
-        console.log(element);
+// pintar tarjetas
+let tarjetas = []; //vamos a ir inyectando los valores de abajo
 
-        const container = document.querySelector(".tarjeta");
-        element.forEach(characters => {
-        tarjetas += `
-                  <article class="card" id= "card">
-                    <div class="cardImage" id="card-1"> </div>
-                    <h2> ${characters.name}</h2>
-                    <p> ${characters.house}</p>
-                  </article>
-                  `
-        });
-       
-        contenidoPersonajes.innerHTML= tarjetas;
-        
-      };
-      
-
-
-crearTarjetas(data.characters);//llamar a la función
-
+function crearTarjetas (element) {
+  console.log(element);
+  const container = document.querySelector(".tarjetas");
+  element.forEach(characters => { //template literaios
+  tarjetas += ` 
+              <div class="tarjetas" id= ${characters.id}>
+                <div class= "texto-tarjetas">
+                <h2 class="nombre">${characters.name}</h2>
+                <li class="casa"> Casa: ${characters.house}</li>
+                <li class="especie">Especie: ${characters.species}</li>
+                </div>
+              </div>
+              `
+  });
+ 
+  contenidoPersonajes.innerHTML= tarjetas;
+  crearTarjetas(characters);
+  
+};
+/*
 //ORDENAR PERSONAJES
 
 //let charac =["a", "d", "b"] 
 //let organizarPersonaje = charac.sort();
 //console.log(organizarPersonaje) regresa abd 
-  
-//export funcion que define personajes
-const characters = (data) => {
-    return(data.characters);
-  };
-console.log(characters);
 
-//export funcion que ordena
-const ordenarDesc = (characters) => {
-  const descendente = characters.sort(function(a, b) {
-    //return (a-b)
-    return (b.name - a.name)
-    //return parseFloat(b.name) - parseFloat(a.name);
-    //return a.nombre.localeCompare(b.nombre); 
-    //return((a.name < b.name)? -1: ((a.name > b.name)? 1: 0));
+//export funcion que ordena asc y desc
+const ordenarAsc = (array) => {
+  const ascendente = array.sort(function(a, b) {
+    return a.nombre.localeCompare(b.nombre); //local compare compara 
+    })
+    return ascendente;
+  };
+  ordenarAsc(charactersHP);
+
+const ordenarDesc = (array) => {
+  const descendente = array.sort(function(a, b) {
+    return b.nombre.localeCompare(a.nombre); 
     })
     return descendente;
   };
+  ordenarDesc(charactersHP);
 
-  
-//capturar opciones
-
+//capturar opciones de combobox
 const ordenAscendente = document.getElementById('asc'); //capturando opcion ascendente
 const ordenDescendente = document.getElementById('desc'); //capturando opcion descendente
 
-// escoger opcion z-a 
-ordenDescendente.addEventListener('selected', ordenarDesc () {
+/* escoger opcion z-a 
+ordenDescendente.addEventListener('click', function () {
+  ordenarDesc(characters.name);
 
-  
-})
-
-
-/*document.getElementById("enviarOrdenar").onclick = 
-function (){
-  //if(document.getElementById(("desc").selected)) { 
-    if(document.querySelector('option[value="descendente"]:selected')){ 
-    return ordenDesc(characters.name);
-  }
-};
-console.log(ordenDesc(characters.name));*/
-
-
-//Guardar valor - nombre del invitado
-//localStorage.setItem("nombreM");
-//localStorage.removeItem("nombreM")
-
-
-
-  /*orderAsc.addEventListener("click", () => {
-    list.innerHTML = '';
-    listElements(filterAsc(characters.name));
-});*/
-
-/*orderDesc.addEventListener("click", () => {
-  contenidoPersonajes.innerHTML = '';
-  listElements(filterDesc(characters.name));
-});*/
-
-
-//Mostrar valor almacenado  
-let nombreBienv= document.getElementById("mensaje-bienvenida");
-
-nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
-
+  contenidoPersonajes.innerHTML = tarjetas
+}); 
+*/
