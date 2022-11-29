@@ -77,7 +77,7 @@ h2 {
     background-repeat: no-repeat;
 }
 
-#ordenAscDesc {
+.ordenAscDesc {
     display:flex;
     flex-direction: row;
     justify-content: center;

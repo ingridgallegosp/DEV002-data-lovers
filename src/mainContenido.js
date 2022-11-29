@@ -32,7 +32,6 @@ nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
 
 // MANIPULACIÓN PÁGINA INDEX/CONTENIDO
 
-
 //Evento click de homeBtn despliega contendioHome y oculta contenidoPersonajes
 homeBtn.addEventListener('click', function () {
   contenidoHome.style.display = "flex";
@@ -46,9 +45,6 @@ personajesBtn.addEventListener('click', function () {
   crearTarjetas(data.characters);
   //NO APARECE EL FORMULARIO FILTRAR DATOS
 })
-
-//})
-   
 
 //export funcion que define personajes :( no funciona
 /*let charactersHP = []; 
@@ -80,7 +76,7 @@ function crearTarjetas (element) {
   contenidoPersonajes.innerHTML= tarjetas;
 };
 
-/*
+
 //ORDENAR PERSONAJES
 
 //let charac =["a", "d", "b"] 
@@ -94,24 +90,25 @@ const ordenarAsc = (array) => {
     })
     return ascendente;
   };
-  ordenarAsc(charactersHP);
 
-const ordenarDesc = (array) => {
-  const descendente = array.sort(function(a, b) {
-    return b.nombre.localeCompare(a.nombre); 
-    })
-    return descendente;
-  };
-  ordenarDesc(charactersHP);
+function ordenarDesc(array) {
+  const descendente = array.sort(function (a, b) {
+    return b.nombre.localeCompare(a.nombre);
+  });
+  return descendente;
+}
 
 //capturar opciones de combobox
 const ordenAscendente = document.getElementById('asc'); //capturando opcion ascendente
 const ordenDescendente = document.getElementById('desc'); //capturando opcion descendente
 
-/* escoger opcion z-a 
-ordenDescendente.addEventListener('click', function () {
-  ordenarDesc(characters.name);
+// escoger opcion z-a 
+ordenDescendente.addEventListener('selected', function () {
+  ordenarDesc(data);
+});
+  ordenAscendente.addEventListener('selected', function () {
+    ordenarAsc(data.characters.name);
 
-  contenidoPersonajes.innerHTML = tarjetas
-}); 
-*/
+  //contenidoPersonajes.innerHTML = tarjetas
+});
+
