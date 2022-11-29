@@ -43,20 +43,17 @@ personajesBtn.addEventListener('click', function () {
   contenidoPersonajes.style.display = "flex";
   contenidoHome.style.display = "none";
   crearTarjetas(data.characters);
-  //NO APARECE EL FORMULARIO FILTRAR DATOS
 })
 
 //export funcion que define personajes :( no funciona
-/*let charactersHP = []; 
-charactersHP = (data) => {
-    return(data.characters);
-};
-console.log(charactersHP);*/
+let charactersHP = []; 
+charactersHP = data.characters;
+console.log(charactersHP);
 
 // pintar tarjetas
 let tarjetas = []; //vamos a ir inyectando los valores de abajo
 function crearTarjetas (element) {
-  console.log(element);
+  //console.log(element);
   element.forEach(characters => { //template literaios
   tarjetas += ` 
               <div class="tarjetas" id= ${characters.id}>
@@ -75,6 +72,14 @@ function crearTarjetas (element) {
   });
   contenidoPersonajes.innerHTML= tarjetas;
 };
+// PRUEBA PARA DIVIDIR CODIGO
+
+//generar arreglo que contenga plantilla de las tarjetas
+
+//funcion que recorra los elementos
+
+
+
 
 
 //ORDENAR PERSONAJES
@@ -84,31 +89,35 @@ function crearTarjetas (element) {
 //console.log(organizarPersonaje) regresa abd 
 
 //export funcion que ordena asc y desc
+
 const ordenarAsc = (array) => {
   const ascendente = array.sort(function(a, b) {
-    return a.nombre.localeCompare(b.nombre); //local compare compara 
+    return a.name.localeCompare(b.name); //local compare compara str
     })
     return ascendente;
   };
+  console.log(ordenarAsc(charactersHP));
 
 function ordenarDesc(array) {
   const descendente = array.sort(function (a, b) {
-    return b.nombre.localeCompare(a.nombre);
+    return b.name.localeCompare(a.name);
   });
   return descendente;
 }
+console.log(ordenarAsc(charactersHP));
 
-//capturar opciones de combobox
+/*//capturar opciones de combobox
 const ordenAscendente = document.getElementById('asc'); //capturando opcion ascendente
 const ordenDescendente = document.getElementById('desc'); //capturando opcion descendente
 
-// escoger opcion z-a 
-ordenDescendente.addEventListener('selected', function () {
-  ordenarDesc(data);
+// escoger opcion a-z y z-a 
+ordenAscendente.addEventListener('click', function () {
+  contenidoPersonajes.innerHTML = ordenarAsc(cdata.characters.name);
 });
-  ordenAscendente.addEventListener('selected', function () {
-    ordenarAsc(data.characters.name);
 
-  //contenidoPersonajes.innerHTML = tarjetas
+ordenDescendente.addEventListener('click', function () {
+  contenidoPersonajes.innerHTML = ordenarDesc(data.characters.name);
 });
+
+*/  
 
