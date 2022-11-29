@@ -9,10 +9,10 @@ const contenidoPersonajes = document.getElementById('contenidoPersonajes'); //ca
 const contenidoHome = document.getElementById('contenidoHome'); //capturando contenidoHome
 const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
 const personajesBtn = document.getElementById('personajesBtn'); //capturando personajesBtn
-
-// IR A PAGINA DE INICIO
-
 const salidaBtn = document.getElementById('salidaBtn'); //capturando salidaBtn
+var personajesHP = ""
+var prueba = 0
+
 salidaBtn.addEventListener('click', function () {
   window.location.href = "index.html";
 })
@@ -26,7 +26,7 @@ let nombreObtenido = localStorage.getItem("nombreM");
 //console.log(nombreObtenido)
 
 //Mostrar valor almacenado  
-let nombreBienv= document.getElementById("mensaje-bienvenida");
+let nombreBienv = document.getElementById("mensaje-bienvenida");
 nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
 
 
@@ -42,20 +42,21 @@ homeBtn.addEventListener('click', function () {
 personajesBtn.addEventListener('click', function () {
   contenidoPersonajes.style.display = "flex";
   contenidoHome.style.display = "none";
-  crearTarjetas(data.characters);
+  contenidoPersonajes.innerHTML = crearTarjetas(data.characters);
 })
 
 //export funcion que define personajes :( no funciona
-let charactersHP = []; 
+let charactersHP = [];
 charactersHP = data.characters;
 console.log(charactersHP);
+console.log(prueba);
 
 // pintar tarjetas
 let tarjetas = []; //vamos a ir inyectando los valores de abajo
-function crearTarjetas (element) {
+function crearTarjetas(element) {
   //console.log(element);
   element.forEach(characters => { //template literaios
-  tarjetas += ` 
+    tarjetas += ` 
               <div class="tarjetas" id= ${characters.id}>
                 <div class= "texto-tarjetas">
                 <h2 class="nombre">${characters.name}</h2>
@@ -70,16 +71,15 @@ function crearTarjetas (element) {
               </div>
               `
   });
-  contenidoPersonajes.innerHTML= tarjetas;
+  return tarjetas
 };
+console.log(personajesHP)
+
 // PRUEBA PARA DIVIDIR CODIGO
 
 //generar arreglo que contenga plantilla de las tarjetas
 
 //funcion que recorra los elementos
-
-
-
 
 
 //ORDENAR PERSONAJES
@@ -91,12 +91,12 @@ function crearTarjetas (element) {
 //export funcion que ordena asc y desc
 
 const ordenarAsc = (array) => {
-  const ascendente = array.sort(function(a, b) {
+  const ascendente = array.sort(function (a, b) {
     return a.name.localeCompare(b.name); //local compare compara str
-    })
-    return ascendente;
-  };
-  console.log(ordenarAsc(charactersHP));
+  })
+  return ascendente;
+};
+//console.log(ordenarAsc(charactersHP));
 
 function ordenarDesc(array) {
   const descendente = array.sort(function (a, b) {
@@ -104,20 +104,27 @@ function ordenarDesc(array) {
   });
   return descendente;
 }
-console.log(ordenarAsc(charactersHP));
+
+const ordenAscendente = document.getElementById('asc'); //capturando opcion ascendente
+//escoger opcion a-z y z-a 
+ordenAscendente.addEventListener('change', function () {
+  console.log(this.options[select.selectedIndex]
+  )
+  //contenidoPersonajes.innerHTML = crearTarjetas(ordenarAsc(data.characters.name));
+});
+
+
+//console.log(ordenarAsc(charactersHP));
 
 /*//capturar opciones de combobox
-const ordenAscendente = document.getElementById('asc'); //capturando opcion ascendente
+
 const ordenDescendente = document.getElementById('desc'); //capturando opcion descendente
 
-// escoger opcion a-z y z-a 
-ordenAscendente.addEventListener('click', function () {
-  contenidoPersonajes.innerHTML = ordenarAsc(cdata.characters.name);
-});
+
 
 ordenDescendente.addEventListener('click', function () {
   contenidoPersonajes.innerHTML = ordenarDesc(data.characters.name);
 });
 
-*/  
+*/
 
