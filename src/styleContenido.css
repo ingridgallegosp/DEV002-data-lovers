@@ -45,6 +45,10 @@ h2 {
     justify-content: center;
     width: 25%;
 }
+.ordenAscDesc {
+    height: 5%;
+    width: 10%;
+}
 
 #contenidoHome {
     display: flex;
