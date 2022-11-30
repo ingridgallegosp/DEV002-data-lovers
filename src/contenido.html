@@ -17,58 +17,65 @@
     <h4 id="nombrePagina">Nombre de la página</h4>
   </header>
 
-  <main>
+  <main class="mainstyle">
     <!--Contenido principal. Info data-->
-
+    
+    <nav id="menuInferior">
+      <!--menú inferior-->
+      <div class="menu-inferior-btn">
+        <button id="personajesBtn">P</button>
+        <label for="pesonajesBtn">Personajes</label>
+        <button id="casasBtn">C</button>
+        <label for="casasBtn">Casas</label>
+        <!--<button class="click"  id="librosBtn">Libros</button>
+      <button class="click" id="hechizosYpocionesBtn">Hechizos y pociones</button> -->
+      </div>
+    </nav>
     
     <div class="contenido" id="contenidoHome">
       <!--Bienvenida-->
-
       <h2 id="mensaje-bienvenida"> Bienvenida/o NOMBRE</h2>
       <img src="imagenes/hedwig.png" alt="Lechuza" id="hedwig">
-
     </div>
+    
  
     <!--Personajes-->
+    <div class="ordenAscDesc" id="comboBox1"> 
+      <select class= "orden" id="orden">
+        <option id="select"value="">Ordenar según:</option>
+        <option id="asc"value="ascendente">Ascendente A-Z</option>
+        <option id="desc"value="descendente">Descendente Z-A</option>
+      </select>
+      <button id="ir">IR</button>
+    </div>
+
     <div class="contenido" id="contenidoPersonajes">
-    </div>
-    <div class="ordenAscDesc" > 
-        <select class= "orden" id="orden">
-          <option id="select"value="">Ordenar según:</option>
-          <option id="asc"value="ascendente">Ascendente A-Z</option>
-          <option id="desc"value="descendente">Descendente Z-A</option>
-        </select>
-        <button id="ir">IR</button>
+       <!--AQUI APARECEN TARJETAS DE LOS PERSONAJES-->
     </div>
 
-            <!--AQUI APARECEN TARJETAS DE LOS PERSONAJES-->
-  
-    
+    <!--Libros-->
+    <div class="contenidoMenuCasas" id="contenidoMenuCasas">
+      <nav id="menuCasas">
+        <button class="menu-casas" id="Gryffindor">Gryffindor</button>
+        <button class="menu-casas" id="Slytherin">Slytherin</button>
+        <button class="menu-casas" id="Hufflepuff">Hufflepuff</button>
+        <button class="menu-casas" id="Ravenclaw">Ravenclaw</button>
+      </nav>
+    </div> 
 
+    <div class="contenido" id="contenidoCasas"></div>
+      <!--AQUI APARECEN CASAS-->
+    </div> 
 
-    <!-- <div class="contenido" id="contenidoLibros">
-        AQUI APARECEN LIBROS
-      </div> 
-
-      <div class="contenido" id="contenidoCasas">
-        AQUI APARECE INFO DE LAS CASAS
+     <!-- <div class="contenido" id="contenidoLibros">
+        AQUI APARECE INFO DE LIBROS
       </div>
 
       <div class="contenido" id="contenidoHechizosYpociones">
         AQUI APARECE INFO DE HECHIZOS Y POCIONES
       </div> -->
 
-    <nav id="menuInferior">
-      <!--menú inferior-->
-      <div class="menu-inferior-btn">
-        <button id="personajesBtn">P</button>
-        <label for="pesonajesBtn">Personajes</label>
-
-      </div>
-      <!--<button class="click"  id="librosBtn">Libros</button>
-      <button class="click" id="casasBtn">Casas</button>
-      <button class="click" id="hechizosYpocionesBtn">Hechizos y pociones</button> -->
-    </nav>
+    
   </main>
 
   <footer> DATA LOVERS 2022 © MELANIE T - INGRID G </footer>

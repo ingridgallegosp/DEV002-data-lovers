@@ -10,15 +10,17 @@ const contenidoHome = document.getElementById('contenidoHome'); //capturando con
 const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
 const personajesBtn = document.getElementById('personajesBtn'); //capturando personajesBtn
 const salidaBtn = document.getElementById('salidaBtn'); //capturando salidaBtn
+const comboBox1 = document.getElementById('comboBox1'); //capturando contenido comboBox1
+const menuCasas = document.getElementById('contenidoMenuCasas'); //capturando menu casas
+const contenidoCasas = document.getElementById('contenidoCasas'); //capturando contenido casas
+const casasBtn = document.getElementById('casasBtn'); //capturando casasBtn
 
 //Guardar valor - nombre del invitado
 //localStorage.setItem("nombreM");
 //localStorage.removeItem("nombreM")
 
-
 let nombreObtenido = localStorage.getItem("nombreM");//Obtener valor almacenado local Storage 
 //console.log(nombreObtenido)
-
 
 let nombreBienv = document.getElementById("mensaje-bienvenida");//Mostrar valor almacenado  
 nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
@@ -33,14 +35,31 @@ salidaBtn.addEventListener('click', function () {
 homeBtn.addEventListener('click', function () {
   contenidoHome.style.display = "flex";
   contenidoPersonajes.style.display = "none";
+  contenidoCasas.style.display = "none";
+  comboBox1.style.display = "none";
+  menuCasas.style.display = "none";
 })
 
 //Evento click de personajesBtn despliega contendioPersonajes y oculta contenidoHome
 personajesBtn.addEventListener('click', function () {
   contenidoPersonajes.style.display = "flex";
+  comboBox1.style.display = "flex";
   contenidoHome.style.display = "none";
+  contenidoCasas.style.display = "none";
+  menuCasas.style.display = "none";
   contenidoPersonajes.innerHTML = crearTarjetas(data.characters);
 })
+
+
+//Evento click de casasBtn despliega contendioCasas y oculta contenidoHome
+casasBtn.addEventListener('click', function () {
+  contenidoCasas.style.display = "flex";
+  menuCasas.style.display = "flex";
+  contenidoHome.style.display = "none";
+  contenidoPersonajes.style.display = "none";
+  comboBox1.style.display = "none";
+});
+
 
 //export funcion que define personajes :( no funciona
 let charactersHP = [];
@@ -49,10 +68,9 @@ charactersHP = data.characters;
 
 
 // pintar tarjetas
- //vamos a ir inyectando los valores de abajo
 function crearTarjetas(element) {
   //console.log(element);
-  let tarjetas = [];
+  let tarjetas = []; //vamos a ir inyectando los valores de abajo
   element.forEach(characters => { //template literaios
     tarjetas += ` 
               <div class="tarjetas" id= ${characters.id}>
@@ -72,13 +90,6 @@ function crearTarjetas(element) {
   return tarjetas
 };
 //console.log(personajesHP)
-
-// PRUEBA PARA DIVIDIR CODIGO
-
-//generar arreglo que contenga plantilla de las tarjetas
-
-//funcion que recorra los elementos
-
 
 //ORDENAR PERSONAJES
 
@@ -109,20 +120,8 @@ console.log(select);
 
 const opcionCambiada = () => {
   console.log("cambio");
-  //contenidoPersonajes.innerHTML = crearTarjetas(ordenarAsc(data.characters.name));
 };
 select.addEventListener("change", opcionCambiada);
-
-const mostrar = () => {
-  const indice = select.selectedIndex;
-  if (indice === -1) return; // Esto es cuando no hay elementos
-  const opcionSeleccionada = select.options[indice];
-  alert(`Texto: ${opcionSeleccionada.text}. Valor: ${opcionSeleccionada.value}`);
-};
-/*
-document.querySelector("#ir").addEventListener('click', function () {
-  contenidoPersonajes.innerHTML = crearTarjetas(ordenarAsc(charactersHP))
-});*/
 
 document.getElementById("ir").addEventListener('click', function () {
   let indice = select.selectedIndex;
@@ -142,17 +141,42 @@ document.getElementById("ir").addEventListener('click', function () {
 
 
 
-//console.log(ordenarAsc(charactersHP));
-
-/*//capturar opciones de combobox
-
-const ordenDescendente = document.getElementById('desc'); //capturando opcion descendente
-
-
-
-ordenDescendente.addEventListener('click', function () {
-  contenidoPersonajes.innerHTML = ordenarDesc(data.characters.name);
+//filtrar PERSONAJES por casas
+/*const filtrarGryffindor = charactersHP.filter(
+  function (charactersHP) {
+  return (charactersHP.house == "Gryffindor");
 });
+console.log(filtrarGryffindor);  */
 
-*/
+const filtrarGryffindor = charactersHP.filter(charactersHP => charactersHP.house == "Gryffindor");
+//console.log(filtrarGryffindor);  
+
+const filtrarSlytherin = charactersHP.filter(charactersHP => charactersHP.house == "Slytherin");
+//console.log(filtrarSlytherin); 
+
+const filtrarHufflepuff = charactersHP.filter(charactersHP => charactersHP.house == "Hufflepuff");
+//console.log(filtrarHufflepuff); 
+
+const filtrarRavenclaw = charactersHP.filter(charactersHP => charactersHP.house == "Ravenclaw");
+//console.log(filtrarRavenclaw); 
+
+
+document.getElementById("Gryffindor").addEventListener('click', function () {
+  contenidoCasas.innerHTML = ""
+  contenidoCasas.innerHTML = crearTarjetas(filtrarGryffindor)
+});
+document.getElementById("Slytherin").addEventListener('click', function () {
+  contenidoCasas.innerHTML = ""
+  contenidoCasas.innerHTML = crearTarjetas(filtrarSlytherin)
+});
+document.getElementById("Hufflepuff").addEventListener('click', function () {
+  contenidoCasas.innerHTML = ""
+  contenidoCasas.innerHTML = crearTarjetas(filtrarHufflepuff)
+});
+document.getElementById("Ravenclaw").addEventListener('click', function () {
+  contenidoCasas.innerHTML = ""
+  contenidoCasas.innerHTML = crearTarjetas(filtrarRavenclaw)
+});
+    
+
 
