@@ -177,6 +177,7 @@ document.getElementById("Ravenclaw").addEventListener('click', function () {
   contenidoCasas.innerHTML = ""
   contenidoCasas.innerHTML = crearTarjetas(filtrarRavenclaw)
 });
+
     
 
 
