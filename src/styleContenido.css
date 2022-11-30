@@ -75,7 +75,7 @@ h2 {
     background-repeat: no-repeat;
 }
 
-.ordenAscDesc {
+.ordenAscDesc { /*esro es nuevo*/
     display:none;
     flex-direction: row;
     justify-content: center;
@@ -87,7 +87,7 @@ h2 {
 }
 
 
-.contenidoMenuCasas
+.contenidoMenuCasas /*esro es nuevo*/
 {
     display:none;
     flex-direction: row;
