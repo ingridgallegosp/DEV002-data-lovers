@@ -49,10 +49,10 @@ personajesBtn.addEventListener('click', function () {
 });
 
 
-  contenidoCasas.style.display = "none";
+  /*contenidoCasas.style.display = "none";
   comboBox1.style.display = "none";
   menuCasas.style.display = "none";
-})
+})*/
 
 //Evento click de personajesBtn despliega contendioPersonajes y oculta contenidoHome
 personajesBtn.addEventListener('click', function () {
@@ -114,28 +114,6 @@ function crearTarjetas(element) {
 
 //ORDENAR PERSONAJES
 
-//let charac =["a", "d", "b"] 
-//let organizarPersonaje = charac.sort();
-//console.log(organizarPersonaje) regresa abd 
-
-//export funcion que ordena asc y desc
-
-const ordenarAsc = (array) => {
-  const ascendente = array.sort(function (a, b) {
-    return a.name.localeCompare(b.name); //local compare compara str
-  })
-  return ascendente;
-};
-//console.log(ordenarAsc(charactersHP));
-
-const ordenarDesc = (array) => {
-  const descendente = array.sort(function (a, b) {
-    return b.name.localeCompare(a.name);
-  });
-  return descendente;
-}
-
-
 //Seleccion para ordenar alfabeticamente
 const select = document.querySelector("#orden") //capturando opcion ascendente
 //escoger opcion a-z y z-a 
@@ -145,12 +123,12 @@ console.log(select);
 document.getElementById("orden").addEventListener('change', function () {
 
 
-const opcionCambiada = () => {
+/*const opcionCambiada = () => {
   console.log("cambio");
 };
 select.addEventListener("change", opcionCambiada);
 
-document.getElementById("ir").addEventListener('click', function () {
+document.getElementById("ir").addEventListener('click', function () {*/
 
   let indice = select.selectedIndex;
   //console.log(indice)
