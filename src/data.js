@@ -18,3 +18,4 @@ export const ordenarDesc = (array) => {
   });
   return descendente;
 };
+//console.log(ordenarDesc(charactersHP));
