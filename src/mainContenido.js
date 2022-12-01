@@ -1,12 +1,12 @@
-
 //import { filterAsc, filterDesct } from './data.js'; //organizarPersonaje
 import data from './data/harrypotter/harry.js';
+import { ordenarAsc, ordenarDesc } from './data.js';
 
-/*import { example } from './data.js';
-console.log(example, data);*/
+//console.log(example, data);
 
-const contenidoPersonajes = document.getElementById('contenidoPersonajes'); //capturando contenidoPersonajes
 const contenidoHome = document.getElementById('contenidoHome'); //capturando contenidoHome
+const contenidoPersonajes = document.getElementById('contenidoPersonajes'); //capturando contenidoPersonajes
+const contenidoTarjetas = document.getElementById("tarjetas");
 const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
 const personajesBtn = document.getElementById('personajesBtn'); //capturando personajesBtn
 const salidaBtn = document.getElementById('salidaBtn'); //capturando salidaBtn
@@ -14,6 +14,14 @@ const comboBox1 = document.getElementById('comboBox1'); //capturando contenido c
 const menuCasas = document.getElementById('contenidoMenuCasas'); //capturando menu casas
 const contenidoCasas = document.getElementById('contenidoCasas'); //capturando contenido casas
 const casasBtn = document.getElementById('casasBtn'); //capturando casasBtn
+
+
+window.addEventListener("load", function () {
+  let nombreObtenido = localStorage.getItem("nombreM");//Obtener valor almacenado local Storage 
+  //console.log(nombreObtenido)
+  let nombreBienv = document.getElementById("mensaje-bienvenida");//Mostrar valor almacenado  
+  nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
+});
 
 //Guardar valor - nombre del invitado
 //localStorage.setItem("nombreM");
@@ -25,16 +33,22 @@ let nombreObtenido = localStorage.getItem("nombreM");//Obtener valor almacenado 
 let nombreBienv = document.getElementById("mensaje-bienvenida");//Mostrar valor almacenado  
 nombreBienv.innerHTML = "Bienvenida " + nombreObtenido;
 
+
 salidaBtn.addEventListener('click', function () {
   window.location.href = "index.html";
-})
-
-// MANIPULACIÓN PÁGINA INDEX/CONTENIDO
-
-//Evento click de homeBtn despliega contendioHome y oculta contenidoPersonajes
+});
 homeBtn.addEventListener('click', function () {
   contenidoHome.style.display = "flex";
   contenidoPersonajes.style.display = "none";
+
+});
+personajesBtn.addEventListener('click', function () {
+  contenidoPersonajes.style.display = "block";
+  contenidoHome.style.display = "none";
+  contenidoTarjetas.innerHTML = crearTarjetas(ordenarAsc(charactersHP));
+});
+
+
   contenidoCasas.style.display = "none";
   comboBox1.style.display = "none";
   menuCasas.style.display = "none";
@@ -62,19 +76,24 @@ casasBtn.addEventListener('click', function () {
 
 
 //export funcion que define personajes :( no funciona
+
 let charactersHP = [];
 charactersHP = data.characters;
 //console.log(charactersHP);
 
 
+
+// Plantilla tarjetas
+
 // pintar tarjetas
+
 function crearTarjetas(element) {
   //console.log(element);
   let tarjetas = []; //vamos a ir inyectando los valores de abajo
   element.forEach(characters => { //template literaios
     tarjetas += ` 
-              <div class="tarjetas" id= ${characters.id}>
-                <div class= "texto-tarjetas">
+              <div class="tarjeta" id= ${characters.id}>
+                <div class= "texto-tarjeta">
                 <h2 class="nombre">${characters.name}</h2>
                 <li class="casa"> Casa: ${characters.house}</li>
                 <li class="especie">Especie: ${characters.species}</li>
@@ -89,6 +108,8 @@ function crearTarjetas(element) {
   });
   return tarjetas
 };
+
+
 //console.log(personajesHP)
 
 //ORDENAR PERSONAJES
@@ -114,9 +135,15 @@ const ordenarDesc = (array) => {
   return descendente;
 }
 
+
+//Seleccion para ordenar alfabeticamente
 const select = document.querySelector("#orden") //capturando opcion ascendente
 //escoger opcion a-z y z-a 
 console.log(select);
+
+//Evento change llama a la funcion segun indice de seleccion
+document.getElementById("orden").addEventListener('change', function () {
+
 
 const opcionCambiada = () => {
   console.log("cambio");
@@ -124,19 +151,21 @@ const opcionCambiada = () => {
 select.addEventListener("change", opcionCambiada);
 
 document.getElementById("ir").addEventListener('click', function () {
+
   let indice = select.selectedIndex;
-  console.log(indice)
+  //console.log(indice)
   if (indice == 1) {
-    contenidoPersonajes.innerHTML = ""
-    contenidoPersonajes.innerHTML = crearTarjetas(ordenarAsc(charactersHP));
-    console.log(crearTarjetas(ordenarAsc(charactersHP)))
+    contenidoTarjetas.innerHTML = ""
+    contenidoTarjetas.innerHTML = crearTarjetas(ordenarAsc(charactersHP));
+    //console.log(crearTarjetas(ordenarAsc(charactersHP)))
   }
   else if (indice == 2) {
-    contenidoPersonajes.innerHTML = ""
-    contenidoPersonajes.innerHTML = crearTarjetas(ordenarDesc(charactersHP))
-    console.log(crearTarjetas(ordenarDesc(charactersHP)))
+    contenidoTarjetas.innerHTML = ""
+    contenidoTarjetas.innerHTML = crearTarjetas(ordenarDesc(charactersHP))
+    //console.log(crearTarjetas(ordenarDesc(charactersHP)))
   }
 });
+
 
 
 
@@ -179,5 +208,4 @@ document.getElementById("Ravenclaw").addEventListener('click', function () {
 });
 
     
-
 
