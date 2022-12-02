@@ -11,9 +11,7 @@ document.getElementById('empezar').onclick =
 
 
     const nombre = document.getElementById('nombreInvitado').value;
-
-    console.log (nombre)
-
+    //console.log (nombre);
       if(!nombre) {
       alert( "No olvides ingresar tu nombre") ;
         } else {

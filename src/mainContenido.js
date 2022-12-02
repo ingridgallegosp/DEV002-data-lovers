@@ -1,5 +1,5 @@
 import data from './data/harrypotter/harry.js';
-import { ordenarAsc, ordenarDesc } from './data.js';
+import { ordenarAsc, ordenarDesc, filtrarGryffindor, filtrarSlytherin, filtrarHufflepuff, filtrarRavenclaw } from './data.js';
 
 const contenidoHome = document.getElementById('contenidoHome'); //capturando contenidoHome
 const contenidoPersonajes = document.getElementById('contenidoPersonajes'); //capturando contenidoPersonajes
@@ -72,7 +72,7 @@ function crearTarjetas(element) {
               `
   });
   return tarjetas
-};
+}
 
 //ORDENAR PERSONAJES
 
@@ -80,7 +80,7 @@ function crearTarjetas(element) {
 const select = document.querySelector("#orden") //capturando opcion ascendente
 
 //escoger opcion a-z y z-a 
-console.log(select);
+//console.log(select);
 
 //Evento change llama a la funcion segun indice de seleccion
 document.getElementById("orden").addEventListener('change', function () {
@@ -98,38 +98,22 @@ document.getElementById("orden").addEventListener('change', function () {
   }
 });
 
-//filtrar PERSONAJES por casas
-/*const filtrarGryffindor = charactersHP.filter(
-  function (charactersHP) {
-  return (charactersHP.house == "Gryffindor");
-});
-console.log(filtrarGryffindor);  */
-
-const filtrarGryffindor = charactersHP.filter(charactersHP => charactersHP.house == "Gryffindor");
-//console.log(filtrarGryffindor);  
-
-const filtrarSlytherin = charactersHP.filter(charactersHP => charactersHP.house == "Slytherin");
-//console.log(filtrarSlytherin); 
-
-const filtrarHufflepuff = charactersHP.filter(charactersHP => charactersHP.house == "Hufflepuff");
-//console.log(filtrarHufflepuff); 
-
-const filtrarRavenclaw = charactersHP.filter(charactersHP => charactersHP.house == "Ravenclaw");
-//console.log(filtrarRavenclaw); 
+//FILTRAR PERSONAJES por casas 
 
 document.getElementById("Gryffindor").addEventListener('click', function () {
   contenidoTarjetasCasas.innerHTML = ""
-  contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarGryffindor)
+  contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarGryffindor(charactersHP))
 });
+
 document.getElementById("Slytherin").addEventListener('click', function () {
   contenidoTarjetasCasas.innerHTML = ""
-  contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarSlytherin)
+  contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarSlytherin(charactersHP))
 });
 document.getElementById("Hufflepuff").addEventListener('click', function () {
   contenidoTarjetasCasas.innerHTML = ""
-  contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarHufflepuff)
+  contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarHufflepuff(charactersHP))
 });
 document.getElementById("Ravenclaw").addEventListener('click', function () {
   contenidoTarjetasCasas.innerHTML = ""
-  contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarRavenclaw)
-}); 
+  contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarRavenclaw(charactersHP))
+});

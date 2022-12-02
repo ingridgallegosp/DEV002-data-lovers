@@ -1,5 +1,5 @@
 
-//FUNCION FILTER
+//FUNCION ORDENAR
 //let charac =["a", "d", "b"] 
 //let organizarPersonaje = charac.sort();
 //console.log(organizarPersonaje) regresa abd 
@@ -19,3 +19,18 @@ export const ordenarDesc = (array) => {
   return descendente;
 };
 //console.log(ordenarDesc(charactersHP));
+
+//FUNCION FILTRAR
+/*const filtrarGryffindor = charactersHP.filter(
+  function (charactersHP) {
+  return (charactersHP.house == "Gryffindor");
+}); */
+
+//export const filtrarG = charactersHP.filter(charactersHP => charactersHP.house == "Gryffindor");
+//console.log(filtrarG);
+
+export const filtrarGryffindor = (array)  => array.filter((element) => element.house == "Gryffindor");
+export const filtrarSlytherin = (array)  => array.filter((element) => element.house == "Slytherin");
+export const filtrarHufflepuff = (array)  => array.filter((element) => element.house == "Hufflepuff");
+export const filtrarRavenclaw = (array)  => array.filter((element) => element.house == "Ravenclaw");
+
