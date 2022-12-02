@@ -1,5 +1,5 @@
 import data from './data/harrypotter/harry.js';
-import { ordenarAsc, ordenarDesc, filtrarGryffindor, filtrarSlytherin, filtrarHufflepuff, filtrarRavenclaw } from './data.js';
+import { ordenarAsc, ordenarDesc, filtrarGryffindor, filtrarSlytherin, filtrarHufflepuff, filtrarRavenclaw, porcentajePersonajesGryffindor } from './data.js';
 
 const contenidoHome = document.getElementById('contenidoHome'); //capturando contenidoHome
 const contenidoPersonajes = document.getElementById('contenidoPersonajes'); //capturando contenidoPersonajes
@@ -46,7 +46,7 @@ personajesBtn.addEventListener('click', function () {
 
 //Evento click de casasBtn despliega contendioCasas 
 casasBtn.addEventListener('click', function () {
-  contenidoCasas.style.display = "block";/////////////////////////////////////////////
+  contenidoCasas.style.display = "block";
   contenidoHome.style.display = "none";
   contenidoPersonajes.style.display = "none";
 });
@@ -117,3 +117,5 @@ document.getElementById("Ravenclaw").addEventListener('click', function () {
   contenidoTarjetasCasas.innerHTML = ""
   contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarRavenclaw(charactersHP))
 });
+
+porcentajePersonajesGryffindor(charactersHP);
