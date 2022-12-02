@@ -23,12 +23,18 @@ form {
     align-items: center;
 } 
 
-    p {
-        margin-bottom: 25px;
+    #p1 {
+        margin-bottom: 0px;
         color: #ffffff;
         font-family: 'Inter', sans-serif;
         font-size: 20px;
     } 
+    #p2 {
+        margin-bottom: 25px;
+        color: #ffffff;
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+    }
 
     input {
         width: 220px;

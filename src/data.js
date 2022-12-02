@@ -30,6 +30,7 @@ export const ordenarDesc = (array) => {
 //console.log(filtrarG);
 
 export const filtrarGryffindor = (array)  => array.filter((element) => element.house == "Gryffindor");
+//export const filtrarGryffindor = (array,element)  => array.filter((elem) => elem.house == "Gryffindor");
 export const filtrarSlytherin = (array)  => array.filter((element) => element.house == "Slytherin");
 export const filtrarHufflepuff = (array)  => array.filter((element) => element.house == "Hufflepuff");
 export const filtrarRavenclaw = (array)  => array.filter((element) => element.house == "Ravenclaw");

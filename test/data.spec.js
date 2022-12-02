@@ -3,16 +3,22 @@ import { ordenarAsc } from '../src/data.js';
 //ordenarDesc, filtrarGryffindor, filtrarSlytherin, filtrarHufflepuff, filtrarRavenclaw
 
 describe('Pruebas para funcion ordenarAsc', () => {
-  test('La funcion ordenarAsc debe retornar un nuevo array con los nombres ordenados '), () => {
-   const arreglo = ["Ana", "Claudia", "Melanie", "Ingrid", "Cecilia"];
-   //const condicon = a-z
-   ordenarAsc(arreglo);
-
-   expect(ordenarAsc).toEqual(["Ana", "Cecilia", "Claudia", "Ingrid", "Melanie"])
-  }
-  });
-
   
+  it('La funcion ordenarAsc debe retornar un nuevo array con los nombres ordenados ascendentemente'), () => {
+    const arreglo = ["Ana", "Claudia", "Melanie", "Ingrid", "Cecilia"];
+    const elemento = nombre
+    const orden = ordenarAsc(arreglo,elemento)
+    
+    expect(orden).toEqual(["Ana", "Cecilia", "Claudia", "Ingrid", "Melanie"])
+  }
+});
+
+/*describe('Pruebas para funcion filtrar', () => {
+  test('La funcion filtrar debe retornar un nuevo array qu solo incluya Gryffindor'), () => {
+    const arreglo = ["Ana", "Claudia", "Melanie", "Ingrid", "Cecilia"];
+    
+  }
+}); */
   
 
    
