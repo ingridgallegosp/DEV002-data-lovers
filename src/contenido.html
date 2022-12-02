@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="styleContenido.css" />
+</head>
+
+<body>
+  <header>
+    <!--Encabezado y menú superior-->
+    <nav id="menuSuperior">
+      <button class="menu-superior" id="salidaBtn">Salida</button>
+      <button class="menu-superior" id="homeBtn">Home</button>
+    </nav>
+    <h4 id="nombrePagina">el Mapa del Merodeador</h4>
+  </header>
+
+  <main>
+    <!--Contenido principal. Info data-->
+    
+    <!--menú lateral-->
+    <nav id="menuLateral">
+      <div class="menu-inferior-btn">
+        <button id="personajesBtn">P</button>
+        <label for="pesonajesBtn">Personajes</label>
+        <button id="casasBtn">C</button>
+        <label for="casasBtn">Casas</label>
+      </div>
+    </nav>
+
+    <!--Bienvenida-->
+    <div class="contenido" id="contenidoHome">
+      <h2 id="mensaje-bienvenida"> Bienvenida/o NOMBRE</h2>
+      <img src="imagenes/hedwig.png" alt="Lechuza" id="hedwig">
+    </div>
+
+    <!--Personajes-->
+    <div class="contenido" id="contenidoPersonajes">
+      <!--menu de selección-->
+      <div class="ordenAscDesc">
+        <select class="orden" id="orden">
+          <option id="select" value="">Ordenar según:</option>
+          <option id="asc" value="ascendente">Ascendente A-Z</option>
+          <option id="desc" value="descendente">Descendente Z-A</option>
+        </select>
+      </div>
+      <!--contenedor tarjetas-->
+      <div class="contenedor-tarjetas" id="tarjetas">
+        <!--aqui se imprimen tarjetas-->
+      </div>
+    </div>
+   
+   <!--Casas-->
+    <div class="contenido" id="contenidoCasas">
+      <!--menu de selección-->
+      <div class="contMenuCasas">
+        <nav id="menuCasas">
+          <button class="menu-casas" id="Gryffindor">Gryffindor</button>
+          <button class="menu-casas" id="Slytherin">Slytherin</button>
+          <button class="menu-casas" id="Hufflepuff">Hufflepuff</button>
+          <button class="menu-casas" id="Ravenclaw">Ravenclaw</button>
+        </nav>
+      </div>
+      <!--contenedor tarjetas-->
+      <div class="contenedor-tarjetas" id="tarjetas-casas">
+        <!--aqui se imprimen tarjetas-->
+      </div>
+    </div>
+   
+  </main>
+
+  <footer> DATA LOVERS 2022 © MELANIE T - INGRID G </footer>
+
+  <script src="mainContenido.js" type="module"></script>
+</body>
+
+</html>

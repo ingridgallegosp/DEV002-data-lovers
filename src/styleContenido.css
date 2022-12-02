@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+   
+}
+
+header {
+    display: flex;
+    background-color: rgba(105, 0, 0, 1);
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+}
+
+h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    text-transform: capitalize; 
+}
+
+h4 {
+    padding: 0 px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    text-transform: capitalize; 
+}
+
+#nombrePagina {
+    width: 85%;
+    text-align: center;
+    color: rgba(241, 241, 241, 1);
+}
+
+#menuSuperior {
+    display: flex;
+    justify-content: center;
+    width: 15hv;
+}
+
+#menuLateral {
+    display: flex;
+    flex-direction: column;
+    justify-content:baseline;
+    background-color: rgba(217, 217, 217, 1);
+    width: 25%;
+}
+
+.contenido {
+    display: none;
+    justify-content: center;
+    
+    width: 100%;
+    /*min-height: 612px;*/
+    margin: 0px;
+    background-image: url("imagenes/beigeBackground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#contenidoHome {
+    display: flex;
+    
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url("imagenes/mapaMerodeador.jpg");
+    /*background-size: cover;*/
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#mensaje-bienvenida {
+    height: 100px;
+    width: 230px;
+    margin: 0;
+    padding: 0;
+
+    justify-content: center;
+    align-items: center;
+    background-image: url("imagenes/pergamino.png");    
+    background-size: cover;
+    background-position: center;
+    background-position: center;
+    
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    text-align: center; 
+}
+#hedwig {
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.contenido {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    min-height: 612px;
+    margin: 0px;
+    background-image: url("imagenes/beigeBackground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ordenAscDesc { 
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 100%;
+    height: 30px;
+    
+}
+
+.contMenuCasas {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 100%;
+    height: 30px;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tarjeta {
+    display: flex;
+    justify-content: center;
+    width: 231px;
+    height: 305px;
+    background-image: url("imagenes/card-back.png");
+    background-size:cover;
+    margin: 5px;   
+    padding: 2%;
+}
+
+.texto-tarjeta {
+    width: 200px;
+    height: 278px;
+    font-family: 'Inter', sans-serif;
+    font-size: smaller;
+    justify-content: center;
+    list-style-type: none;
+    overflow-wrap: break-word;
+}
+
+.menu-inferior-btn {
+    margin: 30px 15px 20px;
+    background-color: rgba(105, 0, 0, 1);
+    color: rgba(236, 236, 236, 1);
+    height: 80px;
+}
+
+footer {
+    width: 100%;
+    height: 4vh;
+    display: block;   
+    background-color: #690000;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;   
+    text-align: center;
+}
+
+
+@media (max-width: 850px) {
+    header {
+        display: flex;
+        background-color: rgba(217, 217, 217, 1);
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    #nombrePagina {
+        width: 70%;
+        text-align: center;
+        color: rgba(105, 0, 0, 1);
+    }
+    #menuSuperior {
+        display: flex;
+        justify-content: center;
+        width: 30%;
+    }
+    #menuLateral {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(105, 0, 0, 1);
+        width: 100%;
+        height: 9vh;
+    }
+
+    label {
+        display: none;
+    }
+    #mensaje-bienvenida {
+        height: 100px;
+        width: 180px;
+        margin: 0;
+        padding: 0;
+    
+        justify-content: center;
+        align-items: center;
+        background-image: url("imagenes/pergamino.png");
+        /*background-image: url("imagenes/carta2.png");*/
+        
+        background-size: cover;
+        background-position: center;
+        background-position: center;
+        
+        font-family: 'Cinzel', serif;
+        font-size: 13px;
+        text-align: center; 
+    }
+    .menu-inferior-btn {
+        height: auto;
+        width: auto;
+    }
+    #hedwig {
+        height: 280px;
+    }
+}

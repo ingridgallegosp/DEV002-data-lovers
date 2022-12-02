@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+
+
+body{
+    margin: 0px;
+    background-image: url("imagenes/fondoPasillo.jpg");
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
+form {
+    height: 96vh;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+    #p1 {
+        margin-bottom: 0px;
+        color: #ffffff;
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+    } 
+    #p2 {
+        margin-bottom: 25px;
+        color: #ffffff;
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+    }
+
+    input {
+        width: 220px;
+        height: 42px;
+        padding: 2px;
+        margin: 10px;
+        box-sizing: border-box;
+        border: #111111 solid 0.2px;
+        border-radius: 7px;
+        
+        background-color:rgb(238, 238, 238);
+        font-family: 'Inter', sans-serif;
+        font-size: 18px;
+        text-align: center; 
+        text-transform: capitalize; 
+    } 
+
+    button:hover { 
+        border: #FFC500 solid 0.35px;
+    }
+
+    button {  
+        width: 220px;
+        height: 42px;
+        padding: 2px;
+        margin: 10px;
+        box-sizing: border-box;
+        border: rgb(238, 238, 238) solid 0.2px;
+        border-radius: 7px;
+        align-content: center;
+
+        background-color:#690000;
+        color:rgb(238, 238, 238);
+        font-size: 18px;  
+        
+        /*font-family: 'Cinzel', serif;*/
+        font-family: 'El Messiri', sans-serif;
+    } 
+
+
+footer {
+   
+    width: 100%;
+    height: 4vh;
+    display: block;   
+    
+    background-color: #690000;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;   
+    text-align: center;
+}
