@@ -1,37 +1,23 @@
 //import { example, anotherExample } from '../src/data.js';
-import { ordenarAsc } from '../src/data.js';
-//ordenarDesc, filtrarGryffindor, filtrarSlytherin, filtrarHufflepuff, filtrarRavenclaw
+import { ordenarAsc, filtrarGryffindor } from '../src/data.js';
+//ordenarDesc,  filtrarSlytherin, filtrarHufflepuff, filtrarRavenclaw
 
+//TEST ORDEN ASC sort()
 describe('Pruebas para funcion ordenarAsc', () => {
-  
-  it('La funcion ordenarAsc debe retornar un nuevo array con los nombres ordenados ascendentemente'), () => {
-    const arreglo = ["Ana", "Claudia", "Melanie", "Ingrid", "Cecilia"];
-    const elemento = nombre
-    const orden = ordenarAsc(arreglo,elemento)
+  it('La funcion ordenarAsc debe retornar un nuevo array con los nombres ordenados ascendentemente', () => {
+    const array = [{'name':'Harry'},{'name': "Angus"},{'name': "Ron"}];
+    const result = ordenarAsc(array)
     
-    expect(orden).toEqual(["Ana", "Cecilia", "Claudia", "Ingrid", "Melanie"])
-  }
+    expect(result).toEqual([{'name':'Angus'}, {'name':'Harry'}, {'name':"Ron"}])
+  })
 });
 
-/*describe('Pruebas para funcion filtrar', () => {
-  test('La funcion filtrar debe retornar un nuevo array qu solo incluya Gryffindor'), () => {
-    const arreglo = ["Ana", "Claudia", "Melanie", "Ingrid", "Cecilia"];
+//TEST FILTRAR Gryffindor filter()
+describe('Pruebas para funcion filtrarGryffindor', () => {
+  it('La funcion filtrarGryffindor debe retornar un nuevo array con los personajes que pertenecen a Gryffindor ', () => {
+    const array = [{'name':'Harry', 'house':'Gryffindor'},{'name': "Angus", 'house':'' },{'name': "Malcolm", 'house':'Slytherin'}];
+    const result = filtrarGryffindor(array)
     
-  }
-}); */
-  
-
-   
-
-
-
-/*
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});*/
+    expect(result).toEqual([{'name':'Harry', 'house':'Gryffindor'}])
+  })
+});
