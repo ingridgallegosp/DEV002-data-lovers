@@ -1,4 +1,5 @@
 //import { example, anotherExample } from '../src/data.js';
+import { TestWatcher } from 'jest';
 import { ordenarAsc, ordenarDesc, filtrarGryffindor, filtrarSlytherin, filtrarHufflepuff, filtrarRavenclaw, porcentajePersonajesGryffindor } from '../src/data.js';
 //ordenarDesc,  filtrarSlytherin, filtrarHufflepuff, filtrarRavenclaw
 
@@ -61,6 +62,7 @@ describe('Pruebas para funcion filtrarRavenclaw', () => {
     expect(result).toEqual([{'name': "Eddie", 'house':'Ravenclaw'}])
   })
 });
+
 
 //Test PORCENTAJE DE PERSONAJES POR CASA porcentajePersonajesGryffindor()
 describe("Pruebas para función porcentajePersonajesGryffindor", () => {

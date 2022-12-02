@@ -41,3 +41,6 @@ export const porcentajePersonajesGryffindor = (array) => {
   let calculoPorcentaje = personajesCasa / personajesTotal * 100;
   return `Un ${calculoPorcentaje}% de los personajes pertenecen a esta casa`
 }
+
+
+
