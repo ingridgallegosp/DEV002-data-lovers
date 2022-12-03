@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
 
 body {
-    min-height: 100vh;
+    height: 100vh;
     margin: 0px;
     padding: 0px;
 
@@ -88,26 +88,21 @@ main {
 
 #contenidoHome {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
-    background: none;
+    background-image: url("imagenes/fondo-ordenador.png");
     /*background-size: cover;*/
     background-position: center;
-}
-
-#mapa {
-    height: 100vh;
-    width: 50%;
+    margin: 0%;
 }
 
 .bienvenida {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    
     height: 100vh;
     width: 50%;
-    background-image: url("imagenes/background.png");
 }
 
 #mensaje-bienvenida {
