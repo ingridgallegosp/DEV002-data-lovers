@@ -3,7 +3,7 @@ import { ordenarAsc, ordenarDesc, filtrarGryffindor, filtrarSlytherin, filtrarHu
 
 const contenidoHome = document.getElementById('contenidoHome'); //capturando contenidoHome
 const contenidoPersonajes = document.getElementById('contenidoPersonajes'); //capturando contenidoPersonajes
-const contenidoTarjetas = document.getElementById("tarjetas");
+const contenidoTarjetas = document.getElementById("contenidoTarjetas");
 const contenidoCasas = document.getElementById('contenidoCasas'); //capturando contenido casas
 const contenidoTarjetasCasas = document.getElementById('tarjetas-casas'); //capturando contenido casas
 
@@ -16,6 +16,9 @@ const casasBtn = document.getElementById('casasBtn'); //capturando casasBtn
 let charactersHP = [];
 charactersHP = data.characters;
 //console.log(charactersHP);//
+
+//Seleccion para ordenar alfabeticamente
+const select = document.querySelector("#orden") //capturando opcion ascendente
 
 //MUESTRA SALUDO BIENVENIDA EN HOME
 window.addEventListener("load", function () {
@@ -42,6 +45,7 @@ personajesBtn.addEventListener('click', function () {
   contenidoHome.style.display = "none";
   contenidoCasas.style.display = "none";
   contenidoTarjetas.innerHTML = crearTarjetas(ordenarAsc(charactersHP));
+  //select.selectedIndex == 0;
 });
 
 //Evento click de casasBtn despliega contendioCasas 
@@ -57,7 +61,28 @@ function crearTarjetas(element) {
   let tarjetas = []; //vamos a ir inyectando los valores de abajo
   element.forEach(characters => { //template literaios
     tarjetas += ` 
-              <div class="tarjeta" id= ${characters.id}>
+    <div class="flip-container">
+      <div class="card" id= ${characters.id}>
+        <div class="front">
+        <h4 class="nombre" id="nombreFront">${characters.name}</h4>
+        </div>
+        <div class="back">
+        <div class= "texto-tarjeta">
+        <h3 class="nombre" id="nombreBack">${characters.name}</h3>
+        <li class="casa"> Casa: ${characters.house}</li>
+        <li class="especie">Especie: ${characters.species}</li>
+        <li class="ascendencia">Ascendencia: ${characters.ancestry}</li>
+        <li class="genero">Género: ${characters.gender}</li>
+        <li class="fecha-nacimiento">Nacimiento: ${characters.birth}</li>
+        <li class="fecha-muerte">Muerte: ${characters.death}</li>
+        <li class="libros">Libros en los que aparece: ${characters.books_featured_in}</li>
+        </div>
+        </div>
+      </div>
+    </div>
+              
+              `
+              /*<div class="tarjeta" id= ${characters.id}>
                 <div class= "texto-tarjeta">
                 <h2 class="nombre">${characters.name}</h2>
                 <li class="casa"> Casa: ${characters.house}</li>
@@ -68,16 +93,14 @@ function crearTarjetas(element) {
                 <li class="fecha-muerte">Muerte: ${characters.death}</li>
                 <li class="libros">Libros en los que aparece: ${characters.books_featured_in}</li>
                 </div>
-              </div>
-              `
+              </div>*/
   });
   return tarjetas
 }
 
 //ORDENAR PERSONAJES
 
-//Seleccion para ordenar alfabeticamente
-const select = document.querySelector("#orden") //capturando opcion ascendente
+
 
 //escoger opcion a-z y z-a 
 //console.log(select);
@@ -86,12 +109,12 @@ const select = document.querySelector("#orden") //capturando opcion ascendente
 document.getElementById("orden").addEventListener('change', function () {
   let indice = select.selectedIndex;
   //console.log(indice)
-  if (indice == 1) {
+  if (indice == 0) {
     contenidoTarjetas.innerHTML = ""
     contenidoTarjetas.innerHTML = crearTarjetas(ordenarAsc(charactersHP));
     //console.log(crearTarjetas(ordenarAsc(charactersHP)))
   }
-  else if (indice == 2) {
+  else if (indice == 1) {
     contenidoTarjetas.innerHTML = ""
     contenidoTarjetas.innerHTML = crearTarjetas(ordenarDesc(charactersHP))
     //console.log(crearTarjetas(ordenarDesc(charactersHP)))
@@ -102,7 +125,7 @@ document.getElementById("orden").addEventListener('change', function () {
 
 document.getElementById("Gryffindor").addEventListener('click', function () {
   contenidoTarjetasCasas.innerHTML = ""
-  contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarGryffindor(charactersHP))
+  contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarGryffindor(charactersHP));
 });
 
 document.getElementById("Slytherin").addEventListener('click', function () {

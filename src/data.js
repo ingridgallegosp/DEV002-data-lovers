@@ -36,11 +36,26 @@ export const filtrarHufflepuff = (array)  => array.filter((element) => element.h
 export const filtrarRavenclaw = (array)  => array.filter((element) => element.house == "Ravenclaw");
 
 export const porcentajePersonajesGryffindor = (array) => {
-  let personajesTotal = array.length;
-  let personajesCasa = filtrarGryffindor(array).length;
-  let calculoPorcentaje = personajesCasa / personajesTotal * 100;
+  const personajesTotal = array.length;
+  const personajesCasa = filtrarGryffindor(array).length;
+  const calculoPorcentaje = personajesCasa / personajesTotal * 100;
   return `Un ${calculoPorcentaje}% de los personajes pertenecen a esta casa`
 }
-
-
-
+export const porcentajePersonajesSlytherin = (array) => {
+  const personajesTotal = array.length;
+  const personajesCasa = filtrarSlytherin(array).length;
+  const calculoPorcentaje = personajesCasa / personajesTotal * 100;
+  return `Un ${calculoPorcentaje}% de los personajes pertenecen a esta casa`
+}
+export const porcentajePersonajesHufflepuff = (array) => {
+  const personajesTotal = array.length;
+  const personajesCasa = filtrarHufflepuff(array).length;
+  const calculoPorcentaje = personajesCasa / personajesTotal * 100;
+  return `Un ${calculoPorcentaje}% de los personajes pertenecen a esta casa`
+}
+export const porcentajePersonajesRavenclaw = (array) => {
+  const personajesTotal = array.length;
+  const personajesCasa = filtrarRavenclaw(array).length;
+  const calculoPorcentaje = personajesCasa / personajesTotal * 100;
+  return `Un ${calculoPorcentaje}% de los personajes pertenecen a esta casa`
+}

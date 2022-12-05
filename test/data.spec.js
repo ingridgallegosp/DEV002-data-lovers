@@ -1,6 +1,6 @@
 //import { example, anotherExample } from '../src/data.js';
-import { TestWatcher } from 'jest';
-import { ordenarAsc, ordenarDesc, filtrarGryffindor, filtrarSlytherin, filtrarHufflepuff, filtrarRavenclaw, porcentajePersonajesGryffindor } from '../src/data.js';
+//import { TestWatcher } from 'jest';
+import { ordenarAsc, ordenarDesc, filtrarGryffindor, filtrarSlytherin, filtrarHufflepuff, filtrarRavenclaw, porcentajePersonajesGryffindor, porcentajePersonajesHufflepuff, porcentajePersonajesRavenclaw, porcentajePersonajesSlytherin } from '../src/data.js';
 //ordenarDesc,  filtrarSlytherin, filtrarHufflepuff, filtrarRavenclaw
 
 //TEST ORDEN ASC sort()
@@ -69,6 +69,33 @@ describe("Pruebas para función porcentajePersonajesGryffindor", () => {
   it("La función porcentajePersonajes debe retornar el porcentaje de los personajes pertenecientes a la casa Gryffindor", ()=>{
     const array = [{'name':'Harry', 'house':'Gryffindor'},{'name': "Ron", 'house':'Gryffindor' },{'name': "Angus", 'house':''},{'name': "Malcolm", 'house':'Slytherin'}]
     const result = porcentajePersonajesGryffindor(array);
+
+    expect(result).toEqual("Un 50% de los personajes pertenecen a esta casa")
+  })
+});
+
+describe("Pruebas para función porcentajePersonajesSlytherin", () => {
+  it("La función porcentajePersonajes debe retornar el porcentaje de los personajes pertenecientes a la casa Slytherin", ()=>{
+    const array = [{'name':'Harry', 'house':'Gryffindor'},{'name': "Ron", 'house':'Gryffindor' },{'name': "Angus", 'house':''},{'name': "Malcolm", 'house':'Slytherin'}]
+    const result = porcentajePersonajesSlytherin(array);
+
+    expect(result).toEqual("Un 25% de los personajes pertenecen a esta casa")
+  })
+});
+
+describe("Pruebas para función porcentajePersonajesHufflepuff", () => {
+  it("La función porcentajePersonajes debe retornar el porcentaje de los personajes pertenecientes a la casa Hufflepuff", ()=>{
+    const array = [{'name':'Amelia', 'house':'Hufflepuff'},{'name': "Edgar", 'house':'Hufflepuff' },{'name': "Owen", 'house':'Hufflepuff'},{'name': "Malcolm", 'house':'Slytherin'}]
+    const result = porcentajePersonajesHufflepuff(array);
+
+    expect(result).toEqual("Un 75% de los personajes pertenecen a esta casa")
+  })
+});
+
+describe("Pruebas para función porcentajePersonajesRavenclaw", () => {
+  it("La función porcentajePersonajes debe retornar el porcentaje de los personajes pertenecientes a la casa Ravenclaw", ()=>{
+    const array = [{'name':'Stewart', 'house':'Ravenclaw'},{'name': "Marcus", 'house':'Ravenclaw' },{'name': "Angus", 'house':''},{'name': "Malcolm", 'house':'Slytherin'}]
+    const result = porcentajePersonajesRavenclaw(array);
 
     expect(result).toEqual("Un 50% de los personajes pertenecen a esta casa")
   })

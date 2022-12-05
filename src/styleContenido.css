@@ -50,6 +50,10 @@ main {
     width: 15%;
 
 }
+.menu-superior, .menu-inferior-btn {
+   
+
+}
 
 #menuLateral {
     display: flex;
@@ -58,6 +62,7 @@ main {
     background-color: rgba(217, 217, 217, 1);
     width: 25%;
 }
+
 
 .menu-inferior-btn {
     display: flex;
@@ -72,18 +77,6 @@ main {
 
 .menu-inferior-img {
     margin: 5%;
-}
-
-.contenido {
-    display: none;
-    justify-content: center;
-    width: 100%;
-    /*min-height: 612px;*/
-    margin: 0px;
-    background-image: url("imagenes/beigeBackground.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 #contenidoHome {
@@ -139,9 +132,7 @@ main {
     min-height: 612px;
     margin: 0px;
     background-image: url("imagenes/beigeBackground.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
 }
 
 .ordenAscDesc {
@@ -170,7 +161,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
 }
-
+/*
 .tarjeta {
     display: flex;
     justify-content: center;
@@ -181,18 +172,57 @@ main {
     margin: 5px;
     padding: 2%;
 }
+*/
+.flip-container {
+    background-color: transparent;
+    width: 231px;
+    height: 305px;
+    perspective: 1000px; 
+  }
+  .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+  .flip-container:hover .card {
+    transform: rotateY(180deg);
+  }
+  .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  .front {
+    background-image: url("imagenes/card-front.png");
+    color: rgba(214, 173, 36, 1);
+    font-family: 'El Messiri' serif;
+    align-items: flex-end;
 
-.texto-tarjeta {
+  }
+  .back {
+    background-image: url("imagenes/card-back.png");
+    transform: rotateY(180deg);
+  }
+
+  .texto-tarjeta {
     width: 200px;
     height: 278px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'El Messiri' serif;
+    color: black;
     font-size: smaller;
     justify-content: center;
     list-style-type: none;
     overflow-wrap: break-word;
 }
-
-
+#nombreBack {
+    color: #690000;;
+}
 footer {
     width: 100%;
     height: 4vh;
