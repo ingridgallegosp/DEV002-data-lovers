@@ -38,24 +38,28 @@ export const filtrarRavenclaw = (array)  => array.filter((element) => element.ho
 export const porcentajePersonajesGryffindor = (array) => {
   const personajesTotal = array.length;
   const personajesCasa = filtrarGryffindor(array).length;
-  const calculoPorcentaje = personajesCasa / personajesTotal * 100;
-  return `Un ${calculoPorcentaje}% de los personajes pertenecen a esta casa`
+  const calculoPorcentaje = Math.round(personajesCasa / personajesTotal * 100);
+  const infoPorc = `Un ${calculoPorcentaje}% de los personajes pertenecen a esta casa`;
+  return infoPorc 
 }
 export const porcentajePersonajesSlytherin = (array) => {
   const personajesTotal = array.length;
   const personajesCasa = filtrarSlytherin(array).length;
-  const calculoPorcentaje = personajesCasa / personajesTotal * 100;
-  return `Un ${calculoPorcentaje}% de los personajes pertenecen a esta casa`
+  const calculoPorcentaje = Math.round(personajesCasa / personajesTotal * 100);
+  const infoPorc = `Un ${calculoPorcentaje}% de los personajes pertenecen a esta casa`;
+  return infoPorc 
 }
 export const porcentajePersonajesHufflepuff = (array) => {
   const personajesTotal = array.length;
   const personajesCasa = filtrarHufflepuff(array).length;
-  const calculoPorcentaje = personajesCasa / personajesTotal * 100;
-  return `Un ${calculoPorcentaje}% de los personajes pertenecen a esta casa`
+  const calculoPorcentaje = Math.round(personajesCasa / personajesTotal * 100);
+  const infoPorc = `Un ${calculoPorcentaje}% de los personajes pertenecen a esta casa`;
+  return infoPorc 
 }
 export const porcentajePersonajesRavenclaw = (array) => {
   const personajesTotal = array.length;
   const personajesCasa = filtrarRavenclaw(array).length;
-  const calculoPorcentaje = personajesCasa / personajesTotal * 100;
-  return `Un ${calculoPorcentaje}% de los personajes pertenecen a esta casa`
+  const calculoPorcentaje = Math.round(personajesCasa / personajesTotal * 100);
+  const infoPorc = `Un ${calculoPorcentaje}% de los personajes pertenecen a esta casa`;
+  return infoPorc 
 }

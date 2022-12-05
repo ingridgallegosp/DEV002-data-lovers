@@ -1,5 +1,5 @@
 import data from './data/harrypotter/harry.js';
-import { ordenarAsc, ordenarDesc, filtrarGryffindor, filtrarSlytherin, filtrarHufflepuff, filtrarRavenclaw, porcentajePersonajesGryffindor } from './data.js';
+import { ordenarAsc, ordenarDesc, filtrarGryffindor, filtrarSlytherin, filtrarHufflepuff, filtrarRavenclaw, porcentajePersonajesGryffindor, porcentajePersonajesHufflepuff, porcentajePersonajesRavenclaw, porcentajePersonajesSlytherin } from './data.js';
 
 const contenidoHome = document.getElementById('contenidoHome'); //capturando contenidoHome
 const contenidoPersonajes = document.getElementById('contenidoPersonajes'); //capturando contenidoPersonajes
@@ -11,6 +11,7 @@ const homeBtn = document.getElementById('homeBtn'); //capturando homeBtn
 const salidaBtn = document.getElementById('salidaBtn'); //capturando salidaBtn
 const personajesBtn = document.getElementById('personajesBtn'); //capturando personajesBtn
 const casasBtn = document.getElementById('casasBtn'); //capturando casasBtn
+const porcInput = document.getElementById("porcentaje"); //capturando input porcentaje
 
 //DEFINIR PERSONAJES
 let charactersHP = [];
@@ -82,18 +83,18 @@ function crearTarjetas(element) {
     </div>
               
               `
-              /*<div class="tarjeta" id= ${characters.id}>
-                <div class= "texto-tarjeta">
-                <h2 class="nombre">${characters.name}</h2>
-                <li class="casa"> Casa: ${characters.house}</li>
-                <li class="especie">Especie: ${characters.species}</li>
-                <li class="ascendencia">Ascendencia: ${characters.ancestry}</li>
-                <li class="genero">Género: ${characters.gender}</li>
-                <li class="fecha-nacimiento">Nacimiento: ${characters.birth}</li>
-                <li class="fecha-muerte">Muerte: ${characters.death}</li>
-                <li class="libros">Libros en los que aparece: ${characters.books_featured_in}</li>
-                </div>
-              </div>*/
+    /*<div class="tarjeta" id= ${characters.id}>
+      <div class= "texto-tarjeta">
+      <h2 class="nombre">${characters.name}</h2>
+      <li class="casa"> Casa: ${characters.house}</li>
+      <li class="especie">Especie: ${characters.species}</li>
+      <li class="ascendencia">Ascendencia: ${characters.ancestry}</li>
+      <li class="genero">Género: ${characters.gender}</li>
+      <li class="fecha-nacimiento">Nacimiento: ${characters.birth}</li>
+      <li class="fecha-muerte">Muerte: ${characters.death}</li>
+      <li class="libros">Libros en los que aparece: ${characters.books_featured_in}</li>
+      </div>
+    </div>*/
   });
   return tarjetas
 }
@@ -123,22 +124,35 @@ document.getElementById("orden").addEventListener('change', function () {
 
 //FILTRAR PERSONAJES por casas 
 
+
+
 document.getElementById("Gryffindor").addEventListener('click', function () {
   contenidoTarjetasCasas.innerHTML = ""
   contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarGryffindor(charactersHP));
+  porcInput.value = porcentajePersonajesGryffindor(charactersHP);
+
 });
 
 document.getElementById("Slytherin").addEventListener('click', function () {
   contenidoTarjetasCasas.innerHTML = ""
   contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarSlytherin(charactersHP))
+  porcInput.value = porcentajePersonajesSlytherin(charactersHP);
+
 });
 document.getElementById("Hufflepuff").addEventListener('click', function () {
   contenidoTarjetasCasas.innerHTML = ""
   contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarHufflepuff(charactersHP))
+  porcInput.value = porcentajePersonajesHufflepuff(charactersHP);
+
 });
 document.getElementById("Ravenclaw").addEventListener('click', function () {
   contenidoTarjetasCasas.innerHTML = ""
   contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarRavenclaw(charactersHP))
+  porcInput.value = porcentajePersonajesHufflepuff(charactersHP);
+
 });
 
 porcentajePersonajesGryffindor(charactersHP);
+
+//MOSTRAR PORCENTAJE DE PERSONAJES POR CASA
+
