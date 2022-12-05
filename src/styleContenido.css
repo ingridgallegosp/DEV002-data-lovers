@@ -51,9 +51,18 @@ main {
 
 }
 .menu-superior, .menu-inferior-btn {
-   
+    box-sizing: border-box;
+    border-radius: 7px;
+    font-family: 'El Messiri', sans-serif;
+} 
 
+.menu-inferior-btn:hover { 
+    border: #FFC500 solid 3px;
+} 
+.menu-superior:hover{
+    border:  rgba(105, 0, 0, 1) solid 3px;
 }
+
 
 #menuLateral {
     display: flex;
@@ -84,7 +93,7 @@ main {
     justify-content: flex-end;
     align-items: center;
     background-image: url("imagenes/fondo-ordenador.png");
-    /*background-size: cover;*/
+    background-size: cover;
     background-position: center;
     margin: 0%;
 }
