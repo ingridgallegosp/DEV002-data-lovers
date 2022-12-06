@@ -21,3 +21,4 @@ describe('Pruebas para funcion filtrarGryffindor', () => {
     expect(result).toEqual([{'name':'Harry', 'house':'Gryffindor'}])
   })
 });
+
