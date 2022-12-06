@@ -105,8 +105,6 @@ function crearTarjetas(element) {
 
 //ORDENAR PERSONAJES
 
-
-
 //escoger opcion a-z y z-a 
 //console.log(select);
 
@@ -126,9 +124,7 @@ document.getElementById("orden").addEventListener('change', function () {
   }
 });
 
-//FILTRAR PERSONAJES por casas 
-
-
+//FILTRAR PERSONAJES por casas y mostrar porcentajes
 
 document.getElementById("Gryffindor").addEventListener('click', function () {
   contenidoTarjetasCasas.innerHTML = ""
@@ -156,7 +152,6 @@ document.getElementById("Ravenclaw").addEventListener('click', function () {
 
 });
 
-porcentajePersonajesGryffindor(charactersHP);
 
-//MOSTRAR PORCENTAJE DE PERSONAJES POR CASA
+
 

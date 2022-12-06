@@ -268,7 +268,7 @@ footer {
 }
 
 
-@media (max-width: 850px) {
+@media screen and (max-width: 800px) {
     header {
         display: flex;
         background-color: rgba(217, 217, 217, 1);
