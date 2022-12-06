@@ -50,7 +50,7 @@ main {
     width: 15%;
 
 }
-.menu-superior, .menu-inferior-btn {
+.menu-superior, .menu-inferior-btn, .submenu-casas {
     box-sizing: border-box;
     border-radius: 7px;
     font-family: 'El Messiri', sans-serif;
@@ -63,7 +63,6 @@ main {
     border:  rgba(105, 0, 0, 1) solid 3px;
 }
 
-
 #menuLateral {
     display: flex;
     flex-direction: column;
@@ -72,16 +71,41 @@ main {
     width: 25%;
 }
 
-
-.menu-inferior-btn {
+.menu-inferior-btn, .submenu-casas {
     display: flex;
-    margin: 30px 15px 20px;
     background-color: rgba(105, 0, 0, 1);
     color: rgba(236, 236, 236, 1);
-    height: 80px;
     justify-content: center;
     align-items: center;
     font-size: 130%;
+}
+.menu-inferior-btn {
+    height: 80px;
+}
+#personajesBtn {
+    margin: 20% 5%;
+}
+
+#casasBtn {
+    margin: 0% 5%;
+}
+#submenuCasas {
+    display: none;
+    flex-direction: column;
+    background-color: rgb(59, 0, 0);
+    color: rgba(236, 236, 236, 1);
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin: 0% 5% 0% 15%;
+    font-size: 120%;
+
+}
+.subCasa {
+    height: 25%;
+}
+.casa:hover {
+    color:#FFC500;
 }
 
 .menu-inferior-img {

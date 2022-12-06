@@ -12,6 +12,7 @@ const salidaBtn = document.getElementById('salidaBtn'); //capturando salidaBtn
 const personajesBtn = document.getElementById('personajesBtn'); //capturando personajesBtn
 const casasBtn = document.getElementById('casasBtn'); //capturando casasBtn
 const porcInput = document.getElementById("porcentaje"); //capturando input porcentaje
+const subMenuCasas = document.getElementById("submenuCasas");
 
 //DEFINIR PERSONAJES
 let charactersHP = [];
@@ -38,6 +39,7 @@ homeBtn.addEventListener('click', function () {
   contenidoHome.style.display = "flex";
   contenidoPersonajes.style.display = "none";
   contenidoCasas.style.display = "none";
+  subMenuCasas.style.display = "none";
 });
 
 //Evento click de personajesBtn despliega contendioPersonajes 
@@ -47,6 +49,7 @@ personajesBtn.addEventListener('click', function () {
   contenidoCasas.style.display = "none";
   contenidoTarjetas.innerHTML = crearTarjetas(ordenarAsc(charactersHP));
   //select.selectedIndex == 0;
+  subMenuCasas.style.display = "none";
 });
 
 //Evento click de casasBtn despliega contendioCasas 
@@ -54,6 +57,7 @@ casasBtn.addEventListener('click', function () {
   contenidoCasas.style.display = "block";
   contenidoHome.style.display = "none";
   contenidoPersonajes.style.display = "none";
+  subMenuCasas.style.display = "flex"
 });
 
 // PINTAR TARJETAS
