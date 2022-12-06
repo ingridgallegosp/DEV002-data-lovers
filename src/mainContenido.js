@@ -152,7 +152,7 @@ document.getElementById("Hufflepuff").addEventListener('click', function () {
 document.getElementById("Ravenclaw").addEventListener('click', function () {
   contenidoTarjetasCasas.innerHTML = ""
   contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarRavenclaw(charactersHP))
-  porcInput.value = porcentajePersonajesHufflepuff(charactersHP);
+  porcInput.value = porcentajePersonajesRavenclaw(charactersHP);
 
 });
 
