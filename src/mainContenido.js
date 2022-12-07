@@ -69,19 +69,19 @@ function crearTarjetas(element) {
     <div class="flip-container">
       <div class="card" id= ${characters.id}>
         <div class="front">
-        <h4 class="nombre" id="nombreFront">${characters.name}</h4>
+          <h4 class="nombre" id="nombreFront">${characters.name}</h4>
         </div>
         <div class="back">
-        <div class= "texto-tarjeta">
-        <h3 class="nombre" id="nombreBack">${characters.name}</h3>
-        <li class="casa"> Casa: ${characters.house}</li>
-        <li class="especie">Especie: ${characters.species}</li>
-        <li class="ascendencia">Ascendencia: ${characters.ancestry}</li>
-        <li class="genero">Género: ${characters.gender}</li>
-        <li class="fecha-nacimiento">Nacimiento: ${characters.birth}</li>
-        <li class="fecha-muerte">Muerte: ${characters.death}</li>
-        <li class="libros">Libros en los que aparece: ${characters.books_featured_in}</li>
-        </div>
+          <div class= "texto-tarjeta">
+            <h3 class="nombre" id="nombreBack">${characters.name}</h3>
+            <li class="casa"> Casa: ${characters.house}</li>
+            <li class="especie">Especie: ${characters.species}</li>
+            <li class="ascendencia">Ascendencia: ${characters.ancestry}</li>
+            <li class="genero">Género: ${characters.gender}</li>
+            <li class="fecha-nacimiento">Nacimiento: ${characters.birth}</li>
+            <li class="fecha-muerte">Muerte: ${characters.death}</li>
+            <li class="libros">Libros en los que aparece: ${characters.books_featured_in}</li>
+          </div>
         </div>
       </div>
     </div>
