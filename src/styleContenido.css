@@ -2,38 +2,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
 
-body {
-    margin: 0px;
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+html {
+  width: 100vw;
+}
+body {
+    min-height: 100vh;
+    width: 100%;
+}
+/* HEADER */
 
 header {
     display: flex;
     background-color: rgba(105, 0, 0, 1);
     justify-content: center;
     align-items: center;
-    height: 12vh;
-}
-
-main {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-
+    height: 20%;
 }
 
 #nombrePagina {
     width: 85%;
     text-align: center;
     color: rgba(241, 241, 241, 1);
-    padding: 0 px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     font-family: 'Cinzel', serif;
-    font-size: 30px;
+    font-size: 5vh;
     text-transform: capitalize;
 }
 
+/*Menú superior*/
 #menuSuperior {
     display: flex;
     justify-content: center;
@@ -42,58 +42,63 @@ main {
 }
 
 .menu-superior-btn {
-    margin: 5%;
-    height: 15%;
-    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3%;
+    padding: 6px;
+    border-radius: 8px;
+}
+#salidaBtn, #homeBtn {
+    height: 6vh;
+    width: 6vh;
+
+}
+.menu-superior-btn:hover {
+    background-color: #3b0202;
 }
 
-.menu-superior-btn,
-.menu-inferior-btn,
-.submenu-casas {
-    box-sizing: border-box;
-    border-radius: 7px;
-    font-family: 'El Messiri', sans-serif;
+/* MAIN: menú lateral + contenido */
+
+main {
+    display: flex;
 }
 
-.menu-superior:hover {
-    border: rgba(105, 0, 0, 1) solid 3px;
-}
-
-.menu-inferior-btn:hover {
-    border: #FFC500 solid 3px;
-}
-
+/*menú lateral*/
 #menuLateral {
     display: flex;
     flex-direction: column;
     justify-content: baseline;
     background-color: rgba(217, 217, 217, 1);
     width: 25%;
-    box-sizing: content-box;
 }
-
 .menu-inferior-btn,
 .submenu-casas {
     display: flex;
+    box-sizing: border-box;
+    border-radius: 7px;
+    font-family: 'El Messiri', sans-serif;
     background-color: rgba(105, 0, 0, 1);
     color: rgba(236, 236, 236, 1);
     justify-content: center;
     align-items: center;
-    font-size: 130%;
-    box-sizing: content-box;
 }
 
 .menu-inferior-btn {
-    height: 80px;
-    display: flexbox;
-    /*position: relative;*/
+    height: 15vh;
+    margin: 12% 5%;
 }
-#personajesBtn {
-    margin: 20% 5%;
+.menu-inferior-btn:hover {
+    border: #FFC500 solid 3px;
 }
-
 #casasBtn {
-    margin: 0% 5%;
+    margin-bottom: 0%;
+}
+.menu-inferior-img {
+    height: 10vh;
+}
+.menu-inferior-texto {
+    font-size: 120%;
 }
 
 #submenuCasas {
