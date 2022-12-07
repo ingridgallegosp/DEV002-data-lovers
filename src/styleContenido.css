@@ -83,6 +83,7 @@ main {
 }
 .menu-inferior-btn {
     height: 80px;
+    display: flexbox;
     /*position: relative;*/
 }
 
@@ -109,29 +110,35 @@ main {
     height: 25%;
 }
 
-.casa {
+.casas {
     position: absolute;
     background-color: #690000;
-    flex-direction: column;
     color: rgba(236, 236, 236, 1);
+    
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: 0% 5% 0% 15%;
+    align-items: flex-start;
+    
     font-size: 120%;
 }
-.casa:hover {
+.casas:hover {
     color:#FFC500 0,35px;
     visibility: visible; 
 }
 
-.casa li a{
+.casas li a{
     visibility: hidden;
     height: 250px;
 }
-.casa li:hover .submenu {
+.casas li:hover .submenu {
     visibility: visible;  
 }
+#porcentaje {
+    width: 400px;
+    background-color: none;
+    border: none;
 
+}
 
 
 .menu-inferior-img {
@@ -216,7 +223,9 @@ main {
     width: 100%;
     height: 30px;
 }
-
+.menuCasas{
+    align-items: center;
+}
 .menu-casas{
     width: 300px;
     height: 150px;
