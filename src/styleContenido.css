@@ -69,6 +69,7 @@ main {
     justify-content: baseline;
     background-color: rgba(217, 217, 217, 1);
     width: 25%;
+    box-sizing: content-box;
 }
 
 .menu-inferior-btn, .submenu-casas {
@@ -78,10 +79,13 @@ main {
     justify-content: center;
     align-items: center;
     font-size: 130%;
+    box-sizing: content-box;
 }
 .menu-inferior-btn {
     height: 80px;
+    /*position: relative;*/
 }
+
 #personajesBtn {
     margin: 20% 5%;
 }
@@ -104,22 +108,46 @@ main {
 .subCasa {
     height: 25%;
 }
-.casa:hover {
-    color:#FFC500;
+
+.casa {
+    position: absolute;
+    background-color: #690000;
+    flex-direction: column;
+    color: rgba(236, 236, 236, 1);
+    justify-content: center;
+    align-items: center;
+    margin: 0% 5% 0% 15%;
+    font-size: 120%;
 }
+.casa:hover {
+    color:#FFC500 0,35px;
+    visibility: visible; 
+}
+
+.casa li a{
+    visibility: hidden;
+    height: 250px;
+}
+.casa li:hover .submenu {
+    visibility: visible;  
+}
+
+
 
 .menu-inferior-img {
     margin: 5%;
+    
 }
 
 #contenidoHome {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-image: url("imagenes/fondo-ordenador.png");
+    background-image: url("imagenes/mapaMerodeador.jpg");
     background-size: cover;
     background-position: center;
     margin: 0%;
+
 }
 
 .bienvenida {
@@ -188,6 +216,35 @@ main {
     width: 100%;
     height: 30px;
 }
+
+.menu-casas{
+    width: 300px;
+    height: 150px;
+    padding: 0px;
+    margin: 40px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    border-color: none;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+#logoGryffindor {
+    background-image: url("imagenes/logoGryffindor.png");
+}
+
+#logoSlytherin {
+    background-image: url("imagenes/logoSlytherin.jfif");
+}
+
+#logoHufflepuff {
+    background-image: url("imagenes/logoHufflepuff.jfif");
+}
+
+#logoRavenclaw {
+    background-image: url("imagenes/logoRavenclaw.jfif");
+}
+
 
 .contenedor-tarjetas {
     display: flex;
