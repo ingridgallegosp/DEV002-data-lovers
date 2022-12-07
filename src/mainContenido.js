@@ -13,6 +13,12 @@ const personajesBtn = document.getElementById('personajesBtn'); //capturando per
 const casasBtn = document.getElementById('casasBtn'); //capturando casasBtn
 const porcInput = document.getElementById("porcentaje"); //capturando input porcentaje
 const subMenuCasas = document.getElementById("submenuCasas");
+const menuCasas = document.getElementById("menuCasas");
+const escudoGryffindor = document.getElementById("escudoGryffindor");
+const escudoSlytherin = document.getElementById("escudoSlytherin");
+const escudoHufflepuff = document.getElementById("escudoHufflepuff");
+const escudoRavenclaw = document.getElementById("escudoRavenclaw");
+
 
 //DEFINIR PERSONAJES
 let charactersHP = [];
@@ -44,7 +50,7 @@ homeBtn.addEventListener('click', function () {
 
 //Evento click de personajesBtn despliega contendioPersonajes 
 personajesBtn.addEventListener('click', function () {
-  contenidoPersonajes.style.display = "block";//porque block y no flex//////////////////////////////////
+  contenidoPersonajes.style.display = "block";
   contenidoHome.style.display = "none";
   contenidoCasas.style.display = "none";
   contenidoTarjetas.innerHTML = crearTarjetas(ordenarAsc(charactersHP));
@@ -57,7 +63,8 @@ casasBtn.addEventListener('click', function () {
   contenidoCasas.style.display = "block";
   contenidoHome.style.display = "none";
   contenidoPersonajes.style.display = "none";
-  subMenuCasas.style.display = "flex"
+  subMenuCasas.style.display = "none"
+
 });
 
 // PINTAR TARJETAS
@@ -132,21 +139,46 @@ document.getElementById("logoGryffindor").addEventListener('click', function () 
   contenidoTarjetasCasas.innerHTML = ""
   contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarGryffindor(charactersHP));
   porcInput.value = porcentajePersonajesGryffindor(charactersHP);
+  subMenuCasas.style.display = "flex";
+  menuCasas.style.display = "none";
+  escudoGryffindor.style.display ="flex";
+  escudoSlytherin.style.display ="none";
+  escudoHufflepuff.style.display ="none";
+  escudoRavenclaw.style.display ="none";
+
 });
 document.getElementById("logoSlytherin").addEventListener('click', function () {
   contenidoTarjetasCasas.innerHTML = ""
   contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarSlytherin(charactersHP))
   porcInput.value = porcentajePersonajesSlytherin(charactersHP);
+  subMenuCasas.style.display = "flex";
+  menuCasas.style.display = "none";
+  escudoSlytherin.style.display ="flex";
+  escudoHufflepuff.style.display ="none";
+  escudoRavenclaw.style.display ="none";
+  escudoGryffindor.style.display ="none";
 });
 document.getElementById("logoHufflepuff").addEventListener('click', function () {
   contenidoTarjetasCasas.innerHTML = ""
   contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarHufflepuff(charactersHP))
   porcInput.value = porcentajePersonajesHufflepuff(charactersHP);
+  subMenuCasas.style.display = "flex";
+  menuCasas.style.display = "none";
+  escudoHufflepuff.style.display ="flex";
+  escudoRavenclaw.style.display ="none";
+  escudoGryffindor.style.display ="none";
+  escudoSlytherin.style.display ="none";
 });
 document.getElementById("logoRavenclaw").addEventListener('click', function () {
   contenidoTarjetasCasas.innerHTML = ""
   contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarRavenclaw(charactersHP))
   porcInput.value = porcentajePersonajesHufflepuff(charactersHP);
+  subMenuCasas.style.display = "flex";
+  menuCasas.style.display = "none";
+  escudoRavenclaw.style.display ="flex"
+  escudoGryffindor.style.display ="none";
+  escudoSlytherin.style.display ="none";
+  escudoHufflepuff.style.display ="none";
 });
 
 
@@ -155,22 +187,38 @@ document.getElementById("menuGryffindor").addEventListener('click', function () 
   contenidoTarjetasCasas.innerHTML = ""
   contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarGryffindor(charactersHP));
   porcInput.value = porcentajePersonajesGryffindor(charactersHP);
+  escudoGryffindor.style.display ="flex";
+  escudoSlytherin.style.display ="none";
+  escudoHufflepuff.style.display ="none";
+  escudoRavenclaw.style.display ="none";
 });
 document.getElementById("menuSlytherin").addEventListener('click', function () {
   contenidoTarjetasCasas.innerHTML = ""
   contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarSlytherin(charactersHP))
   porcInput.value = porcentajePersonajesSlytherin(charactersHP);
+  escudoSlytherin.style.display ="flex";
+  escudoHufflepuff.style.display ="none";
+  escudoRavenclaw.style.display ="none";
+  escudoGryffindor.style.display ="none";
 });
 document.getElementById("menuHufflepuff").addEventListener('click', function () {
   contenidoTarjetasCasas.innerHTML = ""
   contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarHufflepuff(charactersHP))
   porcInput.value = porcentajePersonajesHufflepuff(charactersHP);
+  escudoHufflepuff.style.display ="flex";
+  escudoRavenclaw.style.display ="none";
+  escudoGryffindor.style.display ="none";
+  escudoSlytherin.style.display ="none";
 });
 document.getElementById("menuRavenclaw").addEventListener('click', function () {
   contenidoTarjetasCasas.innerHTML = ""
   contenidoTarjetasCasas.innerHTML = crearTarjetas(filtrarRavenclaw(charactersHP))
-  porcInput.value = porcentajePersonajesHufflepuff(charactersHP);
+  porcInput.value = porcentajePersonajesRavenclaw(charactersHP);
+  escudoRavenclaw.style.display ="flex"
+  escudoGryffindor.style.display ="none";
+  escudoSlytherin.style.display ="none";
+  escudoHufflepuff.style.display ="none";
 });
 
 //MOSTRAR PORCENTAJE DE PERSONAJES POR CASA
-porcentajePersonajesGryffindor(charactersHP);
+//porcentajePersonajesGryffindor(charactersHP);
