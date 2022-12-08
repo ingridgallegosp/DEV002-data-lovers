@@ -30,8 +30,36 @@ export const ordenarDesc = (array) => {
 //console.log(filtrarG);
 
 export const filtrarGryffindor = (array)  => array.filter((element) => element.house == "Gryffindor");
-//export const filtrarGryffindor = (array,element)  => array.filter((elem) => elem.house == "Gryffindor");
 export const filtrarSlytherin = (array)  => array.filter((element) => element.house == "Slytherin");
 export const filtrarHufflepuff = (array)  => array.filter((element) => element.house == "Hufflepuff");
 export const filtrarRavenclaw = (array)  => array.filter((element) => element.house == "Ravenclaw");
 
+//FUNCION ESTADISTICA
+export const porcentajePersonajesGryffindor = (array) => {
+  const personajesTotal = array.length;
+  const personajesCasa = filtrarGryffindor(array).length;
+  const calculoPorcentaje = Math.round(personajesCasa / personajesTotal * 100);
+  const infoPorc = `Un ${calculoPorcentaje}% de los personajes pertenecen a esta casa`;
+  return infoPorc 
+}
+export const porcentajePersonajesSlytherin = (array) => {
+  const personajesTotal = array.length;
+  const personajesCasa = filtrarSlytherin(array).length;
+  const calculoPorcentaje = Math.round(personajesCasa / personajesTotal * 100);
+  const infoPorc = `Un ${calculoPorcentaje}% de los personajes pertenecen a esta casa`;
+  return infoPorc 
+}
+export const porcentajePersonajesHufflepuff = (array) => {
+  const personajesTotal = array.length;
+  const personajesCasa = filtrarHufflepuff(array).length;
+  const calculoPorcentaje = Math.round(personajesCasa / personajesTotal * 100);
+  const infoPorc = `Un ${calculoPorcentaje}% de los personajes pertenecen a esta casa`;
+  return infoPorc 
+}
+export const porcentajePersonajesRavenclaw = (array) => {
+  const personajesTotal = array.length;
+  const personajesCasa = filtrarRavenclaw(array).length;
+  const calculoPorcentaje = Math.round(personajesCasa / personajesTotal * 100);
+  const infoPorc = `Un ${calculoPorcentaje}% de los personajes pertenecen a esta casa`;
+  return infoPorc 
+}
