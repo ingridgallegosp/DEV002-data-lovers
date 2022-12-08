@@ -14,7 +14,7 @@
 
 Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería. 
 
-El Mapa del Merodeador es un curioso artículo mágico que muestra las aulas, pasillos, y la mayoria de espacios y rincones del castillo del Colegio Hogwarts(excepto la Sala de los Menesteres y la cámara Secreta). Además es capaz de identificar con precisión a cada persona, y no se deja engañar por animagos, pociones multijugos, o capas de invisibilidad. Incluso los fantasmas de Hogwarts no están exentos de esto. También puede revelar pasajes secretos usados por "Los Merodeadores".
+El Mapa del Merodeador es un curioso artículo mágico que, durante la saga, muestra las aulas, pasillos, y la mayoria de espacios y rincones del castillo del Colegio Hogwarts(excepto la Sala de los Menesteres y la cámara Secreta). Además es capaz de identificar con precisión a cada persona, y no se deja engañar por animagos, pociones multijugos, o capas de invisibilidad. Incluso los fantasmas de Hogwarts no están exentos de esto. También puede revelar pasajes secretos usados por "Los Merodeadores".
 
 ## 2. Definición de Producto
 
@@ -39,34 +39,36 @@ le ayude a interactuar y entender mejor esos datos.
 
 ## 3. Historias de usuario - HU
 
-![HU](./src/imagenes/Historia%20Mostrar%20Personajes.jpg)
-![HU](./src/imagenes/Historia%20Ordenar%20Personajes.jpg)
-![HU](./src/imagenes/Historia%20Filtrar%20y%20Estadistica.jpg)
-![HU](./src/imagenes/Historia%20Bienvenida.jpg)
+Las historias de Usuario se desarrollaron en base a una pequeña investigación con fans de la saga
+
+![HU](./src/imagenes/HU.jpg)
+![HU2](./src/imagenes/HU2.jpg)
+
+Se muestran los personajes de la Saga de Harry Potter
+
+Las Tarjetas continen información relevante sobre los personajes como su nombre, fecha de nacimiento y muerte, su especie y los libros en los cuales aparece.
+
+Se puede ordena los personajes según su nombre, en orden Ascendente y Descendente.
+
+Permite filtrar los personajes según la Casa de Colegio a la que pertenecen: Gryffindor, Slytherin, Hufflepuff, Ravenclaw.
+
+Se puede conocer el porcentaje de personajes que pertenecen a las casas del colegio Hogwarts.
 
 ## 4. Diseño de la Interfaz de Usuario
 
+Los prototipos de alta y baja fidelidad nos permitieron recibir feedback de compañeras y posibles visitantes de la página.
+
 #### Prototipo de baja fidelidad
 
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
+![Prototipo Baja Fidelidad](./src/imagenes/historia0.png)
+
+![Prototipo Baja Fidelidad](./src/imagenes/prototipo1.jpg)
 
 [Prototipo Baja Fidelidad](https://www.figma.com/file/jpt5p67fjWUPTB9l9twJeF/Untitled?node-id=0%3A1&t=qHBDVehVx1wSBOnf-3)
 
 #### Prototipo de alta fidelidad
 
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
-_User Interface_). Para eso debes aprender a utilizar alguna herramienta de
-diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc.
 
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
-diseño debe seguir los fundamentos de _visual design_.
 
 [Prototipo Alta Fidelidad](https://www.figma.com/file/jpt5p67fjWUPTB9l9twJeF/Untitled?node-id=80%3A6&t=qHBDVehVx1wSBOnf-0)
 
