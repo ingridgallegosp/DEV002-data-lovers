@@ -1,3 +1,4 @@
+
 import data from './data/harrypotter/harry.js';
 import { ordenarAsc, ordenarDesc, filtrarGryffindor, filtrarSlytherin, filtrarHufflepuff, filtrarRavenclaw, porcentajePersonajesGryffindor, porcentajePersonajesHufflepuff, porcentajePersonajesRavenclaw, porcentajePersonajesSlytherin } from './data.js';
 

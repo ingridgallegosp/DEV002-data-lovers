@@ -14,88 +14,98 @@
 
 Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería. 
 
-El Mapa del Merodeador es un curioso artículo mágico que muestra las aulas, pasillos, y la mayoria de espacios y rincones del castillo del Colegio Hogwarts(excepto la Sala de los Menesteres y la cámara Secreta). Además es capaz de identificar con precisión a cada persona, y no se deja engañar por animagos, pociones multijugos, o capas de invisibilidad. Incluso los fantasmas de Hogwarts no están exentos de esto. También puede revelar pasajes secretos usados por "Los Merodeadores".
+El Mapa del Merodeador es un curioso artículo mágico que, durante la saga, muestra las aulas, pasillos, y la mayoria de espacios y rincones del castillo del Colegio Hogwarts(excepto la Sala de los Menesteres y la cámara Secreta). Además es capaz de identificar con precisión a cada persona, y no se deja engañar por animagos, pociones multijugos, o capas de invisibilidad. Incluso los fantasmas de Hogwarts no están exentos de esto. También puede revelar pasajes secretos usados por "Los Merodeadores".
 
 ## 2. Definición de Producto
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
+El Mapa del Merodeador es una interfaz que permite a visitantes y fans de la saga conocer información a detalle de los personajes de los libros de Harry Potter y convertirse en "merodeadores".
+ 
+Para la construcción de la página  realizamos una lluvia de ideas y boceto inicial que nos permitio organizar y delimitar la información a mostrarse y construir las diferentes Historias de Usuario. 
 
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a distintos cálculos que puedes hacer con la data para mostrar
-información aún más relevante para los usuarios (promedio, el valor máximo
-o mínimo, etc).
+Seguimos la metodología del TROZO DE PASTEL ARCOIRIS, que nos permitio desde la primera HU crear productos aptos para ser visitados y visualizar su contenido. 
 
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con qué temática te interesa trabajar. Hemos elegido
-específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
+* HU, Criterios de Aceptación y Definición de Terminado.
+* Planificación de Tareas en Trello.
+* Prototipo de Baja Fidelidad.
+* Maquetado Básico HTML y CSS.
+* Funcionalidad con Javascript.
+* Prototipo de Alta Fidelidad.
+* HTML y CSS según prototipos.
+* Funcionalidad con Javascript.
+* Test Unitarios.
+* Testeos de Usabilidad.
+* Publicación de página en Git Hub pages.
 
-Una vez que definas tu área de interés, buscar entender quién es tu usuario
-y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
-le ayude a interactuar y entender mejor esos datos.
 
 ## 3. Historias de usuario - HU
 
-![HU](./src/imagenes/Historia%20Mostrar%20Personajes.jpg)
-![HU](./src/imagenes/Historia%20Ordenar%20Personajes.jpg)
-![HU](./src/imagenes/Historia%20Filtrar%20y%20Estadistica.jpg)
-![HU](./src/imagenes/Historia%20Bienvenida.jpg)
+Las historias de Usuario se desarrollaron en base a una pequeña investigación con fans de la saga
+
+![HU](./src/imagenes/HU.jpg)
+
+![HU2](./src/imagenes/HU2.jpg)
+
+
+Se muestran los personajes de la Saga de Harry Potter
+
+Las Tarjetas continen información relevante sobre los personajes como su nombre, fecha de nacimiento y muerte, su especie y los libros en los cuales aparece.
+
+Se puede ordena los personajes según su nombre, en orden Ascendente y Descendente.
+
+Permite filtrar los personajes según la Casa de Colegio a la que pertenecen: Gryffindor, Slytherin, Hufflepuff, Ravenclaw.
+
+Se puede conocer el porcentaje de personajes que pertenecen a las casas del colegio Hogwarts.
 
 ## 4. Diseño de la Interfaz de Usuario
 
 #### Prototipo de baja fidelidad
 
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
+![Prototipo Baja Fidelidad](./src/imagenes/historia0.png)
+
+![Prototipo Baja Fidelidad](./src/imagenes/prototipo1.jpg)
 
 [Prototipo Baja Fidelidad](https://www.figma.com/file/jpt5p67fjWUPTB9l9twJeF/Untitled?node-id=0%3A1&t=qHBDVehVx1wSBOnf-3)
 
 #### Prototipo de alta fidelidad
 
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
-_User Interface_). Para eso debes aprender a utilizar alguna herramienta de
-diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc.
+Prototipo en version Movil y Desktop
 
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
-diseño debe seguir los fundamentos de _visual design_.
+![Prototipo Alta Fidelidad](./src/imagenes/prototipo2.jpg)
+
+![Prototipo Alta Fidelidad](./src/imagenes/prototipo3.jpg)
 
 [Prototipo Alta Fidelidad](https://www.figma.com/file/jpt5p67fjWUPTB9l9twJeF/Untitled?node-id=80%3A6&t=qHBDVehVx1wSBOnf-0)
+
+Prototipo de Tarjetas en version Movil y Desktop
+
+![Prototipo Tarjetas](./src/imagenes/prototipo4.jpg)
+
+![Prototipo Tarjetas](./src/imagenes/prototipo5.jpg)
 
 [Prototipo Tarjetas](https://www.figma.com/file/jpt5p67fjWUPTB9l9twJeF/Untitled?node-id=189%3A10&t=qHBDVehVx1wSBOnf-3)
 
 #### Testeos de usabilidad
 
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
-en base a los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
+*
+*
+*
 
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
-Luego de diseñar tu interfaz de usuario deberás trabajar en su implementación.
-**No** es necesario que construyas la interfaz exactamente como la diseñaste.
-Tu tiempo de hacking es escaso, así que deberás priorizar
+La interfaz tiene un diseño responsive que muestra inicialmente una página de Bienvenida. Al ingresar su nombre, el visitante podrá entrar al "Mundo Mágico"
 
-Como mínimo, tu implementación debe:
+La página principal muestra un saludo al visitante, ahora "merodeador" y, mediante los menus, puede visitar las secciones de Personajes y Casas.
 
-1. Mostrar la data en una interfaz: puede ser un card, una tabla, una lista,
-   etc.
-2. Permitir al usuario interactuar para obtener la infomación que necesita.
-3. Ser _responsive_, es decir, debe visualizarse sin problemas desde distintos
-   tamaños de pantallas: móviles, tablets y desktops.
-4. Que la interfaz siga los fundamentos de _visual design_.
+![Pagina Bienvenida](./src/imagenes/pagina%201.jpg)
+
+![Pagina Home](./src/imagenes/pagina%202.jpg)
+
+![Pagina Casa Gryffindor](./src/imagenes/pagina%203.jpg)
 
 ### Pruebas unitarias
+
 Pruebas Unitarias en el archivo  data.spec.js
+
 ![pruebas unitarias](./src/imagenes/testPruebasUnitarias.jpg)
 
 
