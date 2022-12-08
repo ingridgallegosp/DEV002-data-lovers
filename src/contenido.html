@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="styleContenido.css" />
+</head>
+
+<body>
+  <header>
+    <!--Encabezado y menú superior-->
+    <nav id="menuSuperior">
+      <div class="menu-superior-btn">
+        <img src="imagenes/🦆 icon _account logout_.png" alt="Salida" id="salidaBtn">
+      </div>
+      <div class="menu-superior-btn">
+        <img src="imagenes/🦆 icon _home_.png" alt="Home" id="homeBtn">
+      </div>
+    </nav>
+    <h4 id="nombrePagina">el Mapa del Merodeador</h4>
+  </header>
+
+  <main>
+    <!--Contenido principal. Info data-->
+
+    <!--menú lateral-->
+    <nav id="menuLateral">
+      <div class="menu-inferior-btn" id="personajesBtn">
+        <img class="menu-inferior-img" src="imagenes/🦆 icon _french man mustache beret national culture paris_.png"
+          alt="Personajes">
+        <p class="menu-inferior-texto">Personajes</p>
+      </div>
+      <div class="menu-inferior-btn" id="casasBtn">
+        <img class="menu-inferior-img" src="imagenes/🦆 icon _shield_.png" alt="Casas">
+        <p class="menu-inferior-texto">Casas</p>
+        <!--<nav> //para menu desplegable
+            <ul class="casas">
+              <li id="menuGryffindor">Gryffindor</li>
+              <li id="menuSlytherin">Slytherin</li>
+              <li id="menuHufflepuff">Hufflepuff</li>
+              <li id="menuRavenclaw">Ravenclaw</li>
+            </ul>
+          </nav>-->
+      </div>
+
+      <div class="submenu-casas" id="submenuCasas">
+        <div class="subCasa" id="menuGryffindor">
+          <p>Gryffindor</p>
+        </div>
+        <div class="subCasa" id="menuHufflepuff">
+          <p>Hufflepuff</p>
+        </div>
+        <div class="subCasa" id="menuRavenclaw">
+          <p>Ravenclaw</p>
+        </div>
+        <div class="subCasa" id="menuSlytherin">
+          <p>Slytherin</p>
+        </div>
+      </div>
+    </nav>
+
+    <!--Bienvenida-->
+    <div class="contenido" id="contenidoHome">
+      <div class="bienvenida">
+        <h2 id="mensaje-bienvenida"> Bienvenida/o NOMBRE</h2>
+        <img src="imagenes/hedwig.png" alt="Lechuza" id="hedwig">
+      </div>
+    </div>
+
+    <!--Personajes-->
+    <div class="contenido" id="contenidoPersonajes">
+      <!--menu de selección-->
+      <div class="ordenAscDesc">
+        <select class="orden" id="orden">
+          <option id="asc" value="ascendente">Orden A-Z</option>
+          <option id="desc" value="descendente"> Orden Z-A</option>
+        </select>
+      </div>
+
+      <!--contenedor tarjetas-->
+      <div class="contenedor-tarjetas" id="contenidoTarjetas">
+        <!--aqui se imprimen tarjetas-->
+      </div>
+    </div>
+
+    <!--Casas-->
+    <div class="contenido" id="contenidoCasas">
+
+      <!--menu de selección-->
+      <div class="contMenuCasas">
+        <!--<canva  id="porcentaje" value=""> </canva>-->
+        <div id="escudoCasas">
+          <img id="escudoGryffindor" src="imagenes/escudoGryffindor.png">
+          <img id="escudoSlytherin" src="imagenes/escudoSlytherin.png">
+          <img id="escudoHufflepuff" src="imagenes/escudoHufflepuff.png">
+          <img id="escudoRavenclaw" src="imagenes/escudoRavenclaw.png">
+        </div>
+        <div id="porcentaje"></div>
+        <!--<textarea id="porcentaje" value=""> </textarea>-->
+      </div>
+
+      <!--contenedor tarjetas-->
+      <div class="contenedor-tarjetas" id="tarjetas-casas">
+        <!--aqui se imprimen tarjetas-->
+      </div>
+
+      <div id="mostrarBotones">
+        <nav id="menuCasas">
+          <button class="menu-casas" id="logoGryffindor"> </button>
+          <button class="menu-casas" id="logoSlytherin"> </button>
+          <button class="menu-casas" id="logoHufflepuff"> </button>
+          <button class="menu-casas" id="logoRavenclaw"> </button>
+        </nav>
+
+      </div>
+
+
+    </div>
+
+  </main>
+
+  <footer> DATA LOVERS 2022 © MELANIE T - INGRID G </footer>
+
+  <script src="mainContenido.js" type="module"></script>
+</body>
+
+</html>
+
