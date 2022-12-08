@@ -1,16 +1,14 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
 
-body{
+body {
+    min-height: 100vh;
     margin: 0px;
-   
+    padding: 0px;
 }
 
+/*HEADER*/
 header {
     display: flex;
     background-color: rgba(105, 0, 0, 1);
@@ -19,109 +17,348 @@ header {
     height: 12vh;
 }
 
-main {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-}
-
-h2 {
+#nombrePagina {
+    width: 85%;
+    text-align: center;
+    color: rgba(241, 241, 241, 1);
+    padding: 0 px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    text-transform: capitalize; 
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    text-transform: capitalize;
 }
 
-#nombrePagina {
-    width: 75%;
-    text-align: center;
-    color: rgba(241, 241, 241, 1);
+/*MAIN*/
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    min-height:  calc(100vh - 16vh);
 }
 
+/*MENU SUPERIOR*/
 #menuSuperior {
     display: flex;
     justify-content: center;
+    align-content: space-around;
+    width: 20%;
+}
+
+.menu-superior {
+    margin: 5%;
+    height: 15%;
+    width: 15%;
+
+}
+
+.menu-superior,
+.menu-inferior-btn,
+.submenu-casas {
+    box-sizing: border-box;
+    border-radius: 7px;
+    font-family: 'El Messiri', sans-serif;
+}
+
+.menu-inferior-btn:hover {
+    border: #FFC500 solid 3px;
+}
+
+.menu-superior:hover {
+    border: rgba(105, 0, 0, 1) solid 3px;
+}
+
+/*MENU LATERAL*/
+#menuLateral {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    background-color: rgba(217, 217, 217, 1);
     width: 25%;
+    box-sizing: content-box;
+}
+
+.menu-inferior-btn,
+.submenu-casas {
+    display: flex;
+    box-sizing: content-box;
+    background-color: rgba(105, 0, 0, 1);
+    color: rgba(236, 236, 236, 1);
+    justify-content: center;
+    align-items: center;
+    font-size: 130%;
+
+}
+
+.menu-inferior-btn {
+    height: 80px;
+    display: flexbox;
+}
+
+#personajesBtn {
+    margin: 20% 5%;
+}
+
+#casasBtn {
+    margin: 0% 5%;
+}
+
+#submenuCasas {
+    display: none;
+    flex-direction: column;
+    background-color: rgb(59, 0, 0);
+    color: rgba(236, 236, 236, 1);
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin: 0% 5% 0% 15%;
+    font-size: 120%;
+
+}
+
+.subCasa {
+    height: 25%;
+}
+
+.casas {
+    padding: 0px;
+    margin: 0px;
+}
+
+.casas:hover {
+    color: #FFC500;
+}
+
+
+/*contenedor estadisticas*/
+#porcentaje {
+    width: 500px;
+    height: 25px;
+    padding: 2px;
+    margin: 10px;
+    background-color: transparent;
+    border: none;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#escudoGryffindor,
+#escudoSlytherin,
+#escudoHufflepuff,
+#escudoRavenclaw {
+    height: 80px;
+    display: none;
+}
+
+
+.menu-inferior-img {
+    margin: 5%;
+
 }
 
 #contenidoHome {
     display: flex;
-    height: 84vh;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     background-image: url("imagenes/mapaMerodeador.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    margin: 0%;
+
 }
+
+.bienvenida {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 50%;
+}
+
 #mensaje-bienvenida {
-    background-color:aliceblue;
-    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    text-transform: capitalize;
+    height: 100px;
+    width: 230px;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    background-image: url("imagenes/pergamino.png");
+    background-size: cover;
+    background-position: center;
+    background-position: center;
+    font-family: 'Cinzel', serif;
+    text-align: center;
 }
+
 #hedwig {
-    height: 300px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
 }
+
 
 .contenido {
     display: none;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    min-height: 612px;
     margin: 0px;
     background-image: url("imagenes/beigeBackground.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
 }
 
-.tarjetas {
-    display: block;
+.ordenAscDesc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 100%;
+    height: 30px;
+
+}
+
+.contMenuCasas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 100%;
+    height: 100px;
+}
+
+#mostrarBotones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menuCasas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Botones para filtrar casas*/
+.menu-casas {
+    width: 300px;
+    height: 150px;
+    padding: 0px;
+    margin: 40px;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 7px;
+    border-color: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#logoGryffindor {
+    background-image: url("imagenes/logoGryffindor.png");
+}
+
+#logoSlytherin {
+    background-image: url("imagenes/logoSlytherin.jfif");
+}
+
+#logoHufflepuff {
+    background-image: url("imagenes/logoHufflepuff.jfif");
+}
+
+#logoRavenclaw {
+    background-image: url("imagenes/logoRavenclaw.jfif");
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.flip-container {
+    background-color: transparent;
     width: 231px;
     height: 305px;
-    background-image: url("imagenes/card-back.png");
-    background-size:cover;
-    padding: 30px;
-    margin: 5px   
+    perspective: 1000px;
 }
 
-.texto-tarjetas {
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip-container:hover .card {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.front {
+    background-image: url("imagenes/card-front.png");
+    color: rgba(214, 173, 36, 1);
+    font-family: 'El Messiri' serif;
+    align-items: flex-end;
+
+}
+
+.back {
+    background-image: url("imagenes/card-back.png");
+    transform: rotateY(180deg);
+}
+
+.texto-tarjeta {
     width: 200px;
     height: 278px;
+    font-family: 'El Messiri' serif;
+    color: black;
+    font-size: smaller;
     justify-content: center;
     list-style-type: none;
     overflow-wrap: break-word;
 }
 
-#menuInferior {
-    display: flex;
-    flex-direction: column;
-    justify-content:baseline;
-    background-color: rgba(217, 217, 217, 1);
-    width: 20%;
-}
-
-.menu-inferior-btn {
-    margin: 30px 15px 20px;
-    background-color: rgba(105, 0, 0, 1);
-    color: rgba(236, 236, 236, 1);
-    height: 80px;
+#nombreBack {
+    color: #690000;
+    ;
 }
 
 footer {
-   
     width: 100%;
     height: 4vh;
-    display: block;   
+    display: block;
     background-color: #690000;
     color: #ffffff;
     font-size: 14px;
-    font-family: 'Inter', sans-serif;   
+    font-family: 'Inter', sans-serif;
     text-align: center;
 }
-
 
 
 @media (max-width: 850px) {
@@ -130,31 +367,103 @@ footer {
         background-color: rgba(217, 217, 217, 1);
         justify-content: center;
         align-items: center;
-        height: 65px;
+        height: 10vh;
+
     }
 
     main {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
+
     }
 
-    #menuInferior {
+    #nombrePagina {
+        width: 70%;
+        text-align: center;
+        color: rgba(105, 0, 0, 1);
+    }
+
+    #menuSuperior {
+        display: flex;
+        justify-content: center;
+        width: 30%;
+    }
+
+    #menuLateral {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
         background-color: rgba(105, 0, 0, 1);
         width: 100%;
-        height: 65px;
+        height: 9vh;
+    }
+
+    .menu-inferior-btn {
+        height: 8vh;
+        display: flexbox;
+        box-sizing: content-box;
+    }
+
+    .menu-inferior-img {
+        margin: 2px;
+        height: 6vh;
+    }
+
+    #nombrePagina {
+
+        font-size: 20px;
     }
 
     label {
         display: none;
     }
 
-    .menu-inferior-btn {
-        height: auto;
-        width: auto;
+    #mensaje-bienvenida {
+        height: 100px;
+        width: 180px;
+        margin: 0;
+        padding: 0;
+
+        justify-content: center;
+        align-items: center;
+        background-image: url("imagenes/pergamino.png");
+        /*background-image: url("imagenes/carta2.png");*/
+
+        background-size: cover;
+        background-position: center;
+        background-position: center;
+
+        font-family: 'Cinzel', serif;
+        font-size: 13px;
+        text-align: center;
+    }
+
+
+    #hedwig {
+        height: 280px;
+    }
+
+
+    /*MENU PARA  BARRA CON CASAS*/
+    #submenuCasas {
+        display: none;
+        flex-direction: row;
+        background-color: rgb(59, 0, 0);
+        color: rgba(236, 236, 236, 1);
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        height: 30px;
+        padding: 0px;
+        margin: 0px;
+
+    }
+
+    .casas {
+        padding: 0px;
+        margin: 0px;
+       
     }
 }

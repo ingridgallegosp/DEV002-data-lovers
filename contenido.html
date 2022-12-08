@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="styleContenido.css" />
 </head>
@@ -11,60 +12,110 @@
   <header>
     <!--Encabezado y menú superior-->
     <nav id="menuSuperior">
-      <button class="menu-superior" id="salidaBtn">Salida</button>
-      <button class="menu-superior" id="homeBtn">Home</button>
+      <img src="imagenes/🦆 icon _account logout_.png" alt="Salida" class="menu-superior" id="salidaBtn">
+      <img src="imagenes/🦆 icon _home_.png" alt="Home" class="menu-superior" id="homeBtn">
     </nav>
-    <h4 id="nombrePagina">Nombre de la página</h4>
+    <h4 id="nombrePagina">el Mapa del Merodeador</h4>
   </header>
 
   <main>
     <!--Contenido principal. Info data-->
 
-    <div class="contenido" id="contenidoHome">
-      <!--Bienvenida-->
+    <!--menú lateral-->
+    <nav id="menuLateral">
+      <div class="menu-inferior-btn" id="personajesBtn">
+        <img class="menu-inferior-img" src="imagenes/🦆 icon _french man mustache beret national culture paris_.png"
+          alt="Personajes">
+        Personajes
+      </div>
+      <div class="menu-inferior-btn" id="casasBtn">
+        <img class="menu-inferior-img" src="imagenes/🦆 icon _shield_.png" alt="Casas">
+        Casas
+        <!--<nav> //para menu desplegable
+            <ul class="casas">
+              <li id="menuGryffindor">Gryffindor</li>
+              <li id="menuSlytherin">Slytherin</li>
+              <li id="menuHufflepuff">Hufflepuff</li>
+              <li id="menuRavenclaw">Ravenclaw</li>
+            </ul>
+          </nav>-->
+      </div>
 
-      <h2 id="mensaje-bienvenida"> Bienvenida/o NOMBRE</h2>
-      <img src="imagenes/hedwig.png" alt="Lechuza" id="hedwig">
+      <div class="submenu-casas" id="submenuCasas">
+        <div class="casas" id="menuGryffindor">
+          <p>Gryffindor</p>
+        </div>
+        <div class="casas" id="menuSlytherin">
+          <p>Slytherin</p>
+        </div>
+        <div class="casas" id="menuHufflepuff">
+          <p>Hufflepuff</p>
+        </div>
+        <div class="casas" id="menuRavenclaw">
+          <p>Ravenclaw</p>
+        </div>
+      </div>
+    </nav>
 
-    </div>
+    <!--Bienvenida-->
+    <section class="contenido" id="contenidoHome">
+      <figure class="bienvenida">
+        <h2 id="mensaje-bienvenida"> Bienvenida/o NOMBRE</h2>
+        <img src="imagenes/hedwig.png" alt="Lechuza" id="hedwig">
+      </figure>
+    </section>
 
     <!--Personajes-->
-    <div class="contenido" id="contenidoPersonajes">
-
-            <!--AQUI APARECEN TARJETAS DE LOS PERSONAJES-->
-            
-    
-
-    </div>
-
-
-    <!-- <div class="contenido" id="contenidoLibros">
-        AQUI APARECEN LIBROS
-      </div> 
-
-      <div class="contenido" id="contenidoCasas">
-        AQUI APARECE INFO DE LAS CASAS
+    <section class="contenido" id="contenidoPersonajes">
+      <!--menu de selección-->
+      <div class="ordenAscDesc">
+        <select class="orden" id="orden">
+          <option id="asc" value="ascendente">Orden A-Z</option>
+          <option id="desc" value="descendente"> Orden Z-A</option>
+        </select>
       </div>
 
-      <div class="contenido" id="contenidoHechizosYpociones">
-        AQUI APARECE INFO DE HECHIZOS Y POCIONES
-      </div> -->
+      <!--contenedor tarjetas-->
+      <section class="contenedor-tarjetas" id="contenidoTarjetas">
+        <!--aqui se imprimen tarjetas-->
+      </section>
+    </section>
 
-    <nav id="menuInferior">
-      <!--menú inferior-->
-      <div class="menu-inferior-btn">
-        <button id="personajesBtn">P</button>
-        <label for="pesonajesBtn">Personajes</label>
-      </div>
-      <!--<button class="click"  id="librosBtn">Libros</button>
-      <button class="click" id="casasBtn">Casas</button>
-      <button class="click" id="hechizosYpocionesBtn">Hechizos y pociones</button> -->
-    </nav>
+    <!--Casas-->
+    <section class="contenido" id="contenidoCasas">
+
+      <!--menu de selección-->
+      <section class="contMenuCasas">
+        <section id="escudoCasas">
+          <img id="escudoGryffindor" src="imagenes/escudoGryffindor.png">
+          <img id="escudoSlytherin" src="imagenes/escudoSlytherin.png">
+          <img id="escudoHufflepuff" src="imagenes/escudoHufflepuff.png">
+          <img id="escudoRavenclaw" src="imagenes/escudoRavenclaw.png">
+        </section>
+        <div id="porcentaje">
+          <!--aqui se muestra el calculo %-->
+        </div>
+      </section>
+
+      <!--contenedor tarjetas-->
+      <section class="contenedor-tarjetas" id="tarjetas-casas">
+        <!--aqui se imprimen tarjetas-->
+      </section>
+
+      <section id="mostrarBotones">
+        <nav id="menuCasas">
+          <button class="menu-casas" id="logoGryffindor"> </button>
+          <button class="menu-casas" id="logoSlytherin"> </button>
+          <button class="menu-casas" id="logoHufflepuff"> </button>
+          <button class="menu-casas" id="logoRavenclaw"> </button>
+        </nav>
+      </section>
+    </section>
+
   </main>
 
   <footer> DATA LOVERS 2022 © MELANIE T - INGRID G </footer>
 
   <script src="mainContenido.js" type="module"></script>
 </body>
-
 </html>

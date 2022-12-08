@@ -12,10 +12,7 @@ body{
     background-size: cover ;
     background-position: center;
     background-repeat: no-repeat;
-    
-
 } 
-
 
 form {
     height: 96vh;
@@ -26,15 +23,12 @@ form {
     align-items: center;
 } 
 
-
-    p {
-        margin-bottom: 25px;
-        
+    #p1, #p2 {
+        margin-bottom: 0px;
         color: #ffffff;
         font-family: 'Inter', sans-serif;
-        font-size: 20px;
+        backdrop-filter: blur(5px);
     } 
-
 
     input {
         width: 220px;
@@ -46,7 +40,6 @@ form {
         border-radius: 7px;
         
         background-color:rgb(238, 238, 238);
-        
         font-family: 'Inter', sans-serif;
         font-size: 18px;
         text-align: center; 
