@@ -59,8 +59,8 @@ describe('Pruebas para funcion filtrarGryffindor', () => {
     const result = filtrarGryffindor(array)
 
     expect(result).toEqual([
-      { 'name': 'Harry', 'house': 'Gryffindor' },
       { 'name': "Ron", 'house': 'Gryffindor' },
+      { 'name': 'Harry', 'house': 'Gryffindor' }
     ])
   })
 });
@@ -72,7 +72,7 @@ describe('Pruebas para funcion filtrarSlytherin', () => {
     const result = filtrarSlytherin(array)
 
     expect(result).toEqual([
-      { 'name': "Malcolm", 'house': 'Slytherin' },
+      { 'name': "Malcolm", 'house': 'Slytherin' }
     ])
   })
 });
@@ -84,9 +84,10 @@ describe('Pruebas para funcion filtrarHufflepuff', () => {
     const result = filtrarHufflepuff(array)
 
     expect(result).toEqual([
-      { 'name': 'Cadwallader', 'house': 'Hufflepuff' },
-      { 'name': 'Amelia', 'house': 'Hufflepuff' },
       { 'name': "Owen", 'house': 'Hufflepuff' },
+      { 'name': 'Cadwallader', 'house': 'Hufflepuff' },
+      { 'name': 'Amelia', 'house': 'Hufflepuff' }
+
     ])
   })
 });
@@ -98,8 +99,9 @@ describe('Pruebas para funcion filtrarRavenclaw', () => {
     const result = filtrarRavenclaw(array)
 
     expect(result).toEqual([
-      { 'name': "Eddie", 'house': 'Ravenclaw' },
-      { 'name': "Marcus", 'house': 'Ravenclaw' }
+      { 'name': "Marcus", 'house': 'Ravenclaw' },
+      { 'name': "Eddie", 'house': 'Ravenclaw' }
+
     ])
   })
 });
