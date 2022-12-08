@@ -3,10 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     margin: 0px;
     padding: 0px;
-
 }
 
 /*HEADER*/
@@ -17,8 +16,6 @@ header {
     align-items: center;
     height: 12vh;
 }
-
-
 
 #nombrePagina {
     width: 85%;
@@ -38,7 +35,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-
+    min-height:  calc(100vh - 16vh);
 }
 
 /*MENU SUPERIOR*/
@@ -55,17 +52,21 @@ main {
     width: 15%;
 
 }
-.menu-superior, .menu-inferior-btn, .submenu-casas {
+
+.menu-superior,
+.menu-inferior-btn,
+.submenu-casas {
     box-sizing: border-box;
     border-radius: 7px;
     font-family: 'El Messiri', sans-serif;
-} 
+}
 
-.menu-inferior-btn:hover { 
+.menu-inferior-btn:hover {
     border: #FFC500 solid 3px;
-} 
-.menu-superior:hover{
-    border:  rgba(105, 0, 0, 1) solid 3px;
+}
+
+.menu-superior:hover {
+    border: rgba(105, 0, 0, 1) solid 3px;
 }
 
 /*MENU LATERAL*/
@@ -78,7 +79,7 @@ main {
     box-sizing: content-box;
 }
 
-.menu-inferior-btn, 
+.menu-inferior-btn,
 .submenu-casas {
     display: flex;
     box-sizing: content-box;
@@ -87,7 +88,7 @@ main {
     justify-content: center;
     align-items: center;
     font-size: 130%;
-    
+
 }
 
 .menu-inferior-btn {
@@ -115,24 +116,18 @@ main {
     font-size: 120%;
 
 }
+
 .subCasa {
     height: 25%;
 }
 
 .casas {
-    position: absolute;
-    background-color: #690000;
-    color: rgba(236, 236, 236, 1);
-    
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    
-    font-size: 120%;
+    padding: 0px;
+    margin: 0px;
 }
-.casa:hover {
-    color:#FFC500 ;
-    
+
+.casas:hover {
+    color: #FFC500;
 }
 
 
@@ -148,9 +143,13 @@ main {
     font-family: 'Inter', sans-serif;
     font-size: 18px;
     font-weight: bolder;
-    text-align: center;  
+    text-align: center;
 }
-#escudoGryffindor, #escudoSlytherin, #escudoHufflepuff, #escudoRavenclaw {
+
+#escudoGryffindor,
+#escudoSlytherin,
+#escudoHufflepuff,
+#escudoRavenclaw {
     height: 80px;
     display: none;
 }
@@ -158,7 +157,7 @@ main {
 
 .menu-inferior-img {
     margin: 5%;
-  
+
 }
 
 #contenidoHome {
@@ -212,7 +211,6 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    min-height: 612px;
     margin: 0px;
     background-image: url("imagenes/beigeBackground.jpg");
 
@@ -244,6 +242,7 @@ main {
     justify-content: center;
     align-items: center;
 }
+
 #menuCasas {
     display: flex;
     flex-wrap: wrap;
@@ -252,11 +251,11 @@ main {
 }
 
 /*Botones para filtrar casas*/
-.menu-casas{
+.menu-casas {
     width: 300px;
     height: 150px;
     padding: 0px;
-    margin: 30px;
+    margin: 40px;
     justify-content: space-around;
     align-content: space-around;
     align-items: center;
@@ -264,82 +263,77 @@ main {
     border-radius: 7px;
     border-color: none;
     background-size: cover;
-    background-repeat:no-repeat;
-    background-position:center;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
 #logoGryffindor {
-    background-image: url("imagenes/logoGryffindor.png"); 
+    background-image: url("imagenes/logoGryffindor.png");
 }
+
 #logoSlytherin {
-    background-image: url("imagenes/logoSlytherin.jfif"); 
+    background-image: url("imagenes/logoSlytherin.jfif");
 }
+
 #logoHufflepuff {
-    background-image: url("imagenes/logoHufflepuff.jfif");   
+    background-image: url("imagenes/logoHufflepuff.jfif");
 }
+
 #logoRavenclaw {
-    background-image: url("imagenes/logoRavenclaw.jfif"); 
+    background-image: url("imagenes/logoRavenclaw.jfif");
 }
-
-
-
-
-
 
 .contenedor-tarjetas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-/*
-.tarjeta {
-    display: flex;
-    justify-content: center;
-    width: 231px;
-    height: 305px;
-    background-image: url("imagenes/card-back.png");
-    background-size: cover;
-    margin: 5px;
-    padding: 2%;
-}
-*/
+
+
 .flip-container {
     background-color: transparent;
     width: 231px;
     height: 305px;
-    perspective: 1000px; 
-  }
-  .card {
+    perspective: 1000px;
+}
+
+.card {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
     transition: transform 1s;
     transform-style: preserve-3d;
-  }
-  .flip-container:hover .card {
+}
+
+.flip-container:hover .card {
     transform: rotateY(180deg);
-  }
-  .front, .back {
+}
+
+.front,
+.back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
     display: flex;
     justify-content: center;
-  }
-  .front {
+}
+
+.front {
     background-image: url("imagenes/card-front.png");
     color: rgba(214, 173, 36, 1);
     font-family: 'El Messiri' serif;
     align-items: flex-end;
 
-  }
-  .back {
+}
+
+.back {
     background-image: url("imagenes/card-back.png");
     transform: rotateY(180deg);
-  }
+}
 
-  .texto-tarjeta {
+.texto-tarjeta {
     width: 200px;
     height: 278px;
     font-family: 'El Messiri' serif;
@@ -349,9 +343,12 @@ main {
     list-style-type: none;
     overflow-wrap: break-word;
 }
+
 #nombreBack {
-    color: #690000;;
+    color: #690000;
+    ;
 }
+
 footer {
     width: 100%;
     height: 4vh;
@@ -371,6 +368,7 @@ footer {
         justify-content: center;
         align-items: center;
         height: 10vh;
+
     }
 
     main {
@@ -402,6 +400,22 @@ footer {
         height: 9vh;
     }
 
+    .menu-inferior-btn {
+        height: 8vh;
+        display: flexbox;
+        box-sizing: content-box;
+    }
+
+    .menu-inferior-img {
+        margin: 2px;
+        height: 6vh;
+    }
+
+    #nombrePagina {
+
+        font-size: 20px;
+    }
+
     label {
         display: none;
     }
@@ -426,12 +440,30 @@ footer {
         text-align: center;
     }
 
-    .menu-inferior-btn {
-        height: auto;
-        width: auto;
-    }
 
     #hedwig {
         height: 280px;
+    }
+
+
+    /*MENU PARA  BARRA CON CASAS*/
+    #submenuCasas {
+        display: none;
+        flex-direction: row;
+        background-color: rgb(59, 0, 0);
+        color: rgba(236, 236, 236, 1);
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        height: 30px;
+        padding: 0px;
+        margin: 0px;
+
+    }
+
+    .casas {
+        padding: 0px;
+        margin: 0px;
+       
     }
 }

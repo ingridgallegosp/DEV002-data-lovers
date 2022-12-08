@@ -1,5 +1,6 @@
 import { ordenarAsc, ordenarDesc, filtrarGryffindor, filtrarSlytherin, filtrarHufflepuff, filtrarRavenclaw, porcentajePersonajesGryffindor, porcentajePersonajesHufflepuff, porcentajePersonajesRavenclaw, porcentajePersonajesSlytherin } from '../src/data.js';
 
+//DATA PARA TESTEAR
 
 const array = [
   { 'name': 'Harry', 'house': 'Gryffindor' },
@@ -105,7 +106,6 @@ describe('Pruebas para funcion filtrarRavenclaw', () => {
     ])
   })
 });
-
 
 //Test PORCENTAJE DE PERSONAJES POR CASA porcentajePersonajesGryffindor()
 describe("Pruebas para función porcentajePersonajesGryffindor", () => {
