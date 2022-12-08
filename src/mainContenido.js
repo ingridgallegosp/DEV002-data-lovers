@@ -64,7 +64,8 @@ casasBtn.addEventListener('click', function () {
   contenidoHome.style.display = "none";
   contenidoPersonajes.style.display = "none";
   subMenuCasas.style.display = "none"
-
+  
+//mostrar botones flex////////////////////
 });
 
 // PINTAR TARJETAS
