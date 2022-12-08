@@ -445,6 +445,7 @@ footer {
     }
 
      /*MENU PARA  BARRA CON CASAS*/
+     
     #submenuCasas {
         display: none;
         flex-direction: row;
