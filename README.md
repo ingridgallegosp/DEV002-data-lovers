@@ -45,6 +45,7 @@ Las historias de Usuario se desarrollaron en base a una pequeña investigación 
 
 ![HU2](./src/imagenes/HU2.jpg)
 
+
 Se muestran los personajes de la Saga de Harry Potter
 
 Las Tarjetas continen información relevante sobre los personajes como su nombre, fecha de nacimiento y muerte, su especie y los libros en los cuales aparece.
