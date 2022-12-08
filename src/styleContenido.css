@@ -9,6 +9,7 @@ body {
 
 }
 
+/*HEADER*/
 header {
     display: flex;
     background-color: rgba(105, 0, 0, 1);
@@ -17,12 +18,7 @@ header {
     height: 12vh;
 }
 
-main {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
 
-}
 
 #nombrePagina {
     width: 85%;
@@ -37,6 +33,15 @@ main {
     text-transform: capitalize;
 }
 
+/*MAIN*/
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+/*MENU SUPERIOR*/
 #menuSuperior {
     display: flex;
     justify-content: center;
@@ -63,6 +68,7 @@ main {
     border:  rgba(105, 0, 0, 1) solid 3px;
 }
 
+/*MENU LATERAL*/
 #menuLateral {
     display: flex;
     flex-direction: column;
@@ -72,19 +78,21 @@ main {
     box-sizing: content-box;
 }
 
-.menu-inferior-btn, .submenu-casas {
+.menu-inferior-btn, 
+.submenu-casas {
     display: flex;
+    box-sizing: content-box;
     background-color: rgba(105, 0, 0, 1);
     color: rgba(236, 236, 236, 1);
     justify-content: center;
     align-items: center;
     font-size: 130%;
-    box-sizing: content-box;
+    
 }
+
 .menu-inferior-btn {
     height: 80px;
     display: flexbox;
-    /*position: relative;*/
 }
 
 #personajesBtn {
@@ -94,6 +102,7 @@ main {
 #casasBtn {
     margin: 0% 5%;
 }
+
 #submenuCasas {
     display: none;
     flex-direction: column;
