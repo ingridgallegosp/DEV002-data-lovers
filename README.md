@@ -25,12 +25,12 @@ Para la construcción de la página  realizamos una lluvia de ideas y boceto ini
 Seguimos la metodología del TROZO DE PASTEL ARCOIRIS, que nos permitio desde la primera HU crear productos aptos para ser visitados y visualizar su contenido. 
 
 * HU, Criterios de Aceptación y Definición de Terminado.
-* Planificaión de Tareas en Trello.
+* Planificación de Tareas en Trello.
 * Prototipo de Baja Fidelidad.
 * Maquetado Básico HTML y CSS.
 * Funcionalidad con Javascript.
 * Prototipo de Alta Fidelidad.
-* Maquetado Básico HTML y CSS.
+* HTML y CSS según prototipos.
 * Funcionalidad con Javascript.
 * Test Unitarios.
 * Testeos de Usabilidad.
