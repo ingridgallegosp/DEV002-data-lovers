@@ -14,11 +14,11 @@
 
 Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería. 
 
-El Mapa del Merodeador es un curioso artículo mágico que, durante la saga, muestra las aulas, pasillos, y la mayoria de espacios y rincones del castillo del Colegio Hogwarts(excepto la Sala de los Menesteres y la cámara Secreta). Además es capaz de identificar con precisión a cada persona, y no se deja engañar por animagos, pociones multijugos, o capas de invisibilidad. Incluso los fantasmas de Hogwarts no están exentos de esto. También puede revelar pasajes secretos usados por "Los Merodeadores".
+El Mapa del Merodeador es un curioso artículo mágico que, durante la saga, muestra las aulas, pasillos, y la mayoria de espacios y rincones del castillo del Colegio Hogwarts(excepto la Sala de los Menesteres y la cámara Secreta). Además es capaz de identificar con precisión a cada persona, y no puede ser engañado por animagos, pociones multijugos, o capas de invisibilidad. Incluso los fantasmas de Hogwarts no están exentos de esto. También puede revelar pasajes secretos usados por "Los Merodeadores".
 
 ## 2. Definición de Producto
 
-El Mapa del Merodeador es una interfaz que permite a visitantes y fans de la saga conocer información a detalle de los personajes de los libros de Harry Potter y convertirse en "merodeadores".
+El Mapa del Merodeador es una interfaz que permite a visitantes y fans de la saga convertirse en "merodeadores" para conocer información a detalle de los personajes de los libros de Harry Potter.
  
 Para la construcción de la página  realizamos una lluvia de ideas y boceto inicial que nos permitio organizar y delimitar la información a mostrarse y construir las diferentes Historias de Usuario. 
 
@@ -35,7 +35,6 @@ Seguimos la metodología del TROZO DE PASTEL ARCOIRIS, que nos permitio desde la
 * Test Unitarios.
 * Testeos de Usabilidad.
 * Publicación de página en Git Hub pages.
-
 
 ## 3. Historias de usuario - HU
 
