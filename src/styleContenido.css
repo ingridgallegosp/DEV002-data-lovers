@@ -3,10 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     margin: 0px;
     padding: 0px;
-
 }
 
 /*HEADER*/
@@ -17,8 +16,6 @@ header {
     align-items: center;
     height: 12vh;
 }
-
-
 
 #nombrePagina {
     width: 85%;
@@ -38,7 +35,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-
+    min-height:  calc(100vh - 16vh);
 }
 
 /*MENU SUPERIOR*/
@@ -125,20 +122,12 @@ main {
 }
 
 .casas {
-    position: absolute;
-    background-color: #690000;
-    color: rgba(236, 236, 236, 1);
-
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-
-    font-size: 120%;
+    padding: 0px;
+    margin: 0px;
 }
 
-.casa:hover {
+.casas:hover {
     color: #FFC500;
-
 }
 
 
@@ -222,7 +211,6 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    min-height: 612px;
     margin: 0px;
     background-image: url("imagenes/beigeBackground.jpg");
 
@@ -267,7 +255,7 @@ main {
     width: 300px;
     height: 150px;
     padding: 0px;
-    margin: 30px;
+    margin: 40px;
     justify-content: space-around;
     align-content: space-around;
     align-items: center;
@@ -301,18 +289,7 @@ main {
     justify-content: center;
 }
 
-/*
-.tarjeta {
-    display: flex;
-    justify-content: center;
-    width: 231px;
-    height: 305px;
-    background-image: url("imagenes/card-back.png");
-    background-size: cover;
-    margin: 5px;
-    padding: 2%;
-}
-*/
+
 .flip-container {
     background-color: transparent;
     width: 231px;
@@ -484,10 +461,9 @@ footer {
 
     }
 
-    .casa {
+    .casas {
         padding: 0px;
         margin: 0px;
-        height: 20px;
-        width: 80px;
+       
     }
 }
