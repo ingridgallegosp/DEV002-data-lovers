@@ -18,30 +18,31 @@ El Mapa del Merodeador es un curioso artículo mágico que, durante la saga, mue
 
 ## 2. Definición de Producto
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
+El Mapa del Merodeador es una interfaz que permite a visitantes y fans de la saga conocer información a detalle de los personajes de los libros de Harry Potter y convertirse en "merodeadores".
+ 
+Para la construcción de la página  realizamos una lluvia de ideas y boceto inicial que nos permitio organizar y delimitar la información a mostrarse y construir las diferentes Historias de Usuario. 
 
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a distintos cálculos que puedes hacer con la data para mostrar
-información aún más relevante para los usuarios (promedio, el valor máximo
-o mínimo, etc).
+Seguimos la metodología del TROZO DE PASTEL ARCOIRIS, que nos permitio desde la primera HU crear productos aptos para ser visitados y visualizar su contenido. 
 
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con qué temática te interesa trabajar. Hemos elegido
-específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
+* HU, Criterios de Aceptación y Definición de Terminado.
+* Planificaión de Tareas en Trello.
+* Prototipo de Baja Fidelidad.
+* Maquetado Básico HTML y CSS.
+* Funcionalidad con Javascript.
+* Prototipo de Alta Fidelidad.
+* Maquetado Básico HTML y CSS.
+* Funcionalidad con Javascript.
+* Test Unitarios.
+* Testeos de Usabilidad.
+* Publicación de página en Git Hub pages.
 
-Una vez que definas tu área de interés, buscar entender quién es tu usuario
-y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
-le ayude a interactuar y entender mejor esos datos.
 
 ## 3. Historias de usuario - HU
 
 Las historias de Usuario se desarrollaron en base a una pequeña investigación con fans de la saga
 
 ![HU](./src/imagenes/HU.jpg)
+
 ![HU2](./src/imagenes/HU2.jpg)
 
 Se muestran los personajes de la Saga de Harry Potter
@@ -56,8 +57,6 @@ Se puede conocer el porcentaje de personajes que pertenecen a las casas del cole
 
 ## 4. Diseño de la Interfaz de Usuario
 
-Los prototipos de alta y baja fidelidad nos permitieron recibir feedback de compañeras y posibles visitantes de la página.
-
 #### Prototipo de baja fidelidad
 
 ![Prototipo Baja Fidelidad](./src/imagenes/historia0.png)
@@ -68,36 +67,44 @@ Los prototipos de alta y baja fidelidad nos permitieron recibir feedback de comp
 
 #### Prototipo de alta fidelidad
 
+Prototipo en version Movil y Desktop
 
+![Prototipo Alta Fidelidad](./src/imagenes/prototipo2.jpg)
+
+![Prototipo Alta Fidelidad](./src/imagenes/prototipo3.jpg)
 
 [Prototipo Alta Fidelidad](https://www.figma.com/file/jpt5p67fjWUPTB9l9twJeF/Untitled?node-id=80%3A6&t=qHBDVehVx1wSBOnf-0)
+
+Prototipo de Tarjetas en version Movil y Desktop
+
+![Prototipo Tarjetas](./src/imagenes/prototipo4.jpg)
+
+![Prototipo Tarjetas](./src/imagenes/prototipo5.jpg)
 
 [Prototipo Tarjetas](https://www.figma.com/file/jpt5p67fjWUPTB9l9twJeF/Untitled?node-id=189%3A10&t=qHBDVehVx1wSBOnf-3)
 
 #### Testeos de usabilidad
 
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
-en base a los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
+*
+*
+*
 
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
-Luego de diseñar tu interfaz de usuario deberás trabajar en su implementación.
-**No** es necesario que construyas la interfaz exactamente como la diseñaste.
-Tu tiempo de hacking es escaso, así que deberás priorizar
+La interfaz tiene un diseño responsive que muestra inicialmente una página de Bienvenida. Al ingresar su nombre, el visitante podrá entrar al "Mundo Mágico"
 
-Como mínimo, tu implementación debe:
+La página principal muestra un saludo al visitante, ahora "merodeador" y, mediante los menus, puede visitar las secciones de Personajes y Casas.
 
-1. Mostrar la data en una interfaz: puede ser un card, una tabla, una lista,
-   etc.
-2. Permitir al usuario interactuar para obtener la infomación que necesita.
-3. Ser _responsive_, es decir, debe visualizarse sin problemas desde distintos
-   tamaños de pantallas: móviles, tablets y desktops.
-4. Que la interfaz siga los fundamentos de _visual design_.
+![Pagina Bienvenida](./src/imagenes/pagina%201.jpg)
+
+![Pagina Home](./src/imagenes/pagina%202.jpg)
+
+![Pagina Casa Gryffindor](./src/imagenes/pagina%203.jpg)
 
 ### Pruebas unitarias
+
 Pruebas Unitarias en el archivo  data.spec.js
+
 ![pruebas unitarias](./src/imagenes/testPruebasUnitarias.jpg)
 
 
