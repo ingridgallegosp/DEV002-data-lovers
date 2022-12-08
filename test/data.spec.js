@@ -1,7 +1,4 @@
-//import { example, anotherExample } from '../src/data.js';
-//import { TestWatcher } from 'jest';
 import { ordenarAsc, ordenarDesc, filtrarGryffindor, filtrarSlytherin, filtrarHufflepuff, filtrarRavenclaw, porcentajePersonajesGryffindor, porcentajePersonajesHufflepuff, porcentajePersonajesRavenclaw, porcentajePersonajesSlytherin } from '../src/data.js';
-//ordenarDesc,  filtrarSlytherin, filtrarHufflepuff, filtrarRavenclaw
 
 //TEST ORDEN ASC sort()
 describe('Pruebas para funcion ordenarAsc', () => {

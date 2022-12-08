@@ -2,18 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
 
-* { 
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
-  width: 100vw;
+    width: 99vw;
 }
+
 body {
     min-height: 100vh;
     width: 100%;
 }
+
 /* HEADER */
 
 header {
@@ -49,11 +52,14 @@ header {
     padding: 6px;
     border-radius: 8px;
 }
-#salidaBtn, #homeBtn {
+
+#salidaBtn,
+#homeBtn {
     height: 6vh;
     width: 6vh;
 
 }
+
 .menu-superior-btn:hover {
     background-color: #3b0202;
 }
@@ -70,8 +76,9 @@ main {
     flex-direction: column;
     justify-content: baseline;
     background-color: rgba(217, 217, 217, 1);
-    width: 25%;
+    width: 20%;
 }
+
 .menu-inferior-btn,
 .submenu-casas {
     display: flex;
@@ -88,15 +95,20 @@ main {
     height: 15vh;
     margin: 12% 5%;
 }
+
 .menu-inferior-btn:hover {
     border: #FFC500 solid 3px;
 }
+
 #casasBtn {
     margin-bottom: 0%;
 }
+
 .menu-inferior-img {
     height: 10vh;
+    margin: 5%;
 }
+
 .menu-inferior-texto {
     font-size: 120%;
 }
@@ -108,56 +120,23 @@ main {
     color: rgba(236, 236, 236, 1);
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 40vh;
     margin: 0% 5% 0% 15%;
     font-size: 120%;
-
 }
 
 .subCasa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 25%;
 }
+
 .subCasa:hover {
     color: #FFC500;
 }
-.casa:hover {
-    color:#FFC500;
-}
 
-.casas {
-    position: absolute;
-    background-color: #690000;
-    color: rgba(236, 236, 236, 1);
-    
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    
-    font-size: 120%;
-}
-.casas:hover {
-    color:#FFC500 0,35px;
-    visibility: visible; 
-}
-
-.casas li a{
-    visibility: hidden;
-    height: 250px;
-}
-.casas li:hover .submenu {
-    visibility: visible;  
-}
-#porcentaje {
-    width: 400px;
-    background-color: none;
-    border: none;
-
-}
-.menu-inferior-img {
-    margin: 5%;
-    
-}
-
+/* HOME */
 #contenidoHome {
     display: flex;
     justify-content: flex-end;
@@ -182,10 +161,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 18px;
+    font-size: 100%;
     text-transform: capitalize;
-    height: 100px;
-    width: 230px;
+    height: 20vh;
+    width: 20vw;
     margin: 0;
     padding: 0;
     justify-content: center;
@@ -198,22 +177,22 @@ main {
 }
 
 #hedwig {
-    height: 400px;
+    height: 60vh;
     margin: 0;
     padding: 0;
 }
 
-
+/*CONTENIDO PRINCIPAL */
 .contenido {
     display: none;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
-    min-height: 612px;
     margin: 0px;
+    width: 80%;
     background-image: url("imagenes/beigeBackground.jpg");
-
 }
+
+/* Personajes*/
 
 .ordenAscDesc {
     display: flex;
@@ -226,6 +205,22 @@ main {
 
 }
 
+/*contenedor estadisticas y escudos*/
+#porcentaje {
+    font-family: 'Inter', sans-serif;
+    font-size: 100%;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#escudoGryffindor,
+#escudoSlytherin,
+#escudoHufflepuff,
+#escudoRavenclaw {
+    height: 15vh;
+    display: none;
+}
+
 .contMenuCasas {
     display: flex;
     flex-direction: row;
@@ -233,23 +228,39 @@ main {
     align-items: center;
     margin: 5px;
     width: 100%;
-    height: 30px;
+    height: 100px;
 }
-.menuCasas{
+
+#mostrarBotones {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
-.menu-casas{
+
+#menuCasas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Botones para filtrar casas*/
+.menu-casas {
     width: 300px;
     height: 150px;
     padding: 0px;
-    margin: 40px;
+    margin: 30px;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
     box-sizing: border-box;
     border-radius: 7px;
     border-color: none;
     background-size: cover;
-    background-repeat:no-repeat;
-    background-position:center;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
 #logoGryffindor {
     background-image: url("imagenes/logoGryffindor.png");
 }
@@ -378,63 +389,100 @@ footer {
         display: flex;
         justify-content: center;
         width: 30%;
-        background-color: #690000;
     }
 
     .menu-superior-btn {
-        margin: 5%;
         height: 25%;
         width: 25%;
-    }
-
-    .menu-superior-btn,
-    .menu-inferior-btn,
-    .submenu-casas {
-        box-sizing: border-box;
-        border-radius: 1px;
-        font-family: 'El Messiri', sans-serif;
+        margin: 3%;
+        padding: 6px;
+        border-radius: 8px;
+        background-color: #3b0202;
     }
 
     #menuLateral {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+        justify-content: center;
         background-color: rgba(105, 0, 0, 1);
         width: 100%;
-        height: 9vh;
+        height: 15vh;
     }
-
-    label {
+    .menu-inferior-btn {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        box-sizing: border-box;
+        border-radius: 7px;
+        font-family: 'El Messiri', sans-serif;
+        background-color: rgba(105, 0, 0, 1);
+        color: rgba(236, 236, 236, 1);
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-inferior-img {
+        height: 5vh;
+        margin: 5%;
+    }
+    
+    .menu-inferior-texto {
         display: none;
     }
 
-    #mensaje-bienvenida {
-        height: 100px;
-        width: 180px;
-        margin: 0;
-        padding: 0;
-
+    .submenu-casas {
+        display: flex;
+        box-sizing: border-box;
+        border-radius: 7px;
+        font-family: 'El Messiri', sans-serif;
+        background-color: rgba(105, 0, 0, 1);
+        color: rgba(236, 236, 236, 1);
         justify-content: center;
         align-items: center;
-        background-image: url("imagenes/pergamino.png");
 
-
-        background-size: cover;
-        background-position: center;
-        background-position: center;
-
-        font-family: 'Cinzel', serif;
-        font-size: 13px;
-        text-align: center;
     }
 
     .menu-inferior-btn {
-        height: auto;
-        width: auto;
+        height: 15vh;
+        margin: 12% 5%;
     }
 
-    #hedwig {
-        height: 280px;
+    .menu-inferior-btn:hover {
+        border: #FFC500 solid 3px;
+    }
+
+    #casasBtn {
+        margin-bottom: 0%;
+    }
+
+    .menu-inferior-img {
+        height: 10vh;
+        margin: 5%;
+    }
+
+    .menu-inferior-texto {
+        font-size: 120%;
+    }
+
+    #submenuCasas {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(59, 0, 0);
+        color: rgba(236, 236, 236, 1);
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+        margin: 0% 5% 0% 15%;
+        font-size: 120%;
+    }
+
+    .subCasa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 25%;
+    }
+
+    .subCasa:hover {
+        color: #FFC500;
     }
 }
