@@ -1,6 +1,7 @@
 import { ordenarAsc, ordenarDesc, filtrarGryffindor, filtrarSlytherin, filtrarHufflepuff, filtrarRavenclaw, porcentajePersonajesGryffindor, porcentajePersonajesHufflepuff, porcentajePersonajesRavenclaw, porcentajePersonajesSlytherin } from '../src/data.js';
 
 //DATA PARA TESTEAR
+
 const array = [
   { 'name': 'Harry', 'house': 'Gryffindor' },
   { 'name': "Ron", 'house': 'Gryffindor' },
