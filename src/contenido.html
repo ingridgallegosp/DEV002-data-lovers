@@ -31,7 +31,7 @@
       <div class="menu-inferior-btn" id="casasBtn">
         <img class="menu-inferior-img" src="imagenes/🦆 icon _shield_.png" alt="Casas">
         Casas
-         <!--<nav> //para menu desplegable
+        <!--<nav> //para menu desplegable
             <ul class="casas">
               <li id="menuGryffindor">Gryffindor</li>
               <li id="menuSlytherin">Slytherin</li>
@@ -40,7 +40,7 @@
             </ul>
           </nav>-->
       </div>
-        
+
       <div class="submenu-casas" id="submenuCasas">
         <div class="casa" id="menuGryffindor">
           <p>Gryffindor</p>
@@ -58,15 +58,15 @@
     </nav>
 
     <!--Bienvenida-->
-    <div class="contenido" id="contenidoHome">
-      <div class="bienvenida">
+    <section class="contenido" id="contenidoHome">
+      <figure class="bienvenida">
         <h2 id="mensaje-bienvenida"> Bienvenida/o NOMBRE</h2>
         <img src="imagenes/hedwig.png" alt="Lechuza" id="hedwig">
-      </div>
-    </div>
+      </figure>
+    </section>
 
     <!--Personajes-->
-    <div class="contenido" id="contenidoPersonajes">
+    <section class="contenido" id="contenidoPersonajes">
       <!--menu de selección-->
       <div class="ordenAscDesc">
         <select class="orden" id="orden">
@@ -76,42 +76,40 @@
       </div>
 
       <!--contenedor tarjetas-->
-      <div class="contenedor-tarjetas" id="contenidoTarjetas">
+      <section class="contenedor-tarjetas" id="contenidoTarjetas">
         <!--aqui se imprimen tarjetas-->
-      </div>
-    </div>
+      </section>
+    </section>
 
     <!--Casas-->
-    <div class="contenido" id="contenidoCasas">
+    <section class="contenido" id="contenidoCasas">
 
       <!--menu de selección-->
-      <div class="contMenuCasas">
+      <section class="contMenuCasas">
         <!--<canva  id="porcentaje" value=""> </canva>-->
-        <div id="escudoCasas">
-          <img id="escudoGryffindor" src="imagenes/escudoGryffindor.png"> 
-          <img id="escudoSlytherin" src="imagenes/escudoSlytherin.png"> 
-          <img id="escudoHufflepuff" src="imagenes/escudoHufflepuff.png"> 
-          <img id="escudoRavenclaw" src="imagenes/escudoRavenclaw.png"> 
-        </div>
-        <textarea id="porcentaje" value=""> </textarea>
-      </div>
+        <section id="escudoCasas">
+          <img id="escudoGryffindor" src="imagenes/escudoGryffindor.png">
+          <img id="escudoSlytherin" src="imagenes/escudoSlytherin.png">
+          <img id="escudoHufflepuff" src="imagenes/escudoHufflepuff.png">
+          <img id="escudoRavenclaw" src="imagenes/escudoRavenclaw.png">
+        </section>
+        <div id="porcentaje">""</div>
+      </section>
 
       <!--contenedor tarjetas-->
-      <div class="contenedor-tarjetas" id="tarjetas-casas">
+      <section class="contenedor-tarjetas" id="tarjetas-casas">
         <!--aqui se imprimen tarjetas-->
-      </div>
+      </section>
 
-      <div id="mostrarBotones">
+      <section id="mostrarBotones">
         <nav id="menuCasas">
           <button class="menu-casas" id="logoGryffindor"> </button>
           <button class="menu-casas" id="logoSlytherin"> </button>
           <button class="menu-casas" id="logoHufflepuff"> </button>
           <button class="menu-casas" id="logoRavenclaw"> </button>
         </nav>
-      </div>
-        
-      
-    </div>
+      </section>
+    </section>
 
   </main>
 
@@ -119,5 +117,4 @@
 
   <script src="mainContenido.js" type="module"></script>
 </body>
-
 </html>

@@ -55,17 +55,21 @@ main {
     width: 15%;
 
 }
-.menu-superior, .menu-inferior-btn, .submenu-casas {
+
+.menu-superior,
+.menu-inferior-btn,
+.submenu-casas {
     box-sizing: border-box;
     border-radius: 7px;
     font-family: 'El Messiri', sans-serif;
-} 
+}
 
-.menu-inferior-btn:hover { 
+.menu-inferior-btn:hover {
     border: #FFC500 solid 3px;
-} 
-.menu-superior:hover{
-    border:  rgba(105, 0, 0, 1) solid 3px;
+}
+
+.menu-superior:hover {
+    border: rgba(105, 0, 0, 1) solid 3px;
 }
 
 /*MENU LATERAL*/
@@ -78,7 +82,7 @@ main {
     box-sizing: content-box;
 }
 
-.menu-inferior-btn, 
+.menu-inferior-btn,
 .submenu-casas {
     display: flex;
     box-sizing: content-box;
@@ -87,7 +91,7 @@ main {
     justify-content: center;
     align-items: center;
     font-size: 130%;
-    
+
 }
 
 .menu-inferior-btn {
@@ -115,6 +119,7 @@ main {
     font-size: 120%;
 
 }
+
 .subCasa {
     height: 25%;
 }
@@ -123,16 +128,17 @@ main {
     position: absolute;
     background-color: #690000;
     color: rgba(236, 236, 236, 1);
-    
+
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    
+
     font-size: 120%;
 }
+
 .casa:hover {
-    color:#FFC500 ;
-    
+    color: #FFC500;
+
 }
 
 
@@ -148,11 +154,12 @@ main {
     font-family: 'Inter', sans-serif;
     font-size: 18px;
     font-weight: bolder;
-    text-align: center;  
+    text-align: center;
 }
-#escudoGryffindor, 
-#escudoSlytherin, 
-#escudoHufflepuff, 
+
+#escudoGryffindor,
+#escudoSlytherin,
+#escudoHufflepuff,
 #escudoRavenclaw {
     height: 80px;
     display: none;
@@ -161,7 +168,7 @@ main {
 
 .menu-inferior-img {
     margin: 5%;
-  
+
 }
 
 #contenidoHome {
@@ -247,6 +254,7 @@ main {
     justify-content: center;
     align-items: center;
 }
+
 #menuCasas {
     display: flex;
     flex-wrap: wrap;
@@ -255,7 +263,7 @@ main {
 }
 
 /*Botones para filtrar casas*/
-.menu-casas{
+.menu-casas {
     width: 300px;
     height: 150px;
     padding: 0px;
@@ -267,20 +275,24 @@ main {
     border-radius: 7px;
     border-color: none;
     background-size: cover;
-    background-repeat:no-repeat;
-    background-position:center;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
 #logoGryffindor {
-    background-image: url("imagenes/logoGryffindor.png"); 
+    background-image: url("imagenes/logoGryffindor.png");
 }
+
 #logoSlytherin {
-    background-image: url("imagenes/logoSlytherin.jfif"); 
+    background-image: url("imagenes/logoSlytherin.jfif");
 }
+
 #logoHufflepuff {
-    background-image: url("imagenes/logoHufflepuff.jfif");   
+    background-image: url("imagenes/logoHufflepuff.jfif");
 }
+
 #logoRavenclaw {
-    background-image: url("imagenes/logoRavenclaw.jfif"); 
+    background-image: url("imagenes/logoRavenclaw.jfif");
 }
 
 .contenedor-tarjetas {
@@ -288,6 +300,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
 }
+
 /*
 .tarjeta {
     display: flex;
@@ -304,40 +317,46 @@ main {
     background-color: transparent;
     width: 231px;
     height: 305px;
-    perspective: 1000px; 
-  }
-  .card {
+    perspective: 1000px;
+}
+
+.card {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
     transition: transform 1s;
     transform-style: preserve-3d;
-  }
-  .flip-container:hover .card {
+}
+
+.flip-container:hover .card {
     transform: rotateY(180deg);
-  }
-  .front, .back {
+}
+
+.front,
+.back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
     display: flex;
     justify-content: center;
-  }
-  .front {
+}
+
+.front {
     background-image: url("imagenes/card-front.png");
     color: rgba(214, 173, 36, 1);
     font-family: 'El Messiri' serif;
     align-items: flex-end;
 
-  }
-  .back {
+}
+
+.back {
     background-image: url("imagenes/card-back.png");
     transform: rotateY(180deg);
-  }
+}
 
-  .texto-tarjeta {
+.texto-tarjeta {
     width: 200px;
     height: 278px;
     font-family: 'El Messiri' serif;
@@ -347,9 +366,12 @@ main {
     list-style-type: none;
     overflow-wrap: break-word;
 }
+
 #nombreBack {
-    color: #690000;;
+    color: #690000;
+    ;
 }
+
 footer {
     width: 100%;
     height: 4vh;
@@ -369,7 +391,7 @@ footer {
         justify-content: center;
         align-items: center;
         height: 10vh;
-       
+
     }
 
     main {
@@ -406,14 +428,16 @@ footer {
         display: flexbox;
         box-sizing: content-box;
     }
+
     .menu-inferior-img {
         margin: 2px;
         height: 6vh;
     }
+
     #nombrePagina {
-       
+
         font-size: 20px;
-    } 
+    }
 
     label {
         display: none;
@@ -439,13 +463,13 @@ footer {
         text-align: center;
     }
 
-    
+
     #hedwig {
         height: 280px;
     }
-    
 
-     /*MENU PARA  BARRA CON CASAS*/
+
+    /*MENU PARA  BARRA CON CASAS*/
     #submenuCasas {
         display: none;
         flex-direction: row;
@@ -457,9 +481,10 @@ footer {
         height: 30px;
         padding: 0px;
         margin: 0px;
-    
+
     }
-    .casa{
+
+    .casa {
         padding: 0px;
         margin: 0px;
         height: 20px;
