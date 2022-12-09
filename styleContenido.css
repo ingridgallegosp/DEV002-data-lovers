@@ -38,6 +38,7 @@ main {
     min-height:  calc(100vh - 16vh);
 }
 
+
 /*MENU SUPERIOR*/
 #menuSuperior {
     display: flex;
@@ -106,13 +107,13 @@ main {
 
 #submenuCasas {
     display: none;
-    flex-direction: column;
+    flex-direction: row;
     background-color: rgb(59, 0, 0);
     color: rgba(236, 236, 236, 1);
     justify-content: center;
     align-items: center;
-    height: 300px;
-    margin: 0% 5% 0% 15%;
+    height: 50px;
+    margin: 0% ;
     font-size: 120%;
 
 }
@@ -123,7 +124,7 @@ main {
 
 .casas {
     padding: 0px;
-    margin: 0px;
+    margin: 5%;
 }
 
 .casas:hover {
@@ -463,7 +464,7 @@ footer {
 
     .casas {
         padding: 0px;
-        margin: 0px;
+        margin: 6px;
        
     }
 }
